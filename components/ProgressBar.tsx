@@ -20,11 +20,11 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
     <div className="w-full">
       {showLabel && (
         <div className="flex justify-between mb-1">
-          <span className="text-xs font-medium text-gray-700">Progress</span>
-          <span className="text-xs font-medium text-gray-700">{Math.round(clampedPercentage)}%</span>
+          <span className="text-xs font-medium text-gray-700 dark:text-gray-300">Progress</span>
+          <span className="text-xs font-medium text-gray-700 dark:text-gray-300">{Math.round(clampedPercentage)}%</span>
         </div>
       )}
-      <div className={`w-full bg-gray-200 rounded-full ${heightClass}`}>
+      <div className={`w-full bg-gray-200 dark:bg-slate-700 rounded-full ${heightClass}`}>
         <div
           className={`${colorClass} ${heightClass} rounded-full transition-all duration-500 ease-out`}
           style={{ width: `${clampedPercentage}%` }}

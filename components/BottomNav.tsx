@@ -17,7 +17,7 @@ const BottomNav: React.FC<BottomNavProps> = ({ currentTab, setCurrentTab }) => {
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 pb-safe pt-2 px-6 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] z-50">
+    <div className="fixed bottom-0 left-0 w-full bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-800 pb-safe pt-2 px-6 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] dark:shadow-none z-50 transition-colors">
       <div className="flex justify-between items-center max-w-md mx-auto">
         {navItems.map((item) => {
           const Icon = item.icon;
@@ -28,8 +28,8 @@ const BottomNav: React.FC<BottomNavProps> = ({ currentTab, setCurrentTab }) => {
               onClick={() => setCurrentTab(item.id as Tab)}
               className={`flex flex-col items-center p-2 rounded-lg transition-colors ${
                 isActive 
-                  ? 'text-islamic-primary' 
-                  : 'text-gray-400 hover:text-gray-600'
+                  ? 'text-islamic-primary dark:text-emerald-400' 
+                  : 'text-gray-400 dark:text-slate-500 hover:text-gray-600 dark:hover:text-slate-300'
               }`}
             >
               <Icon size={24} strokeWidth={isActive ? 2.5 : 2} />

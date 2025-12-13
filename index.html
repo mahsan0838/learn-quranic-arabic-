@@ -2,12 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>QuranVoc 80</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Nastaliq+Urdu:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
+        darkMode: 'class', // Enable manual dark mode toggling
         theme: {
           extend: {
             colors: {
@@ -30,8 +31,13 @@
     </script>
     <style>
       body {
-        background-color: #FAFAF9; /* stone-50 */
+        /* Default to light, but handled by React for dark class */
+        background-color: #FAFAF9; 
       }
+      .dark body {
+        background-color: #0F172A; /* Slate 900 */
+      }
+      
       .hide-scrollbar::-webkit-scrollbar {
         display: none;
       }
@@ -73,6 +79,12 @@
       /* Safe Area Utility */
       .pb-safe {
         padding-bottom: env(safe-area-inset-bottom);
+      }
+
+      /* Pattern Background */
+      .bg-pattern {
+        background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1.5px, transparent 1.5px);
+        background-size: 24px 24px;
       }
     </style>
   <script type="importmap">
