@@ -22,11 +22,7 @@ import {
   Sparkles,
   ChevronDown,
   Moon,
-  Sun,
-  User,
-  Brain,
-  BookOpen,
-  Zap
+  Sun
 } from 'lucide-react';
 import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 
@@ -78,214 +74,101 @@ const HomeView: React.FC<{
   progress: UserProgress, 
   calculatedPercentage: number, 
   learnedCount: number, 
-  totalWords: number,
-  onNavigate: (tab: Tab) => void,
-  onSelectModule: (id: number) => void
-}> = ({ progress, calculatedPercentage, learnedCount, totalWords, onNavigate, onSelectModule }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Find next module to study (first one that isn't 100% complete)
-  const nextModuleId = MODULES.find(m => {
-    const moduleWords = VOCABULARY.filter(w => w.moduleId === m.id);
-    const learned = moduleWords.filter(w => progress.learnedWordIds.includes(w.id)).length;
-    return learned < moduleWords.length;
-  })?.id || 1;
-
-  return (
-    <div className="pb-32 animate-fade-in-up font-sans">
-      {/* Dynamic Sticky Header */}
-      <div 
-        className={`fixed top-0 left-0 right-0 w-full max-w-md mx-auto z-40 transition-all duration-300 ease-in-out px-6 flex justify-between items-center ${
-          isScrolled 
-            ? 'bg-stone-50/90 dark:bg-slate-950/90 backdrop-blur-md shadow-sm py-3 border-b border-gray-100 dark:border-slate-800' 
-            : 'bg-transparent py-6'
-        }`}
-      >
-        <div className="flex flex-col">
-           <span className={`text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest transition-all duration-300 ${isScrolled ? 'h-0 opacity-0 overflow-hidden' : 'h-auto opacity-100 mb-1'}`}>
-             Welcome Back
-           </span>
-           <h1 className={`font-bold text-slate-800 dark:text-slate-100 transition-all duration-300 ${isScrolled ? 'text-lg' : 'text-3xl'}`}>
-             {isScrolled ? 'QuranVoc 80' : 'Assalamu Alaikum'}
-           </h1>
-        </div>
-        <button 
-          onClick={() => onNavigate('settings')}
-          className={`rounded-full p-2 transition-colors ${isScrolled ? 'bg-gray-100 dark:bg-slate-800' : 'bg-white dark:bg-slate-800 shadow-sm'}`}
-        >
-          <User size={20} className="text-gray-600 dark:text-gray-300" />
-        </button>
+  totalWords: number 
+}> = ({ progress, calculatedPercentage, learnedCount, totalWords }) => (
+  <div className="space-y-6 pb-32 p-4 animate-fade-in-up">
+    {/* Header */}
+    <div className="flex justify-between items-center mt-2">
+      <div>
+        <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">Assalamu Alaikum</h1>
+        <p className="text-sm text-gray-500 dark:text-gray-400">Let's continue learning.</p>
       </div>
-
-      {/* Spacer for content below fixed header */}
-      <div className="h-24"></div>
-
-      <div className="px-6 space-y-8">
-        
-        {/* Hero Progress Card */}
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-600 to-teal-800 text-white shadow-xl shadow-emerald-900/20 group">
-          <div className="absolute inset-0 bg-pattern opacity-20"></div>
-          {/* Ambient Glow */}
-          <div className="absolute -top-20 -right-20 w-64 h-64 bg-emerald-400/30 rounded-full blur-3xl"></div>
-          
-          <div className="relative z-10 p-6 flex flex-col items-center">
-             <div className="relative w-40 h-40 mb-6 mt-2">
-                {/* Background Circle */}
-                <svg className="w-full h-full -rotate-90 transform" viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="8" />
-                  <circle 
-                    cx="50" cy="50" r="42" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round"
-                    className="text-amber-400 transition-all duration-1000 ease-out"
-                    strokeDasharray="264"
-                    strokeDashoffset={264 - (264 * calculatedPercentage / 100)}
-                  />
-                </svg>
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <span className="text-4xl font-bold tracking-tight">{calculatedPercentage}%</span>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-100 opacity-80">Quranic Text</span>
-                </div>
-             </div>
-             
-             {/* Stats Row */}
-             <div className="flex w-full justify-between items-center border-t border-white/10 pt-5">
-                <div className="text-center">
-                  <p className="text-2xl font-bold">{learnedCount}</p>
-                  <p className="text-[10px] uppercase tracking-wider text-emerald-200 opacity-80">Words</p>
-                </div>
-                <div className="w-px h-8 bg-white/10"></div>
-                <div className="text-center">
-                  <p className="text-2xl font-bold">{totalWords}</p>
-                  <p className="text-[10px] uppercase tracking-wider text-emerald-200 opacity-80">Total</p>
-                </div>
-                <div className="w-px h-8 bg-white/10"></div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center gap-1">
-                    <p className="text-2xl font-bold">{progress.streakDays}</p>
-                    <Flame size={16} className="text-amber-400 fill-amber-400" />
-                  </div>
-                  <p className="text-[10px] uppercase tracking-wider text-emerald-200 opacity-80">Streak</p>
-                </div>
-             </div>
-          </div>
-        </div>
-
-        {/* Quick Actions */}
-        <div>
-           <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-4 px-1 flex items-center gap-2">
-             <Zap size={18} className="text-amber-500 fill-amber-500" /> Quick Actions
-           </h3>
-           <div className="grid grid-cols-2 gap-4">
-              <button 
-                onClick={() => {
-                  onSelectModule(nextModuleId);
-                  onNavigate('learn');
-                }}
-                className="bg-white dark:bg-slate-800 p-5 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 flex flex-col items-start hover:border-emerald-500/50 dark:hover:border-emerald-500/50 transition-all active:scale-[0.98] group"
-              >
-                 <div className="bg-emerald-100 dark:bg-emerald-900/30 p-3 rounded-xl text-emerald-600 dark:text-emerald-400 mb-3 group-hover:rotate-6 transition-transform">
-                    <BookOpen size={24} />
-                 </div>
-                 <div className="text-left">
-                   <span className="block font-bold text-gray-800 dark:text-gray-100 text-lg">Continue</span>
-                   <span className="text-xs text-gray-500 dark:text-gray-400">Module {nextModuleId}</span>
-                 </div>
-              </button>
-
-              <button 
-                onClick={() => onNavigate('quiz')}
-                className="bg-white dark:bg-slate-800 p-5 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 flex flex-col items-start hover:border-amber-500/50 dark:hover:border-amber-500/50 transition-all active:scale-[0.98] group"
-              >
-                 <div className="bg-amber-100 dark:bg-amber-900/30 p-3 rounded-xl text-amber-600 dark:text-amber-400 mb-3 group-hover:-rotate-6 transition-transform">
-                    <Brain size={24} />
-                 </div>
-                 <div className="text-left">
-                   <span className="block font-bold text-gray-800 dark:text-gray-100 text-lg">Daily Quiz</span>
-                   <span className="text-xs text-gray-500 dark:text-gray-400">Test knowledge</span>
-                 </div>
-              </button>
-           </div>
-        </div>
-
-        {/* Learning Path */}
-        <div>
-           <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-4 px-1">Learning Path</h3>
-           <div className="space-y-4">
-             {MODULES.map((module, idx) => {
-                const moduleWords = VOCABULARY.filter(w => w.moduleId === module.id);
-                const learnedInModule = moduleWords.filter(w => progress.learnedWordIds.includes(w.id)).length;
-                const percent = Math.round((learnedInModule / moduleWords.length) * 100);
-                const isLocked = idx > 0 && Math.round((VOCABULARY.filter(w => w.moduleId === MODULES[idx-1].id && progress.learnedWordIds.includes(w.id)).length / VOCABULARY.filter(w => w.moduleId === MODULES[idx-1].id).length) * 100) < 50;
-
-                return (
-                  <div 
-                    key={module.id} 
-                    onClick={() => {
-                      // Optional: prevent click if locked, for now allowing free exploration
-                      onSelectModule(module.id);
-                      onNavigate('learn');
-                    }}
-                    className={`bg-white dark:bg-slate-800 p-5 rounded-2xl border border-gray-100 dark:border-slate-700 shadow-sm transition-all relative overflow-hidden group cursor-pointer active:scale-[0.99] ${isLocked ? 'opacity-75 grayscale-[0.5]' : 'hover:shadow-md'}`}
-                  >
-                    <div className={`absolute left-0 top-0 bottom-0 w-1.5 ${module.color}`}></div>
-                    
-                    <div className="flex justify-between items-start mb-3 pl-2">
-                       <div>
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 block mb-1">Module {module.id}</span>
-                          <h4 className="font-bold text-gray-800 dark:text-gray-100 text-lg leading-tight">{module.title}</h4>
-                       </div>
-                       <div className="text-right">
-                          <span className={`text-xl font-bold ${percent === 100 ? 'text-emerald-500' : 'text-gray-800 dark:text-gray-200'}`}>{percent}%</span>
-                       </div>
-                    </div>
-                    
-                    <div className="pl-2">
-                       <ProgressBar percentage={percent} colorClass={module.color.replace('bg-', 'bg-')} heightClass="h-2" />
-                       <p className="text-xs text-gray-400 mt-2 truncate">{module.description}</p>
-                    </div>
-                  </div>
-                );
-             })}
-           </div>
-        </div>
-
-        {/* Weekly Chart */}
-        <div>
-          <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-4 px-1">Weekly Focus</h3>
-          <div className="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-gray-100 dark:border-slate-700 shadow-sm h-56">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={[
-                { day: 'M', val: 15 }, { day: 'T', val: 25 }, { day: 'W', val: 10 }, 
-                { day: 'T', val: 30 }, { day: 'F', val: 20 }, { day: 'S', val: 45 }, { day: 'S', val: 10 }
-              ]}>
-                <XAxis dataKey="day" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#9CA3AF' }} dy={10} />
-                <Tooltip 
-                    cursor={{fill: 'rgba(255,255,255,0.05)'}} 
-                    contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)', backgroundColor: '#1E293B', color: '#fff' }} 
-                />
-                <Bar dataKey="val" radius={[6, 6, 6, 6]} barSize={24}>
-                  {
-                    [0,1,2,3,4,5,6].map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={index === 5 ? '#10B981' : '#E2E8F0'} className="dark:fill-slate-700 dark:[&.recharts-rectangle]:fill-emerald-500" />
-                    ))
-                  }
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        </div>
-
+      <div className="flex items-center space-x-1 bg-amber-50 dark:bg-amber-900/30 px-3 py-1 rounded-full border border-amber-100 dark:border-amber-800/50 shadow-sm">
+        <Flame size={18} className="text-amber-500 fill-amber-500" />
+        <span className="font-bold text-amber-700 dark:text-amber-400">{progress.streakDays} Day Streak</span>
       </div>
     </div>
-  );
-};
+
+    {/* Main Stats Card */}
+    <div className="bg-gradient-to-br from-islamic-dark to-islamic-primary rounded-2xl p-6 text-white shadow-xl shadow-emerald-900/20 relative overflow-hidden group hover:scale-[1.01] transition-transform">
+      <div className="absolute top-0 right-0 opacity-10 -mr-10 -mt-10 group-hover:opacity-20 transition-opacity">
+          <Trophy size={180} />
+      </div>
+      <div className="relative z-10">
+        <div className="flex items-center gap-2 mb-2">
+          <Sparkles size={16} className="text-emerald-300" />
+          <h2 className="text-xs font-bold text-emerald-100 uppercase tracking-widest">Current Impact</h2>
+        </div>
+        <div className="flex items-baseline space-x-2">
+           <span className="text-5xl font-bold">{calculatedPercentage}%</span>
+           <span className="text-emerald-200 text-sm font-medium">of Quranic text unlocked</span>
+        </div>
+        <div className="mt-5 bg-black/20 rounded-full h-2.5 w-full backdrop-blur-sm">
+          <div 
+            className="bg-islamic-gold h-full rounded-full transition-all duration-1000 relative" 
+            style={{ width: `${Math.max(5, (calculatedPercentage / 80) * 100)}%` }}
+          >
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-white rounded-full shadow-lg"></div>
+          </div>
+        </div>
+        <p className="mt-3 text-sm text-emerald-50 opacity-90 flex justify-between">
+           <span>{learnedCount} / {totalWords} words learned</span>
+           <span className="text-emerald-300">Target: 80%</span>
+        </p>
+      </div>
+    </div>
+
+    {/* Modules Overview */}
+    <div>
+      <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-4">Your Journey</h3>
+      <div className="space-y-3">
+        {MODULES.map(module => {
+          const moduleWords = VOCABULARY.filter(w => w.moduleId === module.id);
+          const learnedInModule = moduleWords.filter(w => progress.learnedWordIds.includes(w.id)).length;
+          const percent = Math.round((learnedInModule / moduleWords.length) * 100);
+
+          return (
+            <div key={module.id} className="bg-white dark:bg-slate-800 p-4 rounded-xl border border-gray-100 dark:border-slate-700 shadow-sm flex items-center justify-between transition-colors">
+              <div className="flex-1">
+                <div className="flex justify-between items-center mb-2">
+                  <h4 className="font-semibold text-gray-800 dark:text-gray-200">{module.title}</h4>
+                  <span className="text-xs font-medium text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-slate-700 px-2 py-0.5 rounded">{learnedInModule}/{moduleWords.length}</span>
+                </div>
+                <ProgressBar percentage={percent} colorClass={module.color.replace('bg-', 'bg-')} heightClass="h-2" />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    {/* Insights */}
+    <div>
+      <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-4">Weekly Activity</h3>
+      <div className="bg-white dark:bg-slate-800 p-4 rounded-xl border border-gray-100 dark:border-slate-700 shadow-sm h-48 transition-colors">
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart data={[
+            { day: 'M', val: 15 }, { day: 'T', val: 25 }, { day: 'W', val: 10 }, 
+            { day: 'T', val: 30 }, { day: 'F', val: 20 }, { day: 'S', val: 45 }, { day: 'S', val: 10 }
+          ]}>
+            <XAxis dataKey="day" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#9CA3AF' }} />
+            <Tooltip 
+                cursor={{fill: 'rgba(255,255,255,0.1)'}} 
+                contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)', backgroundColor: '#1F2937', color: '#fff' }} 
+            />
+            <Bar dataKey="val" radius={[4, 4, 0, 0]}>
+              {
+                [0,1,2,3,4,5,6].map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={index === 5 ? '#10B981' : '#E5E7EB'} className="dark:fill-slate-600 dark:[&.recharts-rectangle]:fill-emerald-500" />
+                ))
+              }
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+    </div>
+  </div>
+);
 
 const LearnView: React.FC<{
   selectedModule: number | null,
@@ -312,21 +195,17 @@ const LearnView: React.FC<{
 
     return (
       <div className="pb-32 p-4 animate-fade-in-up">
-         <div className="sticky top-0 bg-stone-50/95 dark:bg-slate-950/95 backdrop-blur-sm z-30 pt-safe pb-4 mb-4 border-b border-gray-200 dark:border-slate-800">
-           <button 
-             onClick={() => setSelectedModule(null)}
-             className="flex items-center text-gray-500 dark:text-gray-400 mb-2 hover:text-islamic-primary transition-colors pl-2"
-           >
-             <ArrowRight className="rotate-180 mr-1" size={18} />
-             Back
-           </button>
-           <div className="px-2">
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">{MODULES.find(m => m.id === selectedModule)?.title}</h2>
-              <p className="text-sm text-gray-500 dark:text-gray-400">{words.length} Words</p>
-           </div>
-         </div>
+         <button 
+           onClick={() => setSelectedModule(null)}
+           className="flex items-center text-gray-500 dark:text-gray-400 mb-4 hover:text-islamic-primary transition-colors"
+         >
+           <ArrowRight className="rotate-180 mr-1" size={18} />
+           Back to Modules
+         </button>
+         <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-1">{MODULES.find(m => m.id === selectedModule)?.title}</h2>
+         <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">{words.length} Words</p>
          
-         <div className="space-y-8 px-2">
+         <div className="space-y-8">
            {categories.map(category => (
              <div key={category}>
                <h3 className="text-lg font-bold text-islamic-dark dark:text-emerald-400 border-l-4 border-islamic-gold pl-3 mb-4">{category}</h3>
@@ -352,11 +231,11 @@ const LearnView: React.FC<{
   // Default: Show Module List
   return (
     <div className="space-y-6 pb-32 p-4 animate-fade-in-up">
-       <div className="flex justify-between items-center mt-2 px-2">
+       <div className="flex justify-between items-center mt-2">
          <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">Browse Content</h1>
        </div>
        
-       <div className="grid gap-4 px-2">
+       <div className="grid gap-4">
          {MODULES.map(module => (
            <button 
              key={module.id} 
@@ -830,8 +709,6 @@ const App: React.FC = () => {
                 calculatedPercentage={calculatedPercentage}
                 learnedCount={learnedCount}
                 totalWords={totalWords}
-                onNavigate={setCurrentTab}
-                onSelectModule={setSelectedModule}
               />
             )}
             {currentTab === 'learn' && (
