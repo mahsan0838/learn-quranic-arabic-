@@ -1,0 +1,159 @@
+# Transcribed from source/80_percent.pdf (pages 8-13). Format:
+#   arabic | english | note | frequency | category
+# `note` = grammar tag printed in the PDF (mg, fg, pl, ...). frequency is empty when the PDF doesn't print one.
+## 8 | This, that...!
+هٰذَا | this | mg | | demonstratives
+ذٰلِكَ | that | mg | | demonstratives
+هٰذِهِ | this | fg | | demonstratives
+تِلْكَ | that | fg | | demonstratives
+هٰؤُلَاءِ | these | mg/fg | | demonstratives
+أُولٰئِكَ | those | mg/fg | | demonstratives
+الَّذِي | he who | mg | | relatives
+الَّتِي | she who | fg | | relatives
+الَّذِينَ | those who | mg | | relatives
+هٰذِهِ | these | for broken plural | | demonstratives
+تِلْكَ | those | for broken plural | | demonstratives
+الَّتِي | those who | for broken plural | | relatives
+## 8 | No, No!!!
+لَا إِلٰهَ | (There is) no god | | | negation
+إِلَّا اللّٰهُ | except Allah | | | negation
+كَلَّا | never, certainly not | | | negation
+لَنْ | not | for future | | negation
+لَمْ | not | for past | | negation
+مَا | not | | | negation
+لَيْسَ (لَيْسَتْ) | not | fg | | negation
+بَلٰى | yes, indeed | | | negation
+غَيْرُ | not, other than | | | negation
+دُونَ | besides; less than | | | negation
+إِلَّا | except; unless; if not | | | negation
+نَعَمْ | yes | | | negation
+## 9 | Whose?
+...هُ | his | mg | | pronoun-suffixes
+...هُمْ | their | mg | | pronoun-suffixes
+...كَ | your | mg | | pronoun-suffixes
+...كُمْ | your | mg | | pronoun-suffixes
+...ي (نِي) | my | me | | pronoun-suffixes
+...نَا | us | mg/fg | | pronoun-suffixes
+...هَا | her | fg | | pronoun-suffixes
+...هُنَّ | their | fg | | pronoun-suffixes
+...كِ | your | fg | | pronoun-suffixes
+...هَا | their | for broken plural | | pronoun-suffixes
+...هُمَا | their | dl | | pronoun-suffixes
+...كُمَا | your | dl | | pronoun-suffixes
+## 9 | Who?
+هُوَ | he | mg | | pronouns
+هُمْ | them | mg | | pronouns
+أَنْتَ | you | mg | | pronouns
+أَنْتُمْ | you all | mg | | pronouns
+أَنَا | I | mg/fg | | pronouns
+نَحْنُ | we | mg/fg | | pronouns
+هِيَ | she | fg | | pronouns
+هُنَّ | they | fg | | pronouns
+أَنْتِ | you | fg | | pronouns
+هِيَ | they | for broken plural | | pronouns
+هُمَا | those two | dl | | pronouns
+أَنْتُمَا | you two | dl | | pronouns
+## 10 | Where?
+فَوْقَ | above, up | | | places
+تَحْتَ | under | | | places
+بَيْنَ أَيْدِي، بَيْنَ يَدَيْ | in front of | | | places
+خَلْفَ | back, after | | | places
+أَمَامَ | in front of | | | places
+وَرَاءَ | behind | | | places
+يَمِين (أَيْمَان) | right; oath | pl | | places
+شِمَال (شَمَائِل) | left | pl | | places
+بَيْنَ | between | | | places
+حَوْلَ | around | | | places
+حَيْثُ | wherever | | | places
+أَيْنَمَا | wherever | | | places
+## 10 | Questions!?
+مَا | what?, that which | | | questions
+مَنْ | who?, the one who | | | questions
+مَتَى | when?, the time when | | | questions
+أَيْنَ | where? | | | questions
+كَيْفَ | how? | | | questions
+كَمْ | how many? | | | questions
+أَيُّ | which? | | | questions
+أَنَّى | where from?, why? | | | questions
+أَ، هَلْ | Is? Am? Are? Do? Have? | | | questions
+مَاذَا | what? | | | questions
+لِمَ، لِمَاذَا | why? | | | questions
+لَوْلَا | if not; why not | | | questions
+## 11 | Miscellaneous
+ذُو، ذَا، ذِي | endowed with; owner of | mg | | miscellaneous
+ذَاتُ | endowed with; owner of | fg | | miscellaneous
+أُولُوا، أُولِي | people of; owners of | | | miscellaneous
+أَهْل | people of; relative | | | miscellaneous
+آل | family, relatives, people | | | miscellaneous
+أَلَا | lo!; do not?, will not? | | | miscellaneous
+نِعْمَ | what an excellent... | | | miscellaneous
+بِئْسَ | what an evil... | | | miscellaneous
+بِئْسَمَا | evil is that which | | | miscellaneous
+مِثْل | something similar | | | miscellaneous
+مَثَل (أَمْثَال) | similitude | | | miscellaneous
+مِمَّنْ (مِن+مَنْ) | than the one who; from those who | | | miscellaneous
+## 11 | When?
+قَبْلَ | before | | | time
+بَعْدَ | after | | | time
+حِينَ | time, period; at the time of | | | time
+إِذْ | when | for past | | time
+إِذَا | when | for future | | time
+ثُمَّ | then | | | time
+فَ | then, thus, therefore | | | time
+بَلْ | nay, -- rather, but, however | | | time
+عِنْدَ، لَدَى، لَدُنْ | near, with | | | time
+إِنْ ... إِلَّا | nothing --- but | | | time
+مَا ... إِلَّا | nothing --- but | | | time
+أَلَّا (أَنْ+لَا) | that...not; so as not to | | | time
+## 12 | Prepositions + مَا
+بِمَا | with what, because | | | prepositions
+عَمَّا | about what | | | prepositions
+فِيمَا | in what | | | prepositions
+كَمَا | as, just as | | | prepositions
+لِمَا | for what; for that which | | | prepositions
+مِمَّا | out of what | | | prepositions
+أَمَّا | as to, as for | | | prepositions
+إِمَّا | if; either/or | | | prepositions
+أَنَّمَا | that | | | prepositions
+إِنَّمَا | verily; is but | | | prepositions
+كَأَنَّمَا | as if | | | prepositions
+كُلَّمَا | whenever | | | prepositions
+## 12 | Prepositions
+بِ | with, in, from,... | | | prepositions
+عَنْ | about | | | prepositions
+فِي | in | | | prepositions
+كَ | as, like | | | prepositions
+لِ، لَ | for | | | prepositions
+مِنْ | from | | | prepositions
+إِلَى | towards | | | prepositions
+تَ | by (of oath) | | | prepositions
+حَتَّى | until | | | prepositions
+عَلَى | on | | | prepositions
+مَعَ | with | | | prepositions
+وَ | and; by (of oath) | | | prepositions
+## 13 | Prefix for verb,...
+قَدْ (+فعل) | has (with ماضي); surely (with مضارع) | | | verb-prefixes
+سَ (+فعل) | will (for near future) | | | verb-prefixes
+سَوْفَ (+فعل) | will (for future) | | | verb-prefixes
+لَ+فعل+نَّ | will surely | | | verb-prefixes
+لَقَدْ (+فعل) | indeed | | | verb-prefixes
+لَ | indeed, surely | | | verb-prefixes
+لِ، لْ (+أمر) | let sb do (imperative) | | | verb-prefixes
+الْ | the | | | verb-prefixes
+أَمْ | or? | | | verb-prefixes
+أَوْ | or | | | verb-prefixes
+بَعْض | some of | | | verb-prefixes
+كُلّ | everyone; all | | | verb-prefixes
+## 13 | Inna
+إِنَّ | verily, truly | | | inna-and-sisters
+أَنَّ | that | | | inna-and-sisters
+كَأَنَّ | as if | | | inna-and-sisters
+لَكِنَّ (لَكِنْ) | but, however | | | inna-and-sisters
+لَعَلَّ | perhaps, may be | | | inna-and-sisters
+أَنْ | that | | | inna-and-sisters
+إِنْ | if | | | inna-and-sisters
+إِيَّا | alone | | | inna-and-sisters
+عَسَى | possibly | | | inna-and-sisters
+لَمَّا | when | | | inna-and-sisters
+لَوْ | if | | | inna-and-sisters
+يَا، يَاأَيُّهَا | O! | | | inna-and-sisters

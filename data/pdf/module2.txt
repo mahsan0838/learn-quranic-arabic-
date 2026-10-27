@@ -1,0 +1,129 @@
+# Transcribed from source/80_percent.pdf (pages 14-21). Format:
+#   arabic | english | note | frequency | category
+## 14 | Some attributes (of Allah and others)
+خَبِير | knowing, ever aware | | 45 | attributes
+رَبّ | Lord; Sustainer | | 970 | attributes
+رَحْمٰن | Compassionate | | 57 | attributes
+سَلَام | peace | | 42 | attributes
+سَمِيع | one who listens | | 47 | attributes
+شَكُور | grateful | | 24 | attributes
+عَزِيز | mighty | | 99 | attributes
+غَفُور | most forgiving | | 91 | attributes
+قَدِير | All-powerful | | 45 | attributes
+نَذِير | warner | | 44 | attributes
+نَصِير | strong helper | | 24 | attributes
+وَكِيل | one who takes care of a thing for another | | 24 | attributes
+أَوَّل (أُولَى) | first | fg | 82 | attributes
+آخِر (آخِرَة) | last | fg | 40 | attributes
+آخَر (أُخْرَى) | [other] | | 65 | attributes
+أَمِين | trustworthy | | 14 | attributes
+بَصِير | one who sees clearly | | 53 | attributes
+بَعِيد | far | | 25 | attributes
+تَوَّاب | most forgiving | | 11 | attributes
+حَفِيظ | protector | | 26 | attributes
+حَكِيم | wise | | 97 | attributes
+حَلِيم | forbearing | | 15 | attributes
+حَمِيد | praiseworthy | | 17 | attributes
+حَمِيم | warm (friend); boiling water | | 20 | attributes
+## 15 | Noun of Superiority (اسم تَفْضِيل)
+أَشَدّ | most severe | | 31 | superiority
+أَعْلَى | higher, superior | | 11 | superiority
+أَعْلَم | better-knowing, more informed | | 49 | superiority
+أَقْرَب | nearer | | 19 | superiority
+أَكْبَر | bigger | | 23 | superiority
+أَكْثَر | more; most | | 80 | superiority
+أَحْسَن | better | | 36 | superiority
+أَحَقّ | more entitled; more worthy | | 10 | superiority
+أَدْنَى | nearer; more likely; lower; less | | 12 | superiority
+أَظْلَم | more unjust | | 16 | superiority
+أَهْدَى | better guided | | 7 | superiority
+أَوْلَى | nearer, closer; woe | | 11 | superiority
+## 15 | Some attributes...
+شَدِيد | severe; strong | | 52 | attributes
+عَلِي | high, exalted | | 11 | attributes
+عَلِيم | knower | | 162 | attributes
+قَرِيب | near | | 26 | attributes
+كَبِير (كَبِيرَة) | big | fg | 44 | attributes
+كَثِير (كَثِيرَة) | plenty; much | fg | 74 | attributes
+سَرِيع | quick; swift; fast | | 10 | attributes
+رَحِيم | merciful | | 182 | attributes
+عَظِيم | supreme | | 107 | attributes
+قَلِيل (قَلِيلَة) | little | fg | 71 | attributes
+كَرِيم | noble; honourable; generous | | 27 | attributes
+لَطِيف | subtle | | 7 | attributes
+## 16 | Prophets and Allah's Signs
+رَسُول (رُسُل) | Messenger | pl | 332 | prophets-and-signs
+نَبِيّ | Prophet | | 75 | prophets-and-signs
+نَبِيُّون، نَبِيِّين، أَنْبِيَاء | Prophets | | | prophets-and-signs
+آدَم، نُوح، إِبْرَاهِيم | Adam, Noah, Abraham | | 137 | prophets-and-signs
+لُوط، إِسْمَاعِيل، إِسْحَاق | Lot, Ishmael, Isaac | | 56 | prophets-and-signs
+يَعْقُوب (إِسْرَائِيل) يُوسُف | Jacob (Israel), Joseph | | 86 | prophets-and-signs
+هُود، شُعَيْب، صَالِح | Hud, Shu'ayb, Salih | | 30 | prophets-and-signs
+مُوسَى، عِيسَى ابْنُ مَرْيَم | Moses, Jesus son of Mary | | 195 | prophets-and-signs
+شَيْطَان (شَيَاطِين) | Satan | pl | 88 | prophets-and-signs
+فِرْعَوْن | Pharaoh | | 74 | prophets-and-signs
+عَاد | People of Hud | | 24 | prophets-and-signs
+ثَمُود | People of Salih | | 26 | prophets-and-signs
+آيَة (آيَات) | sign | pl | 382 | prophets-and-signs
+بَيِّنَة (بَيِّنَات) | evidence | pl | 71 | prophets-and-signs
+قُرْآن | Qur'an; reading, recitation | | 70 | prophets-and-signs
+أَنْعَام | cattle | | 32 | prophets-and-signs
+جَبَل (جِبَال) | mountain | pl | 39 | prophets-and-signs
+بَحْر | sea; large river | | 38 | prophets-and-signs
+شَمْس | sun | | 33 | prophets-and-signs
+قَمَر | moon | | 33 | prophets-and-signs
+لَيْل | night | | 80 | prophets-and-signs
+نَهَار | day | | 57 | prophets-and-signs
+أَرْض | earth | | 461 | prophets-and-signs
+سَمَاء (سَمَاوَات) | sky | pl | 310 | prophets-and-signs
+## 17 | Last day
+صَاحِب (أَصْحَاب) | companion, fellow | | 94 | last-day
+عَاقِبَة | end | | 32 | last-day
+عَذَاب | torment | | 332 | last-day
+عِقَاب | chastisement (as a result of sin) | | 20 | last-day
+قِيَامَة | Resurrection | | 70 | last-day
+لِقَاء | meeting | | 24 | last-day
+مُسَمًّى | fixed | | 21 | last-day
+نَار | fire | | 145 | last-day
+نَهْر (أَنْهَار) | river | pl | 54 | last-day
+وَيْل | woe unto ... | | 40 | last-day
+يَوْم (أَيَّام) | day | pl | 393 | last-day
+يَوْمَئِذٍ | that day | | 70 | last-day
+أَبَدًا | forever; ever | | 28 | last-day
+أَجْر (أُجُور) | reward | pl | 105 | last-day
+أَجَل | term | | 52 | last-day
+الْآخِرَة | the Hereafter | | 115 | last-day
+أَلِيم | painful | | 72 | last-day
+ثَوَاب | reward | | 13 | last-day
+جَحِيم | hellfire | | 26 | last-day
+جَزَاء | reward | | 42 | last-day
+جَنَّة (جَنَّات) | garden | pl | 147 | last-day
+جَهَنَّم | the hell | | 77 | last-day
+حِسَاب | reckoning | | 39 | last-day
+سَاعَة | hour (day of resurrection) | | 47 | last-day
+## 18 | Dīn
+أَمْر (أُمُور) | matter; affair | pl | 13 | din
+تَقْوَى | piety; fear; protection | | 17 | din
+حَقّ | truth, true; right | | 247 | din
+بَاطِل | falsehood | | 26 | din
+حِكْمَة | wisdom | | 20 | din
+حَمْد | praise | | 43 | din
+دِين | religion; law; judgement | | 92 | din
+زَكَاة | poor-due, charity | | 32 | din
+شَهِيد (شُهَدَاء) | witness, present | pl | 56 | din
+صَلَاة | prayer | | 83 | din
+مُبِين | clear, self-expressive | | 119 | din
+نُور | light | | 43 | din
+## 18 | Faith
+أَحَد (إِحْدَى) | one | fg | 85 | faith
+إِلٰه (آلِهَة) | god; deity | pl | 34 | faith
+شَرِيك (شُرَكَاء) | partner, associate | pl | 40 | faith
+شَهَادَة | witness | | 26 | faith
+عَرْش | throne | | 26 | faith
+عَهْد | covenant, promise | | 29 | faith
+غَيْب | unseen | | 49 | faith
+كِتَاب (كُتُب) | book | pl | 261 | faith
+كَلِمَة | word | | 42 | faith
+مَلَك (مَلَائِكَة) | angel | pl | 88 | faith
+مِيثَاق | covenant, treaty | | 25 | faith
+وَاحِد (وَاحِدَة) | one | fg | 61 | faith

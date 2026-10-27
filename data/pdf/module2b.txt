@@ -1,0 +1,79 @@
+# Transcribed from source/80_percent.pdf (pages 19-21), continuation of module2.txt
+## 19 | Deeds
+أَعْمَال | actions, deeds, works | pl | 41 | deeds
+حَسَنَة (حَسَنَات) | good (deed) | pl | 31 | deeds
+سَيِّئَة (سَيِّئَات) | evil, bad | pl | 68 | deeds
+خَيْر | good, better | | 186 | deeds
+شَرّ | evil, bad, worse | | 29 | deeds
+إِثْم | sin | | 35 | deeds
+ذَنْب (ذُنُوب) | sin | pl | 37 | deeds
+جُنَاح | sin | | 25 | deeds
+حَرَام | unlawful | | 26 | deeds
+اِسْم (أَسْمَاء) | name | pl | 27 | deeds
+حَدِيث (أَحَادِيث) | discourse; speech | pl | 23 | deeds
+طَيِّبَة (طَيِّبَات) | good | pl | 30 | deeds
+## 19 | Blessings
+آلَاء | favours | | 34 | blessings
+سُلْطَان | authority; warrant | | 37 | blessings
+فَضْل | grace | | 84 | blessings
+مَاء | water | | 63 | blessings
+مُلْك | dominion, reign | | 48 | blessings
+نِعْمَة | favour | | 37 | blessings
+أَجْمَعُون، أَجْمَعِين | all | | 26 | blessings
+إِذْن | permission | | 39 | blessings
+بَأْس | punishment; power; adversity | | 25 | blessings
+جَمِيع | all, everybody | | 53 | blessings
+سَوَاء | same; equals; level; fair | | 27 | blessings
+فَرِيق | party, group | | 33 | blessings
+## 20 | Relatives
+أُمّ (أُمَّهَات) | mother | pl | 35 | relatives
+أَب، أَبَت (آبَاء) | father | pl | 117 | relatives
+زَوْج (أَزْوَاج) | wife; husband | pl | 76 | relatives
+رَجُل (رِجَال) | man | pl | 57 | relatives
+اِمْرَأَة (نِسَاء) | woman | pl | 83 | relatives
+وَلَد (أَوْلَاد) | child | pl | 56 | relatives
+وَالِد (وَالِدَيْن) | father | dl | 20 | relatives
+ذُرِّيَّة | descendants; children | | 32 | relatives
+اِبْن | son | | 41 | relatives
+بَنُون، بَنِين، أَبْنَاء | sons | pl | 22 | relatives
+أَخ (أَخُو، أَخَا، أَخِي) | brother | | 67 | relatives
+إِخْوَان | brothers | pl | 22 | relatives
+## 20 | Self (body parts)
+وَجْه (وُجُوه) | face | pl | 72 | body-parts
+عَيْن (أَعْيُن) | eye; spring | pl | 47 | body-parts
+أَبْصَار | sights | pl | 38 | body-parts
+أَفْوَاه | mouths | pl | 21 | body-parts
+لِسَان (أَلْسِنَة) | tongue; language | pl | 25 | body-parts
+قَلْب (قُلُوب) | heart | pl | 132 | body-parts
+صَدْر (صُدُور) | breast | pl | 44 | body-parts
+يَد (أَيْدِي) | hand | pl | 118 | body-parts
+رِجْل (أَرْجُل) | foot | pl | 15 | body-parts
+نَفْس (أَنْفُس) | soul | pl | 293 | body-parts
+رُوح | soul, spirit | | 21 | body-parts
+قُوَّة | power, strength | | 28 | body-parts
+## 21 | World
+بَيْت (بُيُوت) | house | pl | 64 | world
+دَار (دِيَار) | abode | pl | 48 | world
+دُنْيَا | world | | 115 | world
+سَبِيل (سُبُل) | way | pl | 176 | world
+صِرَاط | path | | 46 | world
+عَالَم (عَالَمِين) | world | pl | 73 | world
+فِتْنَة | trial; persecution | | 34 | world
+قَرْيَة (قُرَى) | town | pl | 57 | world
+مَال (أَمْوَال) | wealth | pl | 86 | world
+مَتَاع | provision; enjoyment | | 34 | world
+مَسْجِد (مَسَاجِد) | mosque | pl | 28 | world
+مَكَان (مَكَانَة) | place; abode | | 32 | world
+## 21 | People
+أُمَّة (أُمَم) | community | pl | 64 | people
+قَوْم | people | | 383 | people
+إِنْسَان | man | | 65 | people
+نَاس | men, people | | 248 | people
+ذَكَر (ذُكُور) | male | pl | 16 | people
+أُنْثَى (إِنَاث) | female | pl | 30 | people
+عَبْد (عِبَاد) | slave | pl | 126 | people
+عَدُوّ (أَعْدَاء) | enemy | pl | 44 | people
+كُفَّار | disbelievers | | 21 | people
+مُجْرِم | criminal | | 52 | people
+مَلَأ | chiefs, leaders | | 22 | people
+وَلِيّ (أَوْلِيَاء) | protecting friend; guardian | | 86 | people
