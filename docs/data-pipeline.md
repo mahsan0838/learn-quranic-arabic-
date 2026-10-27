@@ -34,3 +34,6 @@ All pages 8-41 were re-read against 190-dpi renders of the PDF. Corrections made
 
 - The Arabic and its diacritics were typed from images by a model, not copy-pasted. **Proofread every page against the PDF.** Rows marked `check` in the `note` column were unclear in the scan.
 - Verbs in the PDF are listed under their root, so some words (e.g. `جَاءَ`) appear more than once with different meanings; this is faithful to the PDF.
+
+## Verb tables
+`data/pdf/conjugation.json` (copied to the app) holds the PDF's sample verb table (pp. 42-45, فَعَلَ). One evident PDF typo is corrected: the هُمَا (they two) present rows are glossed "You do/will do." in the print; the app shows "They two do/will do."

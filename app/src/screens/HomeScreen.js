@@ -51,6 +51,14 @@ export default function HomeScreen({ navigation }) {
                 </Text>
             </TouchableOpacity>
 
+            <TouchableOpacity
+                style={styles.tablesButton}
+                onPress={() => navigation.navigate('Conjugation')}
+            >
+                <Text style={styles.tablesTitle}>Verb tables & drill</Text>
+                <Text style={styles.tablesSub}>See how every verb conjugates (فَعَلَ), then test yourself</Text>
+            </TouchableOpacity>
+
             <View style={styles.progressCard}>
                 <Text style={styles.progressTitle}>Daily goal</Text>
                 <Text style={styles.progressSubtext}>
@@ -133,6 +141,17 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         elevation: 3,
     },
+    tablesButton: {
+        backgroundColor: COLORS.cardBackground,
+        marginHorizontal: SPACING.md,
+        marginBottom: SPACING.md,
+        padding: SPACING.md,
+        borderRadius: 12,
+        borderWidth: 1,
+        borderColor: COLORS.primary,
+    },
+    tablesTitle: { fontSize: SIZES.large, fontWeight: 'bold', color: COLORS.primary },
+    tablesSub: { fontSize: SIZES.small, color: COLORS.textSecondary },
     reviewButtonTitle: {
         fontSize: SIZES.large,
         fontWeight: 'bold',

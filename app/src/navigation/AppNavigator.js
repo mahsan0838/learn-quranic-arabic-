@@ -9,6 +9,7 @@ import LearnScreen from '../screens/LearnScreen';
 import FlashcardsScreen from '../screens/FlashcardsScreen';
 import QuizScreen from '../screens/QuizScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import ConjugationScreen from '../screens/ConjugationScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -76,6 +77,15 @@ export default function AppNavigator() {
                         tabBarLabel: 'Profile',
                         tabBarIcon: ({ color }) => <Text style={{ fontSize: 24 }}>👤</Text>,
                         headerShown: false,
+                    }}
+                />
+                <Tab.Screen
+                    name="Conjugation"
+                    component={ConjugationScreen}
+                    options={{
+                        title: 'Verb Tables',
+                        // Reachable from Home and Learn; hidden from the tab bar.
+                        tabBarButton: () => null,
                     }}
                 />
             </Tab.Navigator>

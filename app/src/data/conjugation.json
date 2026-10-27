@@ -1,5 +1,5 @@
 {
-  "_source": "source/80_percent.pdf pages 42-45 (booklet pp. 35-38), sample verb table on the root ف-ع-ل. Reference material, not vocabulary.",
+  "_source": "source/80_percent.pdf pages 42-45 (booklet pp. 35-38), sample verb table on the root ف-ع-ل. Reference material, not vocabulary. The PDF prints "You do/will do." for the هُمَا (they two) present forms; that is an evident typo, corrected here to "They two do/will do.".",
   "masculine": {
     "active": [
       { "pronoun": "هُوَ",     "past": "فَعَلَ",    "pastEn": "He did.",              "present": "يَفْعَلُ",    "presentEn": "He does. He will do.",        "suffix": "ـهُ" },
@@ -31,7 +31,7 @@
   "feminine": {
     "active": [
       { "pronoun": "هِيَ",     "past": "فَعَلَتْ",   "pastEn": "She did.",       "present": "تَفْعَلُ",    "presentEn": "She does. She will do.",  "suffix": "ـهَا" },
-      { "pronoun": "هُمَا",    "past": "فَعَلَتَا",  "pastEn": "They two did.",  "present": "تَفْعَلَانِ",  "presentEn": "You do/will do.",         "suffix": "ـهُمَا" },
+      { "pronoun": "هُمَا",    "past": "فَعَلَتَا",  "pastEn": "They two did.",  "present": "تَفْعَلَانِ",  "presentEn": "They two do/will do.",         "suffix": "ـهُمَا" },
       { "pronoun": "هُنَّ",    "past": "فَعَلْنَ",   "pastEn": "They all did.",  "present": "يَفْعَلْنَ",   "presentEn": "They do. They will do.",  "suffix": "ـهُنَّ" },
       { "pronoun": "أَنْتِ",   "past": "فَعَلْتِ",   "pastEn": "You did.",       "present": "تَفْعَلِينَ",  "presentEn": "You do. You will do.",    "suffix": "ـكِ" },
       { "pronoun": "أَنْتُمَا", "past": "فَعَلْتُمَا","pastEn": "You two did.",  "present": "تَفْعَلَانِ",  "presentEn": "You do/will do.",         "suffix": "ـكُمَا" },
