@@ -23,7 +23,6 @@ export default function FlashcardsScreen() {
     const [isFlipped, setIsFlipped] = useState(false);
     const [reward, setReward] = useState(null);
     const [summary, setSummary] = useState({ cards: 0, xp: 0, again: 0 });
-    const [finished, setFinished] = useState(false);
     const busy = useRef(false);
     const started = useRef(false);
     const finishedRef = useRef(false);
@@ -36,7 +35,6 @@ export default function FlashcardsScreen() {
         setSummary({ cards: 0, xp: 0, again: 0 });
         setIsFlipped(false);
         setReward(null);
-        setFinished(false);
         finishedRef.current = false;
         setReady(true);
     }, []);
@@ -73,7 +71,6 @@ export default function FlashcardsScreen() {
             setQueue(nextQueue);
             setIsFlipped(false);
             if (nextQueue.length === 0) {
-                setFinished(true);
                 finishedRef.current = true;
             }
         } finally {
@@ -145,7 +142,7 @@ export default function FlashcardsScreen() {
                         <Text style={styles.infoText}>{currentWord.grammatical_info}</Text>
                         {currentWord.frequency != null && (
                             <Text style={styles.infoText}>
-                                Appears {currentWord.frequency}× in the Qur'an
+                                Appears {currentWord.frequency}× in the Qur&apos;an
                             </Text>
                         )}
                         {forms && (

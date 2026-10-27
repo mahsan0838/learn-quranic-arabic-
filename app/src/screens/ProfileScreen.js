@@ -1,14 +1,12 @@
 import React, { useState, useCallback } from 'react';
-import { Alert } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { Alert, View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { COLORS, SIZES, SPACING } from '../constants/theme';
-import { TOTAL_WORDS } from '../data/words';
+import { TOTAL_WORDS, HAS_URDU } from '../data/words';
 import { getAverageQuizAccuracy, getPreferences } from '../utils/storage';
 import { REMINDER_PRESETS, labelFor } from '../utils/reminders';
 import { setReminderEnabled, setReminderTime } from '../utils/notifications';
 import useLanguage from '../hooks/useLanguage';
-import { HAS_URDU } from '../data/words';
 import { getDashboard } from '../utils/game';
 import { BADGES, levelProgress, titleFor } from '../utils/gamification';
 
@@ -23,19 +21,13 @@ export default function ProfileScreen() {
         badges: [],
     });
 
-    useFocusEffect(
-        useCallback(() => {
-            loadStats();
-        }, [])
-    );
-
     const [reminder, setReminder] = useState({ on: false, hour: 19, minute: 0 });
     const [language, setLanguage] = useLanguage();
 
-    const loadReminder = async () => {
+    const loadReminder = useCallback(async () => {
         const prefs = await getPreferences();
         setReminder({ on: prefs.dailyReminder, hour: prefs.reminderHour, minute: prefs.reminderMinute });
-    };
+    }, []);
 
     const toggleReminder = async () => {
         const ok = await setReminderEnabled(!reminder.on);
@@ -52,7 +44,7 @@ export default function ProfileScreen() {
         loadReminder();
     };
 
-    const loadStats = async () => {
+    const loadStats = useCallback(async () => {
         loadReminder();
         const dash = await getDashboard();
         const accuracy = await getAverageQuizAccuracy();
@@ -65,7 +57,13 @@ export default function ProfileScreen() {
             coverage: dash.coveragePct,
             badges: dash.badges,
         });
-    };
+    }, [loadReminder]);
+
+    useFocusEffect(
+        useCallback(() => {
+            loadStats();
+        }, [loadStats])
+    );
 
     return (
         <ScrollView style={styles.container}>
@@ -102,7 +100,7 @@ export default function ProfileScreen() {
                     <Text style={styles.statValue}>{stats.xp}</Text>
                 </View>
                 <View style={styles.statRow}>
-                    <Text style={styles.statLabel}>Qur'an coverage</Text>
+                    <Text style={styles.statLabel}>Qur&apos;an coverage</Text>
                     <Text style={styles.statValue}>{stats.coverage.toFixed(1)}%</Text>
                 </View>
             </View>
@@ -146,7 +144,7 @@ export default function ProfileScreen() {
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>About</Text>
                 <Text style={styles.aboutText}>
-                    QuranVoc 80 helps you learn the most frequent words that make up 82.6% of the Quran's vocabulary.
+                    QuranVoc 80 helps you learn the most frequent words that make up 82.6% of the Quran&apos;s vocabulary.
                 </Text>
                 <Text style={styles.aboutText}>
                     Based on research by Dr. Abdulazeez Abdulraheem

@@ -72,9 +72,9 @@ export default function HomeScreen({ navigation }) {
             </View>
 
             <View style={styles.progressCard}>
-                <Text style={styles.progressTitle}>Qur'an coverage</Text>
+                <Text style={styles.progressTitle}>Qur&apos;an coverage</Text>
                 <Text style={styles.progressPercentage}>{coverage.toFixed(1)}%</Text>
-                <Text style={styles.progressSubtext}>of the Qur'an's words you can now understand</Text>
+                <Text style={styles.progressSubtext}>of the Qur&apos;an&apos;s words you can now understand</Text>
                 <View style={styles.progressBar}>
                     <View style={[styles.progressFill, { width: `${Math.min(100, (coverage / 82.6) * 100)}%` }]} />
                 </View>

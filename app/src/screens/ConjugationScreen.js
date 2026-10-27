@@ -25,7 +25,7 @@ function TableView({ gender }) {
     return (
         <ScrollView contentContainerStyle={styles.body}>
             <Text style={styles.note}>
-                Sample verb فَعَلَ "to do". Every regular verb follows this pattern (from the PDF, pp. 35-38).
+                Sample verb فَعَلَ &quot;to do&quot;. Every regular verb follows this pattern (from the PDF, pp. 35-38).
             </Text>
 
             <Text style={styles.sectionTitle}>Past & present</Text>
@@ -138,7 +138,7 @@ function Drill() {
             <View style={styles.questionCard}>
                 <Text style={styles.english}>{q.gender === 'masculine' ? 'Masculine' : 'Feminine'} · {q.tense}</Text>
                 <Text style={styles.bigArabic}>{q.pronoun}</Text>
-                <Text style={styles.english}>"{q.meaning}"</Text>
+                <Text style={styles.english}>&quot;{q.meaning}&quot;</Text>
             </View>
             {q.options.map((option) => {
                 const isAnswer = option === q.answer;

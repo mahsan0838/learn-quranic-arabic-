@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { computeReminderDates, labelFor, reminderMessage } from '../src/utils/reminders.js';
+import { computeReminderDates, labelFor, reminderMessage } from '../src/utils/reminders.ts';
 
 const at = (d, h, m = 0) => new Date(2026, 0, d, h, m);
 

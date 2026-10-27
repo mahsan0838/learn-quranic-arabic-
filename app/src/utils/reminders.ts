@@ -6,15 +6,29 @@ export const REMINDER_PRESETS = [
   { hour: 21, minute: 0, label: '9:00 PM' },
 ];
 
-export const labelFor = (hour, minute) =>
+export const labelFor = (hour: number, minute: number): string =>
   REMINDER_PRESETS.find((p) => p.hour === hour && p.minute === minute)?.label ??
   `${hour % 12 || 12}:${String(minute).padStart(2, '0')} ${hour < 12 ? 'AM' : 'PM'}`;
+
+type ReminderInput = {
+  hour: number;
+  minute: number;
+  now?: Date;
+  goalReachedToday?: boolean;
+  days?: number;
+};
 
 // The next `days` moments a reminder should fire. Today's slot is skipped when it has
 // already passed or the daily goal is already met, so people who did their review
 // are not nagged.
-export const computeReminderDates = ({ hour, minute, now = new Date(), goalReachedToday = false, days = 7 }) => {
-  const dates = [];
+export const computeReminderDates = ({
+  hour,
+  minute,
+  now = new Date(),
+  goalReachedToday = false,
+  days = 7,
+}: ReminderInput): Date[] => {
+  const dates: Date[] = [];
   for (let offset = 0; dates.length < days; offset++) {
     const at = new Date(now.getFullYear(), now.getMonth(), now.getDate() + offset, hour, minute, 0, 0);
     if (offset === 0 && (goalReachedToday || at <= now)) continue;
@@ -23,7 +37,7 @@ export const computeReminderDates = ({ hour, minute, now = new Date(), goalReach
   return dates;
 };
 
-export const reminderMessage = (streak) =>
+export const reminderMessage = (streak: number): { title: string; body: string } =>
   streak > 0
     ? { title: `🔥 ${streak}-day streak`, body: 'A few minutes of review keeps it alive. Your cards are waiting.' }
     : { title: 'Time for your Arabic review', body: 'A few minutes a day gets you to 80% of the Qur’an.' };

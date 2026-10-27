@@ -8,7 +8,9 @@
 - Done since: verb tables + drill, quiz modes (Arabic→meaning, meaning→Arabic; all / per-module / weak words).
 - Done: Amiri Arabic font bundled (covers every character in the data).
 - Done: daily reminders (local notifications, skipped on days the goal is met).
-- Still open: human proofread of the Arabic, native review of the Urdu, word audio, TypeScript/lint, EAS build (needs an Android package id).
+- Done: ESLint (clean), TypeScript for the pure logic modules (`npm run typecheck`), CI (`.github/workflows/ci.yml`).
+- Out of scope by decision: recorded word audio (the Learn screen keeps its existing device text-to-speech button as is).
+- Still open: human proofread of the Arabic, native review of the Urdu, EAS release build (needs an Android package id).
 
 ---
 
@@ -44,7 +46,6 @@ The app shell is nice (5 screens, theme, storage helpers), but **the app has ~5%
 ### C. Product / learning design
 - "Spaced repetition" is claimed in README but there is **no scheduling** — only a 1–5 number stored and never read.
 - No Arabic font specified (tashkeel can render badly on default Android fonts) — need e.g. Amiri / Noto Naskh.
-- No audio assets; relies on device TTS `ar`, which many Android devices don't have installed.
 - Emoji tab icons, no tests, no lint, no TypeScript, all data/logic inside screens (word list built in 3 places).
 
 ### D. Repo hygiene
@@ -81,7 +82,6 @@ Stop OCR-ing Arabic. Options, in order of preference:
 - [ ] Unify progress model: one `wordState` record (new → learning → mastered) fed by Learn, Flashcards and Quiz.
 - [ ] Quiz modes: Arabic→meaning, meaning→Arabic, listening; per-module and "weak words" quizzes; store `moduleId`.
 - [ ] Bundled Arabic font (Amiri/Noto Naskh Arabic) + Urdu Nastaliq font; proper RTL.
-- [ ] Bundled audio per word (recorded/ licensed, e.g. from Quran Corpus recitation) with TTS only as fallback.
 - [ ] Coverage meter that reflects real Quran coverage: sum of learned-word frequencies / total, not `learned/300`.
 
 ### Phase 4 — Polish & release (1 week)
@@ -100,5 +100,5 @@ Stop OCR-ing Arabic. Options, in order of preference:
 
 ## 4. Open questions
 - Is the PDF (Dr. Abdulraheem's book) licensed for redistribution inside an app? If not, build the list from Quran Corpus data and treat the PDF as reference only.
-- Android only, or iOS/web too? (affects audio & fonts choices)
+- Android only, or iOS/web too? (affects font choices)
 - Is Urdu a hard requirement for v1 (needs a native reviewer)?

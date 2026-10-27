@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { buildQuiz, weakWords } from '../src/utils/quiz.js';
+import { buildQuiz, weakWords } from '../src/utils/quiz.ts';
 
 const vocab = JSON.parse(readFileSync(new URL('../src/data/vocab.json', import.meta.url), 'utf8'));
 const ALL = ['module_1', 'module_2', 'module_3'].flatMap((k) => vocab[k].words);

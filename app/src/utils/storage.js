@@ -44,7 +44,7 @@ export const getLearnedWordsCount = async () => {
   try {
     const progress = await getProgress();
     return Object.keys(progress).length;
-  } catch (error) {
+  } catch (_error) {
     return 0;
   }
 };
@@ -86,7 +86,7 @@ export const getAverageQuizAccuracy = async () => {
     if (scores.length === 0) return 0;
     const total = scores.reduce((sum, s) => sum + s.percentage, 0);
     return Math.round(total / scores.length);
-  } catch (error) {
+  } catch (_error) {
     return 0;
   }
 };
@@ -173,7 +173,7 @@ const bumpLongestStreak = async (streak) => {
 export const getLongestStreak = async () => {
   try {
     return parseInt((await AsyncStorage.getItem(STORAGE_KEYS.LONGEST_STREAK)) || '0');
-  } catch (error) {
+  } catch (_error) {
     return 0;
   }
 };
@@ -182,7 +182,7 @@ export const getStreak = async () => {
   try {
     const streak = await AsyncStorage.getItem(STORAGE_KEYS.STREAK);
     return parseInt(streak || '0');
-  } catch (error) {
+  } catch (_error) {
     return 0;
   }
 };
@@ -209,7 +209,7 @@ export const getPreferences = async () => {
   try {
     const data = await AsyncStorage.getItem(STORAGE_KEYS.PREFERENCES);
     return { ...DEFAULT_PREFERENCES, ...(data ? JSON.parse(data) : {}) };
-  } catch (error) {
+  } catch (_error) {
     return { ...DEFAULT_PREFERENCES };
   }
 };

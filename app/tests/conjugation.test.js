@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { buildConjugationDrill } from '../src/utils/conjugation.js';
+import { buildConjugationDrill } from '../src/utils/conjugation.ts';
 
 const data = JSON.parse(readFileSync(new URL('../src/data/conjugation.json', import.meta.url), 'utf8'));
 

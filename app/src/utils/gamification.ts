@@ -7,14 +7,14 @@ export const XP = {
   quizCorrect: 15,
   quizPerfect: 50,
   dailyGoal: 25,
-};
+} as const;
 
 export const DAILY_GOAL = 15; // reviews per day
 
 // Level n starts at 60 * (n-1)^2 XP.
-export const levelFor = (xp) => Math.floor(Math.sqrt(xp / 60)) + 1;
+export const levelFor = (xp: number): number => Math.floor(Math.sqrt(xp / 60)) + 1;
 
-export const levelProgress = (xp) => {
+export const levelProgress = (xp: number) => {
   const level = levelFor(xp);
   const floor = 60 * (level - 1) ** 2;
   const ceiling = 60 * level ** 2;
@@ -27,16 +27,32 @@ export const levelProgress = (xp) => {
 };
 
 const TITLES = ['Beginner', 'Seeker', 'Reader', 'Student', 'Reciter', 'Scholar', 'Hafiz-in-training'];
-export const titleFor = (level) => TITLES[Math.min(level - 1, TITLES.length - 1)];
+export const titleFor = (level: number): string => TITLES[Math.min(level - 1, TITLES.length - 1)];
 
-export const dateKey = (time = Date.now()) => {
+export const dateKey = (time: number = Date.now()): string => {
   const d = new Date(time);
-  const pad = (n) => String(n).padStart(2, '0');
+  const pad = (n: number) => String(n).padStart(2, '0');
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 };
 
-// stats: { reviewsTotal, known, streak, coveragePct, perfectQuizzes, xp }
-export const BADGES = [
+export type Stats = {
+  reviewsTotal: number;
+  known: number;
+  streak: number;
+  coveragePct: number;
+  perfectQuizzes: number;
+  xp: number;
+};
+
+export type Badge = {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
+  test: (stats: Stats) => boolean;
+};
+
+export const BADGES: Badge[] = [
   { id: 'first-review', icon: '🌱', title: 'First Steps', description: 'Review your first card', test: (s) => s.reviewsTotal >= 1 },
   { id: 'ten-words', icon: '🔟', title: 'Ten Words', description: 'Know 10 words', test: (s) => s.known >= 10 },
   { id: 'fifty-words', icon: '📘', title: 'Fifty Words', description: 'Know 50 words', test: (s) => s.known >= 50 },
@@ -49,5 +65,5 @@ export const BADGES = [
   { id: 'level-5', icon: '🏅', title: 'Level 5', description: 'Reach level 5', test: (s) => levelFor(s.xp) >= 5 },
 ];
 
-export const newlyEarned = (stats, alreadyEarned) =>
+export const newlyEarned = (stats: Stats, alreadyEarned: string[]): Badge[] =>
   BADGES.filter((b) => !alreadyEarned.includes(b.id) && b.test(stats));

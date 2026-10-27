@@ -1,9 +1,9 @@
 // Run with: npm test   (Node's built-in runner; covers the pure game logic)
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { review, isDue, isKnown, buildSession, BOX_INTERVAL_DAYS } from '../src/utils/srs.js';
-import { levelFor, levelProgress, newlyEarned, dateKey, DAILY_GOAL } from '../src/utils/gamification.js';
-import { buildQuiz } from '../src/utils/quiz.js';
+import { review, isDue, isKnown, buildSession, BOX_INTERVAL_DAYS } from '../src/utils/srs.ts';
+import { levelFor, levelProgress, newlyEarned, dateKey, DAILY_GOAL } from '../src/utils/gamification.ts';
+import { buildQuiz } from '../src/utils/quiz.ts';
 
 const DAY = 24 * 60 * 60 * 1000;
 const noon = new Date(2026, 0, 10, 12).getTime();
