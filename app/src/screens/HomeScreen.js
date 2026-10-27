@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
+import { useFocusEffect } from '@react-navigation/native';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { COLORS, SIZES, SPACING } from '../constants/theme';
 import { getLearnedWordsCount, getStreak } from '../utils/storage';
@@ -8,9 +9,11 @@ export default function HomeScreen({ navigation }) {
     const [streak, setStreak] = useState(0);
     const [progressPercentage, setProgressPercentage] = useState(0);
 
-    useEffect(() => {
-        loadProgress();
-    }, []);
+    useFocusEffect(
+        useCallback(() => {
+            loadProgress();
+        }, [])
+    );
 
     const loadProgress = async () => {
         const learned = await getLearnedWordsCount();

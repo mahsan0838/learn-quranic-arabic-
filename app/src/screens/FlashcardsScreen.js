@@ -1,43 +1,30 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { COLORS, SIZES, SPACING } from '../constants/theme';
-import vocabData from '../data/vocab.json';
+import { ALL_WORDS } from '../data/words';
 import { saveFlashcardProgress } from '../utils/storage';
-
-const { width } = Dimensions.get('window');
+import useLanguage from '../hooks/useLanguage';
 
 export default function FlashcardsScreen() {
-    const [currentIndex, setCurrentIndex] = useState(0);
+    // Cards still to be answered this session; the front of the array is current.
+    const [queue, setQueue] = useState(ALL_WORDS);
     const [isFlipped, setIsFlipped] = useState(false);
-    const [selectedLanguage, setSelectedLanguage] = useState('english');
+    const [language] = useLanguage();
 
-    // Combine all words from all modules
-    const allWords = [
-        ...vocabData.module_1.words,
-        ...vocabData.module_2.words,
-        ...vocabData.module_3.words,
-    ];
-
-    const currentWord = allWords[currentIndex];
+    const currentWord = queue[0];
+    const reviewed = ALL_WORDS.length - queue.length;
 
     const handleKnow = async () => {
-        // Save high familiarity (5 = know well)
         await saveFlashcardProgress(currentWord.id, 5);
-        // Move to next card
-        if (currentIndex < allWords.length - 1) {
-            setCurrentIndex(currentIndex + 1);
-            setIsFlipped(false);
-        }
+        setQueue(queue.slice(1));
+        setIsFlipped(false);
     };
 
+    // Missed cards go to the back of the queue so they come around again.
     const handleDontKnow = async () => {
-        // Save low familiarity (2 = needs review)
         await saveFlashcardProgress(currentWord.id, 2);
-        // Move to next card (in real app, would add to review pile)
-        if (currentIndex < allWords.length - 1) {
-            setCurrentIndex(currentIndex + 1);
-            setIsFlipped(false);
-        }
+        setQueue([...queue.slice(1), currentWord]);
+        setIsFlipped(false);
     };
 
     if (!currentWord) {
@@ -47,7 +34,7 @@ export default function FlashcardsScreen() {
                 <TouchableOpacity
                     style={styles.restartButton}
                     onPress={() => {
-                        setCurrentIndex(0);
+                        setQueue(ALL_WORDS);
                         setIsFlipped(false);
                     }}
                 >
@@ -61,7 +48,7 @@ export default function FlashcardsScreen() {
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.progressText}>
-                    {currentIndex + 1} / {allWords.length}
+                    {reviewed} / {ALL_WORDS.length} known · {queue.length} left
                 </Text>
             </View>
 
@@ -78,7 +65,7 @@ export default function FlashcardsScreen() {
                 ) : (
                     <View style={styles.cardBack}>
                         <Text style={styles.meaningText}>
-                            {selectedLanguage === 'english' ? currentWord.english : currentWord.urdu}
+                            {language === 'english' ? currentWord.english : currentWord.urdu}
                         </Text>
                         <Text style={styles.infoText}>{currentWord.grammatical_info}</Text>
                     </View>

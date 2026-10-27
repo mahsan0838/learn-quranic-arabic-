@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
+import { useFocusEffect } from '@react-navigation/native';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { COLORS, SIZES, SPACING } from '../constants/theme';
 import { getLearnedWordsCount, getStreak, getAverageQuizAccuracy } from '../utils/storage';
@@ -11,9 +12,11 @@ export default function ProfileScreen() {
         quizAccuracy: 0,
     });
 
-    useEffect(() => {
-        loadStats();
-    }, []);
+    useFocusEffect(
+        useCallback(() => {
+            loadStats();
+        }, [])
+    );
 
     const loadStats = async () => {
         const learned = await getLearnedWordsCount();

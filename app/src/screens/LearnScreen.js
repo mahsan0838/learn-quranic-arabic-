@@ -1,18 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Alert } from 'react-native';
+import { useFocusEffect } from '@react-navigation/native';
 import { COLORS, SIZES, SPACING } from '../constants/theme';
-import vocabData from '../data/vocab.json';
+import { MODULE_IDS, getModule } from '../data/words';
 import * as Speech from 'expo-speech';
-import { saveProgress } from '../utils/storage';
+import { saveProgress, getProgress } from '../utils/storage';
+import useLanguage from '../hooks/useLanguage';
 
 export default function LearnScreen({ route }) {
-    const { module = 1 } = route?.params || {};
-    const [selectedLanguage, setSelectedLanguage] = useState('english'); // 'english' or 'urdu'
+    const [moduleId, setModuleId] = useState(route?.params?.module ?? 1);
+    const [selectedLanguage, setSelectedLanguage] = useLanguage();
     const [isSpeaking, setIsSpeaking] = useState(false);
+    const [learned, setLearned] = useState({});
 
-    // Get module data
-    const moduleKey = `module_${module}`;
-    const moduleData = vocabData[moduleKey];
+    // Home navigates here with a module param; follow it when it changes.
+    useEffect(() => {
+        if (route?.params?.module) setModuleId(route.params.module);
+    }, [route?.params?.module]);
+
+    useFocusEffect(
+        useCallback(() => {
+            getProgress().then(setLearned);
+        }, [])
+    );
+
+    const moduleData = getModule(moduleId);
 
     const playPronunciation = async (arabicText) => {
         try {
@@ -22,6 +34,7 @@ export default function LearnScreen({ route }) {
                 pitch: 1.0,
                 rate: 0.75, // Slower for learning
                 onDone: () => setIsSpeaking(false),
+                onStopped: () => setIsSpeaking(false),
                 onError: () => {
                     setIsSpeaking(false);
                     Alert.alert('Error', 'Could not play pronunciation');
@@ -36,7 +49,7 @@ export default function LearnScreen({ route }) {
     const markAsLearned = async (wordId) => {
         const success = await saveProgress(wordId, 'learned');
         if (success) {
-            Alert.alert('Success', 'Word marked as learned!');
+            setLearned((prev) => ({ ...prev, [wordId]: { status: 'learned' } }));
         }
     };
 
@@ -56,6 +69,19 @@ export default function LearnScreen({ route }) {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
+                <View style={styles.languageToggle}>
+                    {MODULE_IDS.map((id) => (
+                        <TouchableOpacity
+                            key={id}
+                            style={[styles.toggleButton, moduleId === id && styles.toggleButtonActive]}
+                            onPress={() => setModuleId(id)}
+                        >
+                            <Text style={[styles.toggleText, moduleId === id && styles.toggleTextActive]}>
+                                Module {id}
+                            </Text>
+                        </TouchableOpacity>
+                    ))}
+                </View>
                 <Text style={styles.headerTitle}>{moduleData.name}</Text>
                 <Text style={styles.headerSubtitle}>{moduleData.description}</Text>
 
@@ -103,8 +129,11 @@ export default function LearnScreen({ route }) {
                             <TouchableOpacity
                                 style={styles.learnedButton}
                                 onPress={() => markAsLearned(word.id)}
+                                disabled={!!learned[word.id]}
                             >
-                                <Text style={styles.learnedButtonText}>✓ Mark as Learned</Text>
+                                <Text style={styles.learnedButtonText}>
+                                    {learned[word.id] ? '✓ Learned' : '✓ Mark as Learned'}
+                                </Text>
                             </TouchableOpacity>
                         </View>
                     </View>

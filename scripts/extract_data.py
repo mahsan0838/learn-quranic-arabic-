@@ -79,7 +79,7 @@ def extract_all_pages(pdf_path, start_page, end_page):
     return all_text
 
 def main():
-    pdf_path = "80_percent (1).pdf"
+    pdf_path = "source/80_percent.pdf"
     
     print("=" * 60)
     print("QuranVoc 80 - OCR Data Extraction")

@@ -1,41 +1,20 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { COLORS, SIZES, SPACING } from '../constants/theme';
-import vocabData from '../data/vocab.json';
+import { ALL_WORDS } from '../data/words';
+import { buildQuiz } from '../utils/quiz';
 import { saveQuizScore } from '../utils/storage';
 
 export default function QuizScreen() {
+    const [questions, setQuestions] = useState(() => buildQuiz(ALL_WORDS));
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [score, setScore] = useState(0);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [showResult, setShowResult] = useState(false);
 
-    // Combine all words
-    const allWords = [
-        ...vocabData.module_1.words,
-        ...vocabData.module_2.words,
-        ...vocabData.module_3.words,
-    ];
-
-    // Generate quiz questions (first 10 words for demo)
-    const quizWords = allWords.slice(0, 10);
-    const currentWord = quizWords[currentQuestion];
-
-    // Generate answer options
-    const generateOptions = () => {
-        if (!currentWord) return [];
-
-        const correctAnswer = currentWord.english;
-        const wrongAnswers = allWords
-            .filter(w => w.id !== currentWord.id)
-            .map(w => w.english)
-            .sort(() => 0.5 - Math.random())
-            .slice(0, 3);
-
-        return [correctAnswer, ...wrongAnswers].sort(() => 0.5 - Math.random());
-    };
-
-    const options = generateOptions();
+    const current = questions[currentQuestion];
+    const currentWord = current?.word;
+    const options = current?.options ?? [];
 
     const handleAnswer = (answer) => {
         setSelectedAnswer(answer);
@@ -45,17 +24,17 @@ export default function QuizScreen() {
     };
 
     const handleNext = async () => {
-        if (currentQuestion < quizWords.length - 1) {
+        if (currentQuestion < questions.length - 1) {
             setCurrentQuestion(currentQuestion + 1);
             setSelectedAnswer(null);
         } else {
-            // Save quiz score before showing results
-            await saveQuizScore(score, quizWords.length);
+            await saveQuizScore(score, questions.length);
             setShowResult(true);
         }
     };
 
     const handleRestart = () => {
+        setQuestions(buildQuiz(ALL_WORDS));
         setCurrentQuestion(0);
         setScore(0);
         setSelectedAnswer(null);
@@ -63,12 +42,12 @@ export default function QuizScreen() {
     };
 
     if (showResult) {
-        const percentage = Math.round((score / quizWords.length) * 100);
+        const percentage = Math.round((score / questions.length) * 100);
         return (
             <View style={styles.container}>
                 <View style={styles.resultContainer}>
                     <Text style={styles.resultTitle}>Quiz Complete! 🎉</Text>
-                    <Text style={styles.resultScore}>{score} / {quizWords.length}</Text>
+                    <Text style={styles.resultScore}>{score} / {questions.length}</Text>
                     <Text style={styles.resultPercentage}>{percentage}%</Text>
                     <TouchableOpacity style={styles.restartButton} onPress={handleRestart}>
                         <Text style={styles.restartButtonText}>Try Again</Text>
@@ -90,7 +69,7 @@ export default function QuizScreen() {
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.progressText}>
-                    Question {currentQuestion + 1} / {quizWords.length}
+                    Question {currentQuestion + 1} / {questions.length}
                 </Text>
                 <Text style={styles.scoreText}>Score: {score}</Text>
             </View>
@@ -127,7 +106,7 @@ export default function QuizScreen() {
             {selectedAnswer && (
                 <TouchableOpacity style={styles.nextButton} onPress={handleNext}>
                     <Text style={styles.nextButtonText}>
-                        {currentQuestion < quizWords.length - 1 ? 'Next Question' : 'See Results'}
+                        {currentQuestion < questions.length - 1 ? 'Next Question' : 'See Results'}
                     </Text>
                 </TouchableOpacity>
             )}
