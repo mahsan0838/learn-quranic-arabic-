@@ -1,0 +1,76 @@
+# Transcribed from source/80_percent.pdf (pages 22-27). Verb rows:
+#   past ; present ; imperative ; active participle ; verbal noun | english | note | frequency | category
+## 22 | فعل ثلاثي مجرد فتح يفتح
+فَعَلَ ; يَفْعَلُ ; افْعَلْ ; فَاعِل ; فِعْل | to do | | 105 | verb-fataha-yaftahu
+فَتَحَ ; يَفْتَحُ ; افْتَحْ ; فَاتِح ; فَتْح | to open; to give victory | | 29 | verb-fataha-yaftahu
+بَعَثَ ; يَبْعَثُ ; ابْعَثْ ; بَاعِث ; بَعْث | to raise; to resurrect | | 65 | verb-fataha-yaftahu
+جَعَلَ ; يَجْعَلُ ; اجْعَلْ ; جَاعِل ; جَعْل | to make, to place, to set up | | 346 | verb-fataha-yaftahu
+جَمَعَ ; يَجْمَعُ ; اجْمَعْ ; جَامِع ; جَمْع | to gather, to collect | | 40 | verb-fataha-yaftahu
+ذَهَبَ ; يَذْهَبُ ; اذْهَبْ ; ذَاهِب ; ذَهَاب | to go | | 35 | verb-fataha-yaftahu
+رَفَعَ ; يَرْفَعُ ; ارْفَعْ ; رَافِع ; رَفْع | to raise | | 28 | verb-fataha-yaftahu
+سَحَرَ ; يَسْحَرُ ; اسْحَرْ ; سَاحِر ; سِحْر | to enchant, to bewitch | | 49 | verb-fataha-yaftahu
+صَلَحَ ; يَصْلَحُ ; اصْلَحْ ; صَالِح ; مَصْلَحَة | to act righteously | | 131 | verb-fataha-yaftahu
+لَعَنَ ; يَلْعَنُ ; الْعَنْ ; لَاعِن ; لَعْن | to curse | | 27 | verb-fataha-yaftahu
+نَفَعَ ; يَنْفَعُ ; انْفَعْ ; نَافِع ; نَفْع | to profit | | 42 | verb-fataha-yaftahu
+## 30 | Last letter of the root is و or ي
+تَلَا ; يَتْلُو ; اتْلُ ; تَالٍ ; تِلَاوَة | to recite | | 61 | verb-weak-last
+دَعَا ; يَدْعُو ; ادْعُ ; دَاعٍ ; دُعَاء | to call; to pray | | 197 | verb-weak-last
+عَفَا ; يَعْفُو ; اعْفُ ; عَافٍ ; عَفْو | to forgo | | 30 | verb-weak-last
+بَغَى ; يَبْغِي ; ابْغِ ; بَاغٍ ; بَغْي | to want, to seek | | 29 | verb-weak-last
+جَرَى ; يَجْرِي ; اجْرِ ; جَارٍ ; جَرَيَان | to flow | | 60 | verb-weak-last
+جَزَى ; يَجْزِي ; اجْزِ ; جَازٍ ; جَزَاء | to reward | | 116 | verb-weak-last
+قَضَى ; يَقْضِي ; اقْضِ ; قَاضٍ ; قَضَاء | to decree; to fulfil | | 62 | verb-weak-last
+كَفَى ; يَكْفِي ; اكْفِ ; كَافٍ ; كِفَايَة | to suffice | | 32 | verb-weak-last
+هَدَى ; يَهْدِي ; اهْدِ ; هَادٍ ; هُدًى | to guide; to direct | | 163 | verb-weak-last
+خَشِيَ ; يَخْشَى ; اخْشَ ; خَاشٍ ; خَشْيَة | to fear | | 48 | verb-weak-last
+رَضِيَ ; يَرْضَى ; ارْضَ ; رَاضٍ ; رِضْوَان | to be satisfied, to be content | | 57 | verb-weak-last
+نَسِيَ ; يَنْسَى ; انْسَ ; نَاسٍ ; نِسْيَان | to forget | | 36 | verb-weak-last
+## 24 | فعل ثلاثي مجرد نصر ينصر
+سَجَدَ ; يَسْجُدُ ; اُسْجُدْ ; سَاجِد ; سُجُود | to prostrate | | 49 | verb-nasara-yansuru
+شَعَرَ ; يَشْعُرُ ; اُشْعُرْ ; شَاعِر ; شُعُور | to perceive | | 29 | verb-nasara-yansuru
+شَكَرَ ; يَشْكُرُ ; اُشْكُرْ ; شَاكِر ; شُكْر | to be grateful | | 63 | verb-nasara-yansuru
+صَدَقَ ; يَصْدُقُ ; اُصْدُقْ ; صَادِق ; صِدْق | to be true; to say the truth | | 89 | verb-nasara-yansuru
+عَبَدَ ; يَعْبُدُ ; اُعْبُدْ ; عَابِد ; عِبَادَة | to worship; to serve | | 143 | verb-nasara-yansuru
+فَسَقَ ; يَفْسُقُ ; اُفْسُقْ ; فَاسِق ; فِسْق | to transgress | | 54 | verb-nasara-yansuru
+قَتَلَ ; يَقْتُلُ ; اُقْتُلْ ; قَاتِل ; قَتْل | to kill; to slay | | 93 | verb-nasara-yansuru
+قَعَدَ ; يَقْعُدُ ; اُقْعُدْ ; قَاعِد ; قُعُود | to sit; to remain behind | | 23 | verb-nasara-yansuru
+كَتَبَ ; يَكْتُبُ ; اُكْتُبْ ; كَاتِب ; كِتَابَة | to prescribe; to write | | 56 | verb-nasara-yansuru
+كَفَرَ ; يَكْفُرُ ; اُكْفُرْ ; كَافِر ; كُفْر | to disbelieve; to be ungrateful | | 461 | verb-nasara-yansuru
+مَكَرَ ; يَمْكُرُ ; اُمْكُرْ ; مَاكِر ; مَكْر | to plot | | 43 | verb-nasara-yansuru
+نَظَرَ ; يَنْظُرُ ; اُنْظُرْ ; نَاظِر ; نَظَر | to look; to wait | | 95 | verb-nasara-yansuru
+## 25 | فعل ثلاثي مجرد ضرب يضرب
+ضَرَبَ ; يَضْرِبُ ; اضْرِبْ ; ضَارِب ; ضَرْب | to strike | | 58 | verb-daraba-yadribu
+حَمَلَ ; يَحْمِلُ ; احْمِلْ ; حَامِل ; حَمْل | to carry; to bear | | 50 | verb-daraba-yadribu
+صَبَرَ ; يَصْبِرُ ; اصْبِرْ ; صَابِر ; صَبْر | to bear with patience | | 94 | verb-daraba-yadribu
+ظَلَمَ ; يَظْلِمُ ; اظْلِمْ ; ظَالِم ; ظُلْم | to wrong | | 266 | verb-daraba-yadribu
+عَرَفَ ; يَعْرِفُ ; اعْرِفْ ; عَارِف ; مَعْرِفَة | to recognise | | 59 | verb-daraba-yadribu
+عَقَلَ ; يَعْقِلُ ; اعْقِلْ ; عَاقِل ; عَقْل | to understand; to comprehend | | 49 | verb-daraba-yadribu
+غَفَرَ ; يَغْفِرُ ; اغْفِرْ ; غَافِر ; مَغْفِرَة | to forgive; to cover | | 95 | verb-daraba-yadribu
+قَدَرَ ; يَقْدِرُ ; اقْدِرْ ; قَادِر ; قَدْر، قُدْرَة | to decree; to have power | | 47 | verb-daraba-yadribu
+كَذَبَ ; يَكْذِبُ ; اكْذِبْ ; كَاذِب ; كَذِب | to lie | | 76 | verb-daraba-yadribu
+كَسَبَ ; يَكْسِبُ ; اكْسِبْ ; كَاسِب ; كَسْب | to earn | | 62 | verb-daraba-yadribu
+مَلَكَ ; يَمْلِكُ ; امْلِكْ ; مَالِك ; مِلْك | to possess | | 49 | verb-daraba-yadribu
+## 26 | فعل ثلاثي مجرد سمع يسمع
+سَمِعَ ; يَسْمَعُ ; اسْمَعْ ; سَامِع ; سَمَاعَة | to hear | | 100 | verb-sami'a-yasma'u
+حَزِنَ ; يَحْزَنُ ; احْزَنْ ; حَازِن ; حُزْن | to be grieved | | 30 | verb-sami'a-yasma'u
+حَسِبَ ; يَحْسَبُ ; احْسَبْ ; حَاسِب ; حِسْب | to think; to consider | | 46 | verb-sami'a-yasma'u
+حَفِظَ ; يَحْفَظُ ; احْفَظْ ; حَافِظ ; حِفْظ | to guard; to protect | | 27 | verb-sami'a-yasma'u
+خَسِرَ ; يَخْسَرُ ; اخْسَرْ ; خَاسِر ; خُسْر | to lose | | 51 | verb-sami'a-yasma'u
+رَحِمَ ; يَرْحَمُ ; ارْحَمْ ; رَاحِم ; رَحْمَة | to have mercy on someone | | 148 | verb-sami'a-yasma'u
+شَهِدَ ; يَشْهَدُ ; اشْهَدْ ; شَاهِد ; شُهُود | to bear witness; to be present | | 66 | verb-sami'a-yasma'u
+عَلِمَ ; يَعْلَمُ ; اعْلَمْ ; عَالِم ; عِلْم | to know | | 518 | verb-sami'a-yasma'u
+عَمِلَ ; يَعْمَلُ ; اعْمَلْ ; عَامِل ; عَمَل | to work; to do | | 318 | verb-sami'a-yasma'u
+كَرِهَ ; يَكْرَهُ ; اكْرَهْ ; كَارِه ; كُرْه | to dislike; to detest | | 25 | verb-sami'a-yasma'u
+بَصِرَ ; يُبْصِرُ ; أَبْصِرْ ; بَاصِر ; بَصَر | to watch; to see | | 13 | verb-sami'a-yasma'u
+## 27 | The last two letters of the root are same (مُضَاعَف)
+حَيِيَ ; يَحْيَا ; احْيَ ; حَيّ ; حَيَاة | to live; to greet | | 83 | verb-doubled
+رَدَّ ; يَرُدُّ ; اُرْدُدْ ; رَادّ ; رَدّ | to give back; to return | | 45 | verb-doubled
+صَدَّ ; يَصُدُّ ; اُصْدُدْ ; صَادّ ; صَدّ | to turn away; to hinder | | 39 | verb-doubled
+ضَرَّ ; يَضُرُّ ; اُضْرُرْ ; ضَارّ ; ضَرّ | to hurt; to harm | | 31 | verb-doubled
+ضَلَّ ; يَضِلُّ ; اِضْلِلْ ; ضَالّ ; ضَلَالَة | to go astray; to err; to waste | | 113 | verb-doubled
+ظَنَّ ; يَظُنُّ ; اُظْنُنْ ; ظَانّ ; ظَنّ | to think; to believe | | 68 | verb-doubled
+عَدَّ ; يَعُدُّ ; اُعْدُدْ ; عَادّ ; عَدّ | to count | | 17 | verb-doubled
+غَرَّ ; يَغُرُّ ; اغْرُرْ ; غَارّ ; غُرُور | to beguile | | 24 | verb-doubled
+مَدَّ ; يَمُدُّ ; اُمْدُدْ ; مَادّ ; مَدّ | to spread out; to stretch | | 17 | verb-doubled
+مَسَّ ; يَمَسُّ ; امْسَسْ ; مَاسّ ; مَسّ | to touch | | 58 | verb-doubled
+وَدَّ ; يَوَدُّ ; اَوْدَدْ ; وَادّ ; وُدّ | to love; to wish | | 18 | verb-doubled

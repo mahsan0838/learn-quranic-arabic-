@@ -1,0 +1,62 @@
+# Transcribed from source/80_percent.pdf (pages 23, 28, 29, 31, 32). Same format as module3a.txt.
+## 23 | فعل ثلاثي مجرد نصر ينصر
+نَصَرَ ; يَنْصُرُ ; اُنْصُرْ ; نَاصِر ; نَصْر | to help; to deliver | | 92 | verb-nasara-yansuru
+بَلَغَ ; يَبْلُغُ ; اُبْلُغْ ; بَالِغ ; بُلُوغ | to reach | | 49 | verb-nasara-yansuru
+تَرَكَ ; يَتْرُكُ ; اُتْرُكْ ; تَارِك ; تَرْك | to leave | | 43 | verb-nasara-yansuru
+حَشَرَ ; يَحْشُرُ ; اُحْشُرْ ; حَاشِر ; حَشْر | to gather; to bring together | | 43 | verb-nasara-yansuru
+حَكَمَ ; يَحْكُمُ ; اُحْكُمْ ; حَاكِم ; حُكْم | to judge; to rule | | 80 | verb-nasara-yansuru
+خَرَجَ ; يَخْرُجُ ; اُخْرُجْ ; خَارِج ; خُرُوج | to come out | | 61 | verb-nasara-yansuru
+خَلَدَ ; يَخْلُدُ ; اُخْلُدْ ; خَالِد ; خُلُود | to live forever | | 83 | verb-nasara-yansuru
+خَلَقَ ; يَخْلُقُ ; اُخْلُقْ ; خَالِق ; خَلْق | to create out of nothing | | 248 | verb-nasara-yansuru
+دَخَلَ ; يَدْخُلُ ; اُدْخُلْ ; دَاخِل ; دُخُول | to enter | | 78 | verb-nasara-yansuru
+ذَكَرَ ; يَذْكُرُ ; اُذْكُرْ ; ذَاكِر ; ذِكْر | to remember | | 163 | verb-nasara-yansuru
+رَزَقَ ; يَرْزُقُ ; اُرْزُقْ ; رَازِق ; رِزْق | to provide | | 122 | verb-nasara-yansuru
+## 28 | First letter of the root is و or ي (مِثَال)
+وَذَرَ ; يَذَرُ ; ذَرْ ; وَاذِر ; وَذْر | to leave behind | | 45 | verb-initial-weak
+وَضَعَ ; يَضَعُ ; ضَعْ ; وَاضِع ; وُضْع | to put; to set | | 22 | verb-initial-weak
+وَقَعَ ; يَقَعُ ; قَعْ ; وَاقِع ; وُقُوع | to befall | | 20 | verb-initial-weak
+وَهَبَ ; يَهَبُ ; هَبْ ; وَاهِب ; وَهْب | to grant | | 23 | verb-initial-weak
+وَجَدَ ; يَجِدُ ; جِدْ ; وَاجِد ; وُجُود | to find | | 107 | verb-initial-weak
+وَرِثَ ; يَرِثُ ; رِثْ ; وَارِث ; وِرَاثَة | to inherit | | 19 | verb-initial-weak
+وَزَرَ ; يَزِرُ ; زِرْ ; وَازِر ; وِزْر | to bear a load | | 19 | verb-initial-weak
+وَصَفَ ; يَصِفُ ; صِفْ ; وَاصِف ; وَصْف | to describe; to ascribe | | 14 | verb-initial-weak
+وَعَدَ ; يَعِدُ ; عِدْ ; وَاعِد ; وَعْد | to promise | | 124 | verb-initial-weak
+وَقَى ; يَقِي ; قِ ; وَاقٍ ; وِقَايَة | to protect; to save | | 19 | verb-initial-weak
+وَسِعَ ; يَسَعُ ; سَعْ ; وَاسِع ; سَعَة | to embrace; to comprehend | check | 25 | verb-initial-weak
+## 29 | Second letter of the root is و or ي (أَجْوَف)
+تَابَ ; يَتُوبُ ; تُبْ ; تَائِب ; تَوْبَة | to repent | | 72 | verb-hollow
+ذَاقَ ; يَذُوقُ ; ذُقْ ; ذَائِق ; ذَوْق | to taste | | 42 | verb-hollow
+فَازَ ; يَفُوزُ ; فُزْ ; فَائِز ; فَوْز | to succeed; to gain victory | | 26 | verb-hollow
+قَالَ ; يَقُولُ ; قُلْ ; قَائِل ; قَوْل | to say | | 1719 | verb-hollow
+قَامَ ; يَقُومُ ; قُمْ ; قَائِم ; قِيَام | to stand up; to raise | | 55 | verb-hollow
+كَانَ ; يَكُونُ ; كُنْ ; كَائِن ; كَوْن | to be | | 1361 | verb-hollow
+مَاتَ ; يَمُوتُ ; مُتْ ; مَائِت ; مَوْت | to die | | 93 | verb-hollow
+خَافَ ; يَخَافُ ; خَفْ ; خَائِف ; خَوْف | to be afraid | | 112 | verb-hollow
+كَادَ ; يَكَادُ ; كَدْ ; كَائِد ; كَوْد | to become nigh; to be close to | | 24 | verb-hollow
+كَادَ ; يَكِيدُ ; كِدْ ; كَائِد ; كَيْد | to plot against | | 35 | verb-hollow
+زَادَ ; يَزِيدُ ; زِدْ ; زَائِد ; زِيَادَة | to increase | | 51 | verb-hollow
+## 31 | Anyone of the 3 letters of the root is hamzah (مَهْمُوز)
+سَأَلَ ; يَسْأَلُ ; سَلْ ; سَائِل ; سُؤَال | to ask | | 119 | verb-hamzated
+قَرَأَ ; يَقْرَأُ ; اقْرَأْ ; قَارِئ ; قِرَاءَة | to read; to recite | | 17 | verb-hamzated
+أَخَذَ ; يَأْخُذُ ; خُذْ ; آخِذ ; أَخْذ | to take; to catch | | 142 | verb-hamzated
+أَكَلَ ; يَأْكُلُ ; كُلْ ; آكِل ; أَكْل | to eat | | 101 | verb-hamzated
+أَمَرَ ; يَأْمُرُ ; مُرْ ; آمِر ; أَمْر | to command | | 232 | verb-hamzated
+أَمِنَ ; يَأْمَنُ ; ائْمَنْ ; آمِن ; أَمْن | to be safe; to feel safe; to trust | | 25 | verb-hamzated
+أَبَى ; يَأْبَى ; إِئْبَ ; آبٍ ; إِبَاء | to refuse | | 13 | verb-hamzated
+رَأَى ; يَرَى ; رَ ; رَاءٍ ; رُؤْيَة | to see | | 269 | verb-hamzated
+أَتَى ; يَأْتِي ; ائْتِ ; آتٍ ; إِتْيَان | to come | | 263 | verb-hamzated
+شَاءَ ; يَشَاءُ ; شَأْ ; شَاءٍ ; مَشِيئَة | to will, to wish | | 277 | verb-hamzated
+سَاءَ ; يَسُوءُ ; سُؤْ ; سَاوِئ ; سُوء | to be evil | | 39 | verb-hamzated
+جَاءَ ; يَجِيءُ ; جِئْ ; جَائِي ; مَجِيء | to come | | 236 | verb-hamzated
+## 32 | فعل ثلاثي مزيد فيه فَعَّلَ (Form II)
+بَدَّلَ ; يُبَدِّلُ ; بَدِّلْ ; مُبَدِّل ; تَبْدِيل | to change | | 33 | verb-form-2
+بَشَّرَ ; يُبَشِّرُ ; بَشِّرْ ; مُبَشِّر ; تَبْشِير | to give good news | | 48 | verb-form-2
+بَيَّنَ ; يُبَيِّنُ ; بَيِّنْ ; مُبَيِّن ; تَبْيِين | to make clear | | 35 | verb-form-2
+زَيَّنَ ; يُزَيِّنُ ; زَيِّنْ ; مُزَيِّن ; تَزْيِين | to adorn/make st seem fair | | 26 | verb-form-2
+سَبَّحَ ; يُسَبِّحُ ; سَبِّحْ ; مُسَبِّح ; تَسْبِيح | to glorify; to praise | | 48 | verb-form-2
+سَخَّرَ ; يُسَخِّرُ ; سَخِّرْ ; مُسَخِّر ; تَسْخِير | to bring under control | | 26 | verb-form-2
+صَدَّقَ ; يُصَدِّقُ ; صَدِّقْ ; مُصَدِّق ; تَصْدِيق | to pronounce ss to be true | | 31 | verb-form-2
+عَذَّبَ ; يُعَذِّبُ ; عَذِّبْ ; مُعَذِّب ; تَعْذِيب | to punish; to torment | | 49 | verb-form-2
+عَلَّمَ ; يُعَلِّمُ ; عَلِّمْ ; مُعَلِّم ; تَعْلِيم | to teach | | 42 | verb-form-2
+قَدَّمَ ; يُقَدِّمُ ; قَدِّمْ ; مُقَدِّم ; تَقْدِيم | to send forward | | 27 | verb-form-2
+كَذَّبَ ; يُكَذِّبُ ; كَذِّبْ ; مُكَذِّب ; تَكْذِيب | to accuse ss of falsehood | | 198 | verb-form-2

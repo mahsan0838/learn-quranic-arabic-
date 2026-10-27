@@ -15,11 +15,11 @@ npm run android    # or open on an Android emulator
 
 - `app/` — the Expo app (`src/screens`, `src/utils`, `src/data/vocab.json`, `src/constants/theme.js`)
 - `docs/data-pipeline.md` — word schema and the state of data extraction
-- `docs/PROGRESS.md` — manual data-entry tracker
+- `data/pdf/` — hand-transcribed PDF pages (source for `vocab.json`; rebuild with `scripts/build_vocab.py`)
 - `scripts/` — Python helpers for PDF analysis and vocab validation
 - `source/` — local copy of the source PDF (git-ignored)
 - `plan.md` — audit and roadmap
 
 ## Status
 
-The UI is working but `vocab.json` has only 15 of 300 words. See `plan.md` for what comes next.
+The vocabulary (570 entries, PDF pages 8-41) is transcribed from the PDF into `data/pdf/` and built into `app/src/data/vocab.json`. It still needs a proofread against the PDF; see `docs/data-pipeline.md`.

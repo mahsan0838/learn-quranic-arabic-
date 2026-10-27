@@ -1,0 +1,59 @@
+{
+  "_source": "source/80_percent.pdf pages 42-45 (booklet pp. 35-38), sample verb table on the root ف-ع-ل. Reference material, not vocabulary.",
+  "masculine": {
+    "active": [
+      { "pronoun": "هُوَ",     "past": "فَعَلَ",    "pastEn": "He did.",              "present": "يَفْعَلُ",    "presentEn": "He does. He will do.",        "suffix": "ـهُ" },
+      { "pronoun": "هُمَا",    "past": "فَعَلَا",   "pastEn": "They two did.",        "present": "يَفْعَلَانِ",  "presentEn": "They two do/will do.",        "suffix": "ـهُمَا" },
+      { "pronoun": "هُمْ",     "past": "فَعَلُوا",  "pastEn": "They all did.",        "present": "يَفْعَلُونَ",  "presentEn": "They do. They will do.",      "suffix": "ـهُمْ" },
+      { "pronoun": "أَنْتَ",   "past": "فَعَلْتَ",  "pastEn": "You did.",             "present": "تَفْعَلُ",    "presentEn": "You do. You will do.",        "suffix": "ـكَ" },
+      { "pronoun": "أَنْتُمَا", "past": "فَعَلْتُمَا","pastEn": "You two did.",        "present": "تَفْعَلَانِ",  "presentEn": "You do/will do.",             "suffix": "ـكُمَا" },
+      { "pronoun": "أَنْتُمْ", "past": "فَعَلْتُمْ","pastEn": "You all did.",         "present": "تَفْعَلُونَ",  "presentEn": "You all do. You all will do.","suffix": "ـكُمْ" },
+      { "pronoun": "أَنَا",    "past": "فَعَلْتُ",  "pastEn": "I did.",               "present": "أَفْعَلُ",    "presentEn": "I do. I will do.",            "suffix": "ـي / ـنِي" },
+      { "pronoun": "نَحْنُ",   "past": "فَعَلْنَا", "pastEn": "We did.",              "present": "نَفْعَلُ",    "presentEn": "We do. We will do.",          "suffix": "ـنَا" }
+    ],
+    "negativeImperative": [
+      { "en": "Don't do!",               "ar": "لَا تَفْعَلْ",   "number": "singular" },
+      { "en": "Don't (you two) do!",     "ar": "لَا تَفْعَلَا",  "number": "dual" },
+      { "en": "Don't (you all) do!",     "ar": "لَا تَفْعَلُوا", "number": "plural" }
+    ],
+    "imperative": [
+      { "en": "Do!",               "ar": "اِفْعَلْ",  "number": "singular" },
+      { "en": "Do (you two)!",     "ar": "اِفْعَلَا", "number": "dual" },
+      { "en": "Do (you all)!",     "ar": "اِفْعَلُوا", "number": "plural" }
+    ],
+    "passive": { "past": "فُعِلَ", "pastEn": "(it) is done.", "present": "يُفْعَلُ", "presentEn": "(it) is being done." },
+    "participles": {
+      "active":  { "singular": "فَاعِل", "dual": "فَاعِلَانِ، فَاعِلَيْنِ", "plural": "فَاعِلُونَ، فَاعِلِينَ", "en": "Doer." },
+      "passive": { "singular": "مَفْعُول", "dual": "مَفْعُولَانِ، مَفْعُولَيْنِ", "plural": "مَفْعُولُونَ، مَفْعُولِينَ", "en": "The one who is affected." }
+    },
+    "verbalNoun": { "ar": "فِعْل", "en": "action; act of doing" }
+  },
+  "feminine": {
+    "active": [
+      { "pronoun": "هِيَ",     "past": "فَعَلَتْ",   "pastEn": "She did.",       "present": "تَفْعَلُ",    "presentEn": "She does. She will do.",  "suffix": "ـهَا" },
+      { "pronoun": "هُمَا",    "past": "فَعَلَتَا",  "pastEn": "They two did.",  "present": "تَفْعَلَانِ",  "presentEn": "You do/will do.",         "suffix": "ـهُمَا" },
+      { "pronoun": "هُنَّ",    "past": "فَعَلْنَ",   "pastEn": "They all did.",  "present": "يَفْعَلْنَ",   "presentEn": "They do. They will do.",  "suffix": "ـهُنَّ" },
+      { "pronoun": "أَنْتِ",   "past": "فَعَلْتِ",   "pastEn": "You did.",       "present": "تَفْعَلِينَ",  "presentEn": "You do. You will do.",    "suffix": "ـكِ" },
+      { "pronoun": "أَنْتُمَا", "past": "فَعَلْتُمَا","pastEn": "You two did.",  "present": "تَفْعَلَانِ",  "presentEn": "You do/will do.",         "suffix": "ـكُمَا" },
+      { "pronoun": "أَنْتُنَّ", "past": "فَعَلْتُنَّ","pastEn": "You all did.",  "present": "تَفْعَلْنَ",   "presentEn": "You all do. You all will do.","suffix": "ـكُنَّ" },
+      { "pronoun": "أَنَا",    "past": "فَعَلْتُ",   "pastEn": "I did.",         "present": "أَفْعَلُ",    "presentEn": "I do. I will do.",        "suffix": "ـي / ـنِي" },
+      { "pronoun": "نَحْنُ",   "past": "فَعَلْنَا",  "pastEn": "We did.",        "present": "نَفْعَلُ",    "presentEn": "We do. We will do.",      "suffix": "ـنَا" }
+    ],
+    "negativeImperative": [
+      { "en": "Don't do!",           "ar": "لَا تَفْعَلِي",  "number": "singular" },
+      { "en": "Don't (you two) do!", "ar": "لَا تَفْعَلَا",  "number": "dual" },
+      { "en": "Don't (you all) do!", "ar": "لَا تَفْعَلْنَ", "number": "plural" }
+    ],
+    "imperative": [
+      { "en": "Do!",            "ar": "اِفْعَلِي",  "number": "singular" },
+      { "en": "Do (you two)!",  "ar": "اِفْعَلَا",  "number": "dual" },
+      { "en": "Do (you all)!",  "ar": "اِفْعَلْنَ", "number": "plural" }
+    ],
+    "passive": { "past": "فُعِلَتْ", "pastEn": "(it) is done.", "present": "تُفْعَلُ", "presentEn": "(it) is being done." },
+    "participles": {
+      "active":  { "singular": "فَاعِلَة", "dual": "فَاعِلَتَانِ، فَاعِلَتَيْنِ", "plural": "فَاعِلَات", "en": "Doer." },
+      "passive": { "singular": "مَفْعُولَة", "dual": "مَفْعُولَانِ، مَفْعُولَيْنِ", "plural": "مَفْعُولُونَ، مَفْعُولِينَ", "en": "The one who is affected." }
+    },
+    "verbalNoun": { "ar": "فِعْل", "en": "action; act of doing" }
+  }
+}

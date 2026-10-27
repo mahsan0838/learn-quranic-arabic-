@@ -42,8 +42,7 @@ def validate_vocab_json(filepath):
                     print(f"  Sample: {words[0].get('arabic', 'N/A')} - {words[0].get('english', 'N/A')}")
         
         print(f"\n{'='*60}")
-        print(f"TOTAL WORDS ENTERED: {total_words} / 300")
-        print(f"Progress: {(total_words/300)*100:.1f}%")
+        print(f"TOTAL WORDS ENTERED: {total_words}")
         print(f"{'='*60}\n")
         
         # Validation checks

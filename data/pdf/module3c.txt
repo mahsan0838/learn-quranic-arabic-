@@ -1,0 +1,50 @@
+# Transcribed from source/80_percent.pdf (pages 33-36). Same format as module3a.txt.
+## 33 | Form II (continued)
+نَبَّأَ ; يُنَبِّئُ ; نَبِّئْ ; مُنَبِّئ ; تَنْبِئَة | to declare; to apprise | | 46 | verb-form-2
+نَزَّلَ ; يُنَزِّلُ ; نَزِّلْ ; مُنَزِّل ; تَنْزِيل | to send down | | 79 | verb-form-2
+نَجَّى ; يُنَجِّي ; نَجِّ ; مُنَجٍّ ; تَنْجِيَة | to deliver; to rescue | | 39 | verb-form-2
+وَلَّى ; يُوَلِّي ; وَلِّ ; مُوَلٍّ ; تَوْلِيَة | to turn | | 45 | verb-form-2
+## 33 | Form III فَاعَلَ
+جَاهَدَ ; يُجَاهِدُ ; جَاهِدْ ; مُجَاهِد ; مُجَاهَدَة | to struggle; to strive | | 31 | verb-form-3
+قَاتَلَ ; يُقَاتِلُ ; قَاتِلْ ; مُقَاتِل ; مُقَاتَلَة | to fight | | 54 | verb-form-3
+نَادَى ; يُنَادِي ; نَادِ ; مُنَادٍ ; مُنَادَاة، نِدَاء | to call out; to cry unto | | 44 | verb-form-3
+نَافَقَ ; يُنَافِقُ ; نَافِقْ ; مُنَافِق ; مُنَافَقَة | to play hypocrisy | | 34 | verb-form-3
+هَاجَرَ ; يُهَاجِرُ ; هَاجِرْ ; مُهَاجِر ; مُهَاجَرَة | to migrate | | 24 | verb-form-3
+## 34 | Form IV أَفْعَلَ
+أَبْصَرَ ; يُبْصِرُ ; أَبْصِرْ ; مُبْصِر ; إِبْصَار | to see; to watch | | 36 | verb-form-4
+أَحْسَنَ ; يُحْسِنُ ; أَحْسِنْ ; مُحْسِن ; إِحْسَان | to do good; to do excellently | | 72 | verb-form-4
+أَخْرَجَ ; يُخْرِجُ ; أَخْرِجْ ; مُخْرِج ; إِخْرَاج | to bring forth | | 108 | verb-form-4
+أَدْخَلَ ; يُدْخِلُ ; أَدْخِلْ ; مُدْخِل ; إِدْخَال | to make ss enter | | 45 | verb-form-4
+أَرْجَعَ ; يُرْجِعُ ; أَرْجِعْ ; مُرْجِع ; إِرْجَاع | to send back; to take back | | 33 | verb-form-4
+أَرْسَلَ ; يُرْسِلُ ; أَرْسِلْ ; مُرْسِل ; إِرْسَال | to send | | 135 | verb-form-4
+أَسْرَفَ ; يُسْرِفُ ; أَسْرِفْ ; مُسْرِف ; إِسْرَاف | to exceed; to be extravagant | | 23 | verb-form-4
+أَسْلَمَ ; يُسْلِمُ ; أَسْلِمْ ; مُسْلِم ; إِسْلَام | to submit; to surrender | | 72 | verb-form-4
+أَشْرَكَ ; يُشْرِكُ ; أَشْرِكْ ; مُشْرِك ; إِشْرَاك | to ascribe a partner | | 120 | verb-form-4
+أَصْبَحَ ; يُصْبِحُ ; أَصْبِحْ ; مُصْبِح ; إِصْبَاح | to become | | 34 | verb-form-4
+أَصْلَحَ ; يُصْلِحُ ; أَصْلِحْ ; مُصْلِح ; إِصْلَاح | to become good; to make good | | 40 | verb-form-4
+## 35 | Form IV أَفْعَلَ (continued)
+أَعْرَضَ ; يُعْرِضُ ; أَعْرِضْ ; مُعْرِض ; إِعْرَاض | to turn away; to backslide | | 53 | verb-form-4
+أَغْرَقَ ; يُغْرِقُ ; أَغْرِقْ ; مُغْرِق ; إِغْرَاق | to drown | | 21 | verb-form-4
+أَفْسَدَ ; يُفْسِدُ ; أَفْسِدْ ; مُفْسِد ; إِفْسَاد | to spread corruption | | 36 | verb-form-4
+أَفْلَحَ ; يُفْلِحُ ; أَفْلِحْ ; مُفْلِح ; إِفْلَاح | to be successful | | 40 | verb-form-4
+أَنْبَتَ ; يُنْبِتُ ; أَنْبِتْ ; مُنْبِت ; إِنْبَات | to make st grow; to cause to grow | | 16 | verb-form-4
+أَنْذَرَ ; يُنْذِرُ ; أَنْذِرْ ; مُنْذِر ; إِنْذَار | to warn | | 70 | verb-form-4
+أَنْزَلَ ; يُنْزِلُ ; أَنْزِلْ ; مُنْزِل ; إِنْزَال | to send down; to reveal | | 190 | verb-form-4
+أَنْشَأَ ; يُنْشِئُ ; أَنْشِئْ ; مُنْشِئ ; إِنْشَاء | to produce/create; to make st grow | | 22 | verb-form-4
+أَنْعَمَ ; يُنْعِمُ ; أَنْعِمْ ; مُنْعِم ; إِنْعَام | to favour; to bestow grace | | 17 | verb-form-4
+أَنْفَقَ ; يُنْفِقُ ; أَنْفِقْ ; مُنْفِق ; إِنْفَاق | to spend | | 69 | verb-form-4
+أَنْكَرَ ; يُنْكِرُ ; أَنْكِرْ ; مُنْكِر ; إِنْكَار | to not recognize; to deny | | 25 | verb-form-4
+أَهْلَكَ ; يُهْلِكُ ; أَهْلِكْ ; مُهْلِك ; إِهْلَاك | to destroy | | 58 | verb-form-4
+## 36 | Form IV أَفْعَلَ (continued)
+أَتَمَّ ; يُتِمُّ ; أَتِمَّ ; مُتِمّ ; إِتْمَام | to complete | | 17 | verb-form-4
+أَحَبَّ ; يُحِبُّ ; أَحِبَّ ; مُحِبّ ; إِحْبَاب | to love | | 64 | verb-form-4
+أَحَلَّ ; يُحِلُّ ; أَحْلِلْ ; مُحِلّ ; إِحْلَال | to make lawful; to cause to dwell | | 21 | verb-form-4
+أَسَرَّ ; يُسِرُّ ; أَسْرِرْ ; مُسِرّ ; إِسْرَار | to conceal; to speak secretly | | 18 | verb-form-4
+أَضَلَّ ; يُضِلُّ ; أَضْلِلْ ; مُضِلّ ; إِضْلَال | to leave in error; to send astray | | 68 | verb-form-4
+أَعَدَّ ; يُعِدُّ ; أَعْدِدْ ; مُعِدّ ; إِعْدَاد | to prepare; to make st ready | | 20 | verb-form-4
+أَذَاقَ ; يُذِيقُ ; أَذِقْ ; مُذِيق ; إِذَاقَة | to make sb taste | | 22 | verb-form-4
+أَرَادَ ; يُرِيدُ ; أَرِدْ ; مُرِيد ; إِرَادَة | to intend; to wish | | 139 | verb-form-4
+أَصَابَ ; يُصِيبُ ; أَصِبْ ; مُصِيب ; إِصَابَة | to befall; to inflict | | 65 | verb-form-4
+أَطَاعَ ; يُطِيعُ ; أَطِعْ ; مُطِيع ; إِطَاعَة | to obey | | 74 | verb-form-4
+أَقَامَ ; يُقِيمُ ; أَقِمْ ; مُقِيم ; إِقَامَة | to establish; to set upright | | 67 | verb-form-4
+أَمَاتَ ; يُمِيتُ ; أَمِتْ ; مُمِيت ; إِمَاتَة | to cause someone to die | | 21 | verb-form-4

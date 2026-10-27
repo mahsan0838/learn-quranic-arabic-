@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { useFocusEffect } from '@react-navigation/native';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { COLORS, SIZES, SPACING } from '../constants/theme';
+import { TOTAL_WORDS } from '../data/words';
 import { getLearnedWordsCount, getStreak } from '../utils/storage';
 
 export default function HomeScreen({ navigation }) {
@@ -20,15 +21,14 @@ export default function HomeScreen({ navigation }) {
         const currentStreak = await getStreak();
         setWordsLearned(learned);
         setStreak(currentStreak);
-        // Calculate percentage based on 300 total words
-        setProgressPercentage(Math.round((learned / 300) * 100));
+        setProgressPercentage(Math.round((learned / TOTAL_WORDS) * 100));
     };
 
     return (
         <ScrollView style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.title}>QuranVoc 80</Text>
-                <Text style={styles.subtitle}>Learn 300 words, understand 80% of the Quran</Text>
+                <Text style={styles.subtitle}>Learn {TOTAL_WORDS} words, understand 82.6% of the Quran</Text>
             </View>
 
             <View style={styles.progressCard}>
@@ -59,7 +59,7 @@ export default function HomeScreen({ navigation }) {
                     onPress={() => navigation.navigate('Learn', { module: 1 })}
                 >
                     <Text style={styles.moduleTitle}>Module 1: High-Frequency Words</Text>
-                    <Text style={styles.moduleSubtitle}>41.5% coverage • Basic pronouns & prepositions</Text>
+                    <Text style={styles.moduleSubtitle}>41.5% of the Quran • pronouns, particles, prepositions</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -67,7 +67,7 @@ export default function HomeScreen({ navigation }) {
                     onPress={() => navigation.navigate('Learn', { module: 2 })}
                 >
                     <Text style={styles.moduleTitle}>Module 2: Key Nouns & Attributes</Text>
-                    <Text style={styles.moduleSubtitle}>Allah's names, Prophets, Day of Judgment</Text>
+                    <Text style={styles.moduleSubtitle}>Attributes of Allah, prophets, the Last Day, family, people</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -75,7 +75,7 @@ export default function HomeScreen({ navigation }) {
                     onPress={() => navigation.navigate('Learn', { module: 3 })}
                 >
                     <Text style={styles.moduleTitle}>Module 3: Essential Verbs</Text>
-                    <Text style={styles.moduleSubtitle}>Common Quranic verbs by form</Text>
+                    <Text style={styles.moduleSubtitle}>Verbs with past, present, imperative, participle & noun</Text>
                 </TouchableOpacity>
             </View>
         </ScrollView>

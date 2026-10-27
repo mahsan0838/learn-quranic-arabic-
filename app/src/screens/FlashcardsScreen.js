@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { COLORS, SIZES, SPACING } from '../constants/theme';
-import { ALL_WORDS } from '../data/words';
+import { ALL_WORDS, meaningOf, pickSession } from '../data/words';
 import { saveFlashcardProgress } from '../utils/storage';
 import useLanguage from '../hooks/useLanguage';
 
 export default function FlashcardsScreen() {
     // Cards still to be answered this session; the front of the array is current.
-    const [queue, setQueue] = useState(ALL_WORDS);
+    const [session, setSession] = useState(() => pickSession(ALL_WORDS));
+    const [queue, setQueue] = useState(session);
     const [isFlipped, setIsFlipped] = useState(false);
     const [language] = useLanguage();
 
     const currentWord = queue[0];
-    const reviewed = ALL_WORDS.length - queue.length;
+    const reviewed = session.length - queue.length;
 
     const handleKnow = async () => {
         await saveFlashcardProgress(currentWord.id, 5);
@@ -34,7 +35,9 @@ export default function FlashcardsScreen() {
                 <TouchableOpacity
                     style={styles.restartButton}
                     onPress={() => {
-                        setQueue(ALL_WORDS);
+                        const next = pickSession(ALL_WORDS);
+                        setSession(next);
+                        setQueue(next);
                         setIsFlipped(false);
                     }}
                 >
@@ -48,7 +51,7 @@ export default function FlashcardsScreen() {
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.progressText}>
-                    {reviewed} / {ALL_WORDS.length} known · {queue.length} left
+                    {reviewed} / {session.length} known · {queue.length} left
                 </Text>
             </View>
 
@@ -65,7 +68,7 @@ export default function FlashcardsScreen() {
                 ) : (
                     <View style={styles.cardBack}>
                         <Text style={styles.meaningText}>
-                            {language === 'english' ? currentWord.english : currentWord.urdu}
+                            {meaningOf(currentWord, language)}
                         </Text>
                         <Text style={styles.infoText}>{currentWord.grammatical_info}</Text>
                     </View>

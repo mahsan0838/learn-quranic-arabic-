@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Alert } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { COLORS, SIZES, SPACING } from '../constants/theme';
-import { MODULE_IDS, getModule } from '../data/words';
+import { MODULE_IDS, HAS_URDU, getModule, meaningOf } from '../data/words';
 import * as Speech from 'expo-speech';
 import { saveProgress, getProgress } from '../utils/storage';
 import useLanguage from '../hooks/useLanguage';
@@ -85,6 +85,7 @@ export default function LearnScreen({ route }) {
                 <Text style={styles.headerTitle}>{moduleData.name}</Text>
                 <Text style={styles.headerSubtitle}>{moduleData.description}</Text>
 
+                {HAS_URDU && (
                 <View style={styles.languageToggle}>
                     <TouchableOpacity
                         style={[styles.toggleButton, selectedLanguage === 'english' && styles.toggleButtonActive]}
@@ -103,6 +104,7 @@ export default function LearnScreen({ route }) {
                         </Text>
                     </TouchableOpacity>
                 </View>
+                )}
             </View>
 
             <ScrollView style={styles.wordList}>
@@ -110,12 +112,19 @@ export default function LearnScreen({ route }) {
                     <View key={word.id} style={styles.wordCard}>
                         <Text style={styles.arabicText}>{word.arabic}</Text>
                         <Text style={styles.meaningText}>
-                            {selectedLanguage === 'english' ? word.english : word.urdu}
+                            {meaningOf(word, selectedLanguage)}
                         </Text>
                         <View style={styles.infoRow}>
                             <Text style={styles.infoText}>{word.grammatical_info}</Text>
-                            <Text style={styles.frequencyText}>Frequency: {word.frequency}</Text>
+                            {word.frequency != null && (
+                                <Text style={styles.frequencyText}>Frequency: {word.frequency}</Text>
+                            )}
                         </View>
+                        {word.forms && (
+                            <Text style={styles.formsText}>
+                                {[word.forms.present, word.forms.imperative, word.forms.active_participle, word.forms.verbal_noun].join('   ')}
+                            </Text>
+                        )}
                         <View style={styles.buttonRow}>
                             <TouchableOpacity
                                 style={styles.ttsButton}
@@ -144,6 +153,12 @@ export default function LearnScreen({ route }) {
 }
 
 const styles = StyleSheet.create({
+    formsText: {
+        fontSize: SIZES.large,
+        color: COLORS.text,
+        textAlign: 'center',
+        marginBottom: SPACING.sm,
+    },
     container: {
         flex: 1,
         backgroundColor: COLORS.background,

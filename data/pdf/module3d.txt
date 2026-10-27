@@ -1,0 +1,46 @@
+# Transcribed from source/80_percent.pdf (pages 37-40). Same format as module3a.txt.
+## 37 | Form IV أَفْعَلَ (continued)
+أَحْيَا ; يُحْيِي ; أَحْيِ ; مُحْيٍ ; إِحْيَاء | to give life | | 53 | verb-form-4
+أَخْفَى ; يُخْفِي ; أَخْفِ ; مُخْفٍ ; إِخْفَاء | to conceal | | 18 | verb-form-4
+أَرَى ; يُرِي ; أَرِ ; مُرٍ ; إِرَاءَة | to show | | 44 | verb-form-4
+أَغْنَى ; يُغْنِي ; أَغْنِ ; مُغْنٍ ; إِغْنَاء | to enrich | | 41 | verb-form-4
+أَلْقَى ; يُلْقِي ; أَلْقِ ; مُلْقٍ ; إِلْقَاء | to throw; to cast; to place | | 71 | verb-form-4
+أَنْجَى ; يُنْجِي ; أَنْجِ ; مُنْجٍ ; إِنْجَاء | to rescue; to save; to deliver | | 23 | verb-form-4
+أَوْحَى ; يُوحِي ; أَوْحِ ; مُوحٍ ; إِيحَاء | to reveal; to inspire | | 72 | verb-form-4
+أَوْفَى ; يُوفِي ; أَوْفِ ; مُوفٍ ; إِيفَاء | to fulfil | | 18 | verb-form-4
+آمَنَ ; يُؤْمِنُ ; آمِنْ ; مُؤْمِن ; إِيمَان | to believe | | 782 | verb-form-4
+آتَى ; يُؤْتِي ; آتِ ; مُؤْتٍ ; إِيتَاء | to give | | 274 | verb-form-4
+آذَى ; يُؤْذِي ; آذِ ; مُؤْذٍ ; إِيذَاء | to give trouble; to harm; to annoy | | 16 | verb-form-4
+## 38 | Form V تَفَعَّلَ
+تَفَكَّرَ ; يَتَفَكَّرُ ; تَفَكَّرْ ; مُتَفَكِّر ; تَفَكُّر | to think over; to reflect | | 17 | verb-form-5
+تَذَكَّرَ ; يَتَذَكَّرُ ; تَذَكَّرْ ; مُتَذَكِّر ; تَذَكُّر | to receive admonition; to remember | | 51 | verb-form-5
+تَوَكَّلَ ; يَتَوَكَّلُ ; تَوَكَّلْ ; مُتَوَكِّل ; تَوَكُّل | to put one's trust | | 44 | verb-form-5
+تَبَيَّنَ ; يَتَبَيَّنُ ; تَبَيَّنْ ; مُتَبَيِّن ; تَبَيُّن | to become clear | | 18 | verb-form-5
+تَرَبَّصَ ; يَتَرَبَّصُ ; تَرَبَّصْ ; مُتَرَبِّص ; تَرَبُّص | to wait and watch for opportunity | | 17 | verb-form-5
+تَوَلَّى ; يَتَوَلَّى ; تَوَلَّ ; مُتَوَلٍّ ; تَوَلٍّ | to turn away; to take for friend | | 79 | verb-form-5
+تَوَفَّى ; يَتَوَفَّى ; تَوَفَّ ; مُتَوَفٍّ ; تَوَفٍّ | to make sb die; to receive in full | | 25 | verb-form-5
+## 38 | Form VI تَفَاعَلَ
+تَبَارَكَ ; يَتَبَارَكُ ; تَبَارَكْ ; مُتَبَارِك ; تَبَارُك | to be blessed or exalted | | 9 | verb-form-6
+تَسَاءَلَ ; يَتَسَاءَلُ ; تَسَاءَلْ ; مُتَسَاءِل ; تَسَاؤُل | to ask each other | | 9 | verb-form-6
+## 39 | Form VIII اِفْتَعَلَ
+اخْتَلَفَ ; يَخْتَلِفُ ; اخْتَلِفْ ; مُخْتَلِف ; اخْتِلَاف | to differ | | 52 | verb-form-8
+اتَّبَعَ ; يَتَّبِعُ ; اتَّبِعْ ; مُتَّبِع ; اتِّبَاع | to follow | | 140 | verb-form-8
+اتَّخَذَ ; يَتَّخِذُ ; اتَّخِذْ ; مُتَّخِذ ; اتِّخَاذ | to take; to adopt | | 128 | verb-form-8
+اتَّقَى ; يَتَّقِي ; اتَّقِ ; مُتَّقٍ ; اتِّقَاء | to be on guard; to protect | | 215 | verb-form-8
+افْتَرَى ; يَفْتَرِي ; افْتَرِ ; مُفْتَرٍ ; افْتِرَاء | to fabricate a lie | | 59 | verb-form-8
+اهْتَدَى ; يَهْتَدِي ; اهْتَدِ ; مُهْتَدٍ ; اهْتِدَاء | to find or to follow the right path | | 61 | verb-form-8
+ابْتَغَى ; يَبْتَغِي ; ابْتَغِ ; مُبْتَغٍ ; ابْتِغَاء | to seek | | 48 | verb-form-8
+## 39 | Form VII اِنْفَعَلَ
+انْقَلَبَ ; يَنْقَلِبُ ; انْقَلِبْ ; مُنْقَلِب ; انْقِلَاب | to turn around; to return | | 20 | verb-form-7
+انْتَهَى ; يَنْتَهِي ; انْتَهِ ; مُنْتَهٍ ; انْتِهَاء | to refrain; to end | | 16 | verb-form-7
+## 40 | Form IX اِفْعَلَّ
+اسْوَدَّ ; يَسْوَدُّ ; اسْوَدَّ ; مُسْوَدّ ; اسْوِدَاد | to become black | | 3 | verb-form-9
+ابْيَضَّ ; يَبْيَضُّ ; ابْيَضَّ ; مُبْيَضّ ; ابْيِضَاض | to become white | | 3 | verb-form-9
+## 40 | Form X اِسْتَفْعَلَ
+اسْتَعْجَلَ ; يَسْتَعْجِلُ ; اسْتَعْجِلْ ; مُسْتَعْجِل ; اسْتِعْجَال | to seek ss to hasten | | 20 | verb-form-10
+اسْتَغْفَرَ ; يَسْتَغْفِرُ ; اسْتَغْفِرْ ; مُسْتَغْفِر ; اسْتِغْفَار | to ask forgiveness | | 42 | verb-form-10
+اسْتَكْبَرَ ; يَسْتَكْبِرُ ; اسْتَكْبِرْ ; مُسْتَكْبِر ; اسْتِكْبَار | to act arrogantly | | 48 | verb-form-10
+اسْتَهْزَأَ ; يَسْتَهْزِئُ ; اسْتَهْزِئْ ; مُسْتَهْزِئ ; اسْتِهْزَاء | to mock at | | 23 | verb-form-10
+اسْتَجَابَ ; يَسْتَجِيبُ ; اسْتَجِبْ ; مُسْتَجِيب ; اسْتِجَابَة | to accept; to respond | | 28 | verb-form-10
+اسْتَطَاعَ ; يَسْتَطِيعُ ; اسْتَطِعْ ; مُسْتَطِيع ; اسْتِطَاعَة | to be able to | | 42 | verb-form-10
+اسْتَقَامَ ; يَسْتَقِيمُ ; اسْتَقِمْ ; مُسْتَقِيم ; اسْتِقَامَة | to be straight; to act straight | | 47 | verb-form-10

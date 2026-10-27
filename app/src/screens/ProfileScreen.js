@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { useFocusEffect } from '@react-navigation/native';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { COLORS, SIZES, SPACING } from '../constants/theme';
+import { TOTAL_WORDS } from '../data/words';
 import { getLearnedWordsCount, getStreak, getAverageQuizAccuracy } from '../utils/storage';
 
 export default function ProfileScreen() {
@@ -41,7 +42,7 @@ export default function ProfileScreen() {
                 <Text style={styles.sectionTitle}>Learning Stats</Text>
                 <View style={styles.statRow}>
                     <Text style={styles.statLabel}>Total Words Learned</Text>
-                    <Text style={styles.statValue}>{stats.wordsLearned} / 300</Text>
+                    <Text style={styles.statValue}>{stats.wordsLearned} / {TOTAL_WORDS}</Text>
                 </View>
                 <View style={styles.statRow}>
                     <Text style={styles.statLabel}>Current Streak</Text>
@@ -76,7 +77,7 @@ export default function ProfileScreen() {
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>About</Text>
                 <Text style={styles.aboutText}>
-                    QuranVoc 80 helps you learn the 300 most frequent words that make up 80% of the Quran's vocabulary.
+                    QuranVoc 80 helps you learn the most frequent words that make up 82.6% of the Quran's vocabulary.
                 </Text>
                 <Text style={styles.aboutText}>
                     Based on research by Dr. Abdulazeez Abdulraheem
