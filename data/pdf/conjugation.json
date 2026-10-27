@@ -1,5 +1,5 @@
 {
-  "_source": "source/80_percent.pdf pages 42-45 (booklet pp. 35-38), sample verb table on the root ف-ع-ل. Reference material, not vocabulary. The PDF prints "You do/will do." for the هُمَا (they two) present forms; that is an evident typo, corrected here to "They two do/will do.".",
+  "_source": "source/80_percent.pdf pages 42-45 (booklet pp. 35-38), sample verb table on the root ف-ع-ل. Reference material, not vocabulary. The PDF prints 'You do/will do.' for the هُمَا (they two) present forms; that is an evident typo, corrected here to 'They two do/will do.'.",
   "masculine": {
     "active": [
       { "pronoun": "هُوَ",     "past": "فَعَلَ",    "pastEn": "He did.",              "present": "يَفْعَلُ",    "presentEn": "He does. He will do.",        "suffix": "ـهُ" },
