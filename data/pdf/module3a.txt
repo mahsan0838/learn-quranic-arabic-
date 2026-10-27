@@ -13,9 +13,9 @@
 لَعَنَ ; يَلْعَنُ ; الْعَنْ ; لَاعِن ; لَعْن | to curse | | 27 | verb-fataha-yaftahu
 نَفَعَ ; يَنْفَعُ ; انْفَعْ ; نَافِع ; نَفْع | to profit | | 42 | verb-fataha-yaftahu
 ## 30 | Last letter of the root is و or ي
-تَلَا ; يَتْلُو ; اتْلُ ; تَالٍ ; تِلَاوَة | to recite | | 61 | verb-weak-last
-دَعَا ; يَدْعُو ; ادْعُ ; دَاعٍ ; دُعَاء | to call; to pray | | 197 | verb-weak-last
-عَفَا ; يَعْفُو ; اعْفُ ; عَافٍ ; عَفْو | to forgo | | 30 | verb-weak-last
+تَلَا ; يَتْلُو ; اُتْلُ ; تَالٍ ; تِلَاوَة | to recite | | 61 | verb-weak-last
+دَعَا ; يَدْعُو ; اُدْعُ ; دَاعٍ ; دُعَاء | to call; to pray | | 197 | verb-weak-last
+عَفَا ; يَعْفُو ; اُعْفُ ; عَافٍ ; عَفْو | to forgo | | 30 | verb-weak-last
 بَغَى ; يَبْغِي ; ابْغِ ; بَاغٍ ; بَغْي | to want, to seek | | 29 | verb-weak-last
 جَرَى ; يَجْرِي ; اجْرِ ; جَارٍ ; جَرَيَان | to flow | | 60 | verb-weak-last
 جَزَى ; يَجْزِي ; اجْزِ ; جَازٍ ; جَزَاء | to reward | | 116 | verb-weak-last
@@ -53,7 +53,7 @@
 ## 26 | فعل ثلاثي مجرد سمع يسمع
 سَمِعَ ; يَسْمَعُ ; اسْمَعْ ; سَامِع ; سَمَاعَة | to hear | | 100 | verb-sami'a-yasma'u
 حَزِنَ ; يَحْزَنُ ; احْزَنْ ; حَازِن ; حُزْن | to be grieved | | 30 | verb-sami'a-yasma'u
-حَسِبَ ; يَحْسَبُ ; احْسَبْ ; حَاسِب ; حِسْب | to think; to consider | | 46 | verb-sami'a-yasma'u
+حَسِبَ ; يَحْسَبُ ; احْسَبْ ; حَاسِب ; حِسْب | to think; to consider | check | 46 | verb-sami'a-yasma'u
 حَفِظَ ; يَحْفَظُ ; احْفَظْ ; حَافِظ ; حِفْظ | to guard; to protect | | 27 | verb-sami'a-yasma'u
 خَسِرَ ; يَخْسَرُ ; اخْسَرْ ; خَاسِر ; خُسْر | to lose | | 51 | verb-sami'a-yasma'u
 رَحِمَ ; يَرْحَمُ ; ارْحَمْ ; رَاحِم ; رَحْمَة | to have mercy on someone | | 148 | verb-sami'a-yasma'u
@@ -61,9 +61,9 @@
 عَلِمَ ; يَعْلَمُ ; اعْلَمْ ; عَالِم ; عِلْم | to know | | 518 | verb-sami'a-yasma'u
 عَمِلَ ; يَعْمَلُ ; اعْمَلْ ; عَامِل ; عَمَل | to work; to do | | 318 | verb-sami'a-yasma'u
 كَرِهَ ; يَكْرَهُ ; اكْرَهْ ; كَارِه ; كُرْه | to dislike; to detest | | 25 | verb-sami'a-yasma'u
-بَصِرَ ; يُبْصِرُ ; أَبْصِرْ ; بَاصِر ; بَصَر | to watch; to see | | 13 | verb-sami'a-yasma'u
+بَصُرَ ; يَبْصُرُ ; اُبْصُرْ ; بَاصِر ; بَصَر | to watch; to see | | 13 | verb-sami'a-yasma'u
 ## 27 | The last two letters of the root are same (مُضَاعَف)
-حَيِيَ ; يَحْيَا ; احْيَ ; حَيّ ; حَيَاة | to live; to greet | | 83 | verb-doubled
+حَيَّ ; يَحْيَا ; احْيَ ; حَيّ ; حَيَاة | to live; to greet | | 83 | verb-doubled
 رَدَّ ; يَرُدُّ ; اُرْدُدْ ; رَادّ ; رَدّ | to give back; to return | | 45 | verb-doubled
 صَدَّ ; يَصُدُّ ; اُصْدُدْ ; صَادّ ; صَدّ | to turn away; to hinder | | 39 | verb-doubled
 ضَرَّ ; يَضُرُّ ; اُضْرُرْ ; ضَارّ ; ضَرّ | to hurt; to harm | | 31 | verb-doubled

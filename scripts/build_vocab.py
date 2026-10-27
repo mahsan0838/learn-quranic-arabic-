@@ -76,6 +76,41 @@ def parse():
     return entries
 
 
+def load_urdu():
+    """Supplementary Urdu glosses (not from the PDF), keyed by page then position."""
+    path = os.path.join(ROOT, "data", "supplement", "urdu.txt")
+    pages, page = {}, None
+    with open(path, encoding="utf-8") as f:
+        for lineno, raw in enumerate(f, 1):
+            line = raw.strip()
+            if not line or (line.startswith("#") and not line.startswith("##")):
+                continue
+            if line.startswith("##"):
+                page = int(line[2:].strip())
+                pages[page] = []
+                continue
+            english, _, urdu = line.rpartition(" | ")
+            if not english or not urdu:
+                sys.exit(f"{path}:{lineno}: expected 'english | urdu': {line}")
+            pages[page].append((english.strip(), urdu.strip()))
+    return pages
+
+
+def attach_urdu(entries):
+    urdu = load_urdu()
+    by_page = {}
+    for e in entries:
+        by_page.setdefault(e["page"], []).append(e)
+    for page, rows in by_page.items():
+        glosses = urdu.get(page, [])
+        if len(glosses) != len(rows):
+            sys.exit(f"urdu.txt page {page}: {len(glosses)} glosses for {len(rows)} entries")
+        for i, (entry, (english, gloss)) in enumerate(zip(rows, glosses), 1):
+            if entry["english"] != english:
+                sys.exit(f"urdu.txt page {page} #{i}: '{english}' != PDF '{entry['english']}'")
+            entry["urdu"] = gloss
+
+
 def grammatical_info(entry):
     parts = [entry["section"]]
     if entry["note"]:
@@ -85,7 +120,8 @@ def grammatical_info(entry):
 
 def main():
     entries = parse()
-    entries.sort(key=lambda e: (e["page"], 0))  # stable: keeps file order within a page
+    entries.sort(key=lambda e: e["page"])  # stable: keeps file order within a page
+    attach_urdu(entries)
     out = {
         "metadata": {
             "source": "80% of Quranic Words by Dr. Abdulazeez Abdulraheem (Islamic Book Trust)",
@@ -93,7 +129,8 @@ def main():
             "coverage_percentage": 82.6,
             "modules": len(MODULES),
             "note": "Transcribed by hand from the PDF; Arabic diacritics still need a human proofread. "
-                    "urdu is null because the PDF has no Urdu.",
+                    "english, frequency, forms and Arabic come from the PDF; urdu is a supplementary "
+                    "gloss added afterwards (data/supplement/urdu.txt) and is not from the PDF.",
         }
     }
     next_id = 1
@@ -104,7 +141,7 @@ def main():
                 "id": next_id,
                 "arabic": e["arabic"],
                 "english": e["english"],
-                "urdu": None,
+                "urdu": e["urdu"],
                 "grammatical_info": grammatical_info(e),
                 "frequency": e["frequency"],
                 "category": e["category"],

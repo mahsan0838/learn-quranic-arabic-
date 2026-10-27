@@ -24,7 +24,11 @@ data/pdf/conjugation.json     sample verb tables from pp. 42-45 (copied to app/s
 | 2 Key Nouns & Attributes | 14-21 | 192 |
 | 3 Essential Verbs | 22-41 | 234 (+ 5 forms each) |
 
-Frequencies are the counts printed in the PDF; module 1 pages print none, so `frequency` is `null` there (never estimated). `urdu` is `null` everywhere: the PDF has no Urdu.
+Frequencies are the counts printed in the PDF; module 1 pages print none, so `frequency` is `null` there (never estimated). The PDF has no Urdu: the `urdu` field comes from `data/supplement/urdu.txt`, written afterwards as a secondary aid (English from the PDF always wins; the build fails if a supplement line doesn't match the PDF English).
+
+## Proofreading log
+
+All pages 8-41 were re-read against 190-dpi renders of the PDF. Corrections made: pausal forms matched to the PDF on pp. 10-11 (e.g. فَوْق, بَعْد, قَبْل), `غَيْر`, `ذَات`, `بِئْس`, `عَلِيّ`, `حَيَّ`, `بَصُرَ يَبْصُرُ اُبْصُرْ`, `وَسِعَ يَوْسَعُ اِيْسَعْ` (as printed), imperatives `اُتْلُ/اُدْعُ/اُعْفُ`, `اِئْبَ`, `رَأْي`, `جَاءٍ`, `أَتْمِمْ`, `أَحْبِبْ`. The proofreader was the same model that transcribed, so a human pass is still advised. Rows carrying `check` in the note column (e.g. `حَسِبَ`) were ambiguous in the scan.
 
 ## Known gaps / to verify
 

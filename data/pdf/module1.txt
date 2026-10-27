@@ -23,7 +23,7 @@
 مَا | not | | | negation
 لَيْسَ (لَيْسَتْ) | not | fg | | negation
 بَلٰى | yes, indeed | | | negation
-غَيْرُ | not, other than | | | negation
+غَيْر | not, other than | | | negation
 دُونَ | besides; less than | | | negation
 إِلَّا | except; unless; if not | | | negation
 نَعَمْ | yes | | | negation
@@ -54,16 +54,16 @@
 هُمَا | those two | dl | | pronouns
 أَنْتُمَا | you two | dl | | pronouns
 ## 10 | Where?
-فَوْقَ | above, up | | | places
-تَحْتَ | under | | | places
+فَوْق | above, up | | | places
+تَحْت | under | | | places
 بَيْنَ أَيْدِي، بَيْنَ يَدَيْ | in front of | | | places
-خَلْفَ | back, after | | | places
-أَمَامَ | in front of | | | places
-وَرَاءَ | behind | | | places
+خَلْف | back, after | | | places
+أَمَام | in front of | | | places
+وَرَاء | behind | | | places
 يَمِين (أَيْمَان) | right; oath | pl | | places
 شِمَال (شَمَائِل) | left | pl | | places
-بَيْنَ | between | | | places
-حَوْلَ | around | | | places
+بَيْن | between | | | places
+حَوْل | around | | | places
 حَيْثُ | wherever | | | places
 أَيْنَمَا | wherever | | | places
 ## 10 | Questions!?
@@ -81,21 +81,21 @@
 لَوْلَا | if not; why not | | | questions
 ## 11 | Miscellaneous
 ذُو، ذَا، ذِي | endowed with; owner of | mg | | miscellaneous
-ذَاتُ | endowed with; owner of | fg | | miscellaneous
+ذَات | endowed with; owner of | fg | | miscellaneous
 أُولُوا، أُولِي | people of; owners of | | | miscellaneous
 أَهْل | people of; relative | | | miscellaneous
 آل | family, relatives, people | | | miscellaneous
 أَلَا | lo!; do not?, will not? | | | miscellaneous
 نِعْمَ | what an excellent... | | | miscellaneous
-بِئْسَ | what an evil... | | | miscellaneous
+بِئْس | what an evil... | | | miscellaneous
 بِئْسَمَا | evil is that which | | | miscellaneous
 مِثْل | something similar | | | miscellaneous
 مَثَل (أَمْثَال) | similitude | | | miscellaneous
 مِمَّنْ (مِن+مَنْ) | than the one who; from those who | | | miscellaneous
 ## 11 | When?
-قَبْلَ | before | | | time
-بَعْدَ | after | | | time
-حِينَ | time, period; at the time of | | | time
+قَبْل | before | | | time
+بَعْد | after | | | time
+حِين | time, period; at the time of | | | time
 إِذْ | when | for past | | time
 إِذَا | when | for future | | time
 ثُمَّ | then | | | time
@@ -132,13 +132,13 @@
 مَعَ | with | | | prepositions
 وَ | and; by (of oath) | | | prepositions
 ## 13 | Prefix for verb,...
-قَدْ (+فعل) | has (with ماضي); surely (with مضارع) | | | verb-prefixes
+قَدْ (+فعل) | has (with مَاضِي); surely (with مُضَارِع) | | | verb-prefixes
 سَ (+فعل) | will (for near future) | | | verb-prefixes
 سَوْفَ (+فعل) | will (for future) | | | verb-prefixes
 لَ+فعل+نَّ | will surely | | | verb-prefixes
 لَقَدْ (+فعل) | indeed | | | verb-prefixes
 لَ | indeed, surely | | | verb-prefixes
-لِ، لْ (+أمر) | let sb do (imperative) | | | verb-prefixes
+لِ، لْ (أَمْر) | let sb do (imperative) | | | verb-prefixes
 الْ | the | | | verb-prefixes
 أَمْ | or? | | | verb-prefixes
 أَوْ | or | | | verb-prefixes

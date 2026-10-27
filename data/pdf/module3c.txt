@@ -36,8 +36,8 @@
 أَنْكَرَ ; يُنْكِرُ ; أَنْكِرْ ; مُنْكِر ; إِنْكَار | to not recognize; to deny | | 25 | verb-form-4
 أَهْلَكَ ; يُهْلِكُ ; أَهْلِكْ ; مُهْلِك ; إِهْلَاك | to destroy | | 58 | verb-form-4
 ## 36 | Form IV أَفْعَلَ (continued)
-أَتَمَّ ; يُتِمُّ ; أَتِمَّ ; مُتِمّ ; إِتْمَام | to complete | | 17 | verb-form-4
-أَحَبَّ ; يُحِبُّ ; أَحِبَّ ; مُحِبّ ; إِحْبَاب | to love | | 64 | verb-form-4
+أَتَمَّ ; يُتِمُّ ; أَتْمِمْ ; مُتِمّ ; إِتْمَام | to complete | | 17 | verb-form-4
+أَحَبَّ ; يُحِبُّ ; أَحْبِبْ ; مُحِبّ ; إِحْبَاب | to love | | 64 | verb-form-4
 أَحَلَّ ; يُحِلُّ ; أَحْلِلْ ; مُحِلّ ; إِحْلَال | to make lawful; to cause to dwell | | 21 | verb-form-4
 أَسَرَّ ; يُسِرُّ ; أَسْرِرْ ; مُسِرّ ; إِسْرَار | to conceal; to speak secretly | | 18 | verb-form-4
 أَضَلَّ ; يُضِلُّ ; أَضْلِلْ ; مُضِلّ ; إِضْلَال | to leave in error; to send astray | | 68 | verb-form-4

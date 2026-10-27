@@ -1,0 +1,608 @@
+# SUPPLEMENTARY (not from the PDF): Urdu glosses written as a secondary aid.
+# The PDF's English stays the source of truth. Each line must repeat the PDF English exactly,
+# in the same order as the entry on that page; build_vocab.py fails on any mismatch.
+# Format:  english | urdu
+## 8
+this | یہ (مذکر)
+that | وہ (مذکر)
+this | یہ (مؤنث)
+that | وہ (مؤنث)
+these | یہ سب (مذکر/مؤنث)
+those | وہ سب (مذکر/مؤنث)
+he who | وہ جو (مذکر)
+she who | وہ جو (مؤنث)
+those who | وہ لوگ جو (مذکر)
+these | یہ (جمعِ مکسر)
+those | وہ (جمعِ مکسر)
+those who | وہ جو (جمعِ مکسر)
+(There is) no god | کوئی معبود نہیں
+except Allah | سوائے اللہ کے
+never, certainly not | ہرگز نہیں
+not | نہیں (مستقبل کے لیے)
+not | نہیں (ماضی کے لیے)
+not | نہیں
+not | نہیں ہے (مؤنث کے لیے بھی)
+yes, indeed | کیوں نہیں، ہاں بالکل
+not, other than | کے سوا، کے علاوہ
+besides; less than | کے سوا؛ کم تر
+except; unless; if not | مگر؛ سوائے؛ اگر نہیں
+yes | ہاں
+## 9
+his | اس کا (مذکر)
+their | ان کا (مذکر)
+your | تمہارا (مذکر)
+your | تم سب کا (مذکر)
+my | میرا
+us | ہمیں، ہمارا
+her | اس کا (مؤنث)
+their | ان کا (مؤنث)
+your | تمہارا (مؤنث)
+their | ان کا (جمعِ مکسر)
+their | ان دونوں کا
+your | تم دونوں کا
+he | وہ (مذکر)
+them | وہ سب (مذکر)
+you | تم (مذکر)
+you all | تم سب (مذکر)
+I | میں
+we | ہم
+she | وہ (مؤنث)
+they | وہ سب (مؤنث)
+you | تم (مؤنث)
+they | وہ (جمعِ مکسر)
+those two | وہ دونوں
+you two | تم دونوں
+## 10
+above, up | اوپر
+under | نیچے
+in front of | سامنے
+back, after | پیچھے، بعد
+in front of | آگے، سامنے
+behind | پیچھے
+right; oath | دایاں؛ قسم
+left | بایاں
+between | درمیان
+around | اردگرد
+wherever | جہاں کہیں
+wherever | جہاں کہیں بھی
+what?, that which | کیا؟ جو
+who?, the one who | کون؟ جو شخص
+when?, the time when | کب؟ جس وقت
+where? | کہاں؟
+how? | کیسے؟
+how many? | کتنے؟
+which? | کون سا؟
+where from?, why? | کہاں سے؟ کیسے؟
+Is? Am? Are? Do? Have? | کیا؟
+what? | کیا؟
+why? | کیوں؟
+if not; why not | اگر نہ ہوتا؛ کیوں نہیں
+## 11
+endowed with; owner of | والا، مالک (مذکر)
+endowed with; owner of | والی، مالکہ (مؤنث)
+people of; owners of | والے لوگ، مالکان
+people of; relative | اہل، رشتہ دار
+family, relatives, people | آل، خاندان، لوگ
+lo!; do not?, will not? | خبردار! کیا نہیں؟
+what an excellent... | کیا ہی خوب...
+what an evil... | کیا ہی برا...
+evil is that which | برا ہے وہ جو
+something similar | مثل، جیسا
+similitude | مثال
+than the one who; from those who | اس سے جو؛ ان میں سے جو
+before | پہلے
+after | بعد
+time, period; at the time of | وقت، مدت؛ کے وقت
+when | جب (ماضی)
+when | جب (مستقبل)
+then | پھر
+then, thus, therefore | پس، لہٰذا
+nay, -- rather, but, however | بلکہ، لیکن
+near, with | پاس، نزدیک
+nothing --- but | نہیں ... مگر
+nothing --- but | نہیں ... مگر
+that...not; so as not to | کہ نہیں؛ تاکہ نہ
+## 12
+with what, because | اس کے ساتھ جو؛ اس لیے کہ
+about what | اس کے بارے میں جو
+in what | اس میں جو
+as, just as | جیسا کہ
+for what; for that which | اس کے لیے جو
+out of what | اس میں سے جو
+as to, as for | رہا یہ کہ
+if; either/or | اگر؛ یا تو
+that | کہ
+verily; is but | بے شک؛ صرف
+as if | گویا کہ
+whenever | جب کبھی
+with, in, from,... | کے ساتھ، میں، سے
+about | کے بارے میں
+in | میں
+as, like | کی طرح
+for | کے لیے
+from | سے
+towards | کی طرف
+by (of oath) | قسم ہے (تَ)
+until | یہاں تک کہ
+on | پر
+with | ساتھ
+and; by (of oath) | اور؛ قسم ہے
+## 13
+has (with مَاضِي); surely (with مُضَارِع) | تحقیق؛ یقیناً
+will (for near future) | عنقریب
+will (for future) | آئندہ، ضرور
+will surely | ضرور ضرور
+indeed | یقیناً
+indeed, surely | بے شک
+let sb do (imperative) | چاہیے کہ کرے
+the | (ال) معرفہ بنانے کے لیے
+or? | یا؟
+or | یا
+some of | بعض
+everyone; all | ہر ایک؛ سب
+verily, truly | بے شک
+that | کہ بے شک
+as if | گویا کہ
+but, however | لیکن
+perhaps, may be | شاید
+that | کہ
+if | اگر
+alone | صرف
+possibly | قریب ہے، شاید
+when | جب
+if | اگر، کاش
+O! | اے!
+## 14
+knowing, ever aware | باخبر
+Lord; Sustainer | رب، پالنے والا
+Compassionate | نہایت مہربان
+peace | سلامتی
+one who listens | سننے والا
+grateful | شکر گزار
+mighty | غالب، زبردست
+most forgiving | بہت بخشنے والا
+All-powerful | ہر چیز پر قادر
+warner | ڈرانے والا
+strong helper | بڑا مددگار
+one who takes care of a thing for another | کارساز، کام بنانے والا
+first | پہلا
+last | آخری
+[other] | دوسرا
+trustworthy | امانت دار
+one who sees clearly | خوب دیکھنے والا
+far | دور
+most forgiving | بہت توبہ قبول کرنے والا
+protector | نگہبان
+wise | حکمت والا
+forbearing | بردبار
+praiseworthy | قابلِ تعریف
+warm (friend); boiling water | گہرا دوست؛ کھولتا پانی
+## 15
+most severe | سخت ترین
+higher, superior | بلند تر
+better-knowing, more informed | زیادہ جاننے والا
+nearer | زیادہ قریب
+bigger | بڑا، بڑھ کر
+more; most | زیادہ، اکثر
+better | بہتر
+more entitled; more worthy | زیادہ حق دار
+nearer; more likely; lower; less | زیادہ قریب؛ کم تر
+more unjust | زیادہ ظالم
+better guided | زیادہ ہدایت یافتہ
+nearer, closer; woe | زیادہ لائق؛ ہلاکت
+severe; strong | سخت، طاقتور
+high, exalted | بلند، برتر
+knower | جاننے والا
+near | قریب
+big | بڑا
+plenty; much | بہت
+quick; swift; fast | تیز
+merciful | رحم کرنے والا
+supreme | عظمت والا
+little | تھوڑا
+noble; honourable; generous | معزز، کریم
+subtle | باریک بین، مہربان
+## 16
+Messenger | رسول
+Prophet | نبی
+Prophets | انبیاء
+Adam, Noah, Abraham | آدم، نوح، ابراہیم
+Lot, Ishmael, Isaac | لوط، اسماعیل، اسحاق
+Jacob (Israel), Joseph | یعقوب (اسرائیل)، یوسف
+Hud, Shu'ayb, Salih | ہود، شعیب، صالح
+Moses, Jesus son of Mary | موسیٰ، عیسیٰ بن مریم
+Satan | شیطان
+Pharaoh | فرعون
+People of Hud | قومِ عاد
+People of Salih | قومِ ثمود
+sign | نشانی، آیت
+evidence | واضح دلیل
+Qur'an; reading, recitation | قرآن؛ پڑھنا
+cattle | چوپائے
+mountain | پہاڑ
+sea; large river | سمندر، بڑا دریا
+sun | سورج
+moon | چاند
+night | رات
+day | دن
+earth | زمین
+sky | آسمان
+## 17
+companion, fellow | ساتھی
+end | انجام
+torment | عذاب
+chastisement (as a result of sin) | سزا (گناہ کے نتیجے میں)
+Resurrection | قیامت
+meeting | ملاقات
+fixed | مقرر
+fire | آگ
+river | نہر
+woe unto ... | ہلاکت ہے
+day | دن
+that day | اس دن
+forever; ever | ہمیشہ
+reward | اجر
+term | مقررہ مدت
+the Hereafter | آخرت
+painful | دردناک
+reward | ثواب
+hellfire | بھڑکتی آگ، جحیم
+reward | بدلہ، جزا
+garden | باغ، جنت
+the hell | جہنم
+reckoning | حساب
+hour (day of resurrection) | گھڑی، قیامت
+## 18
+matter; affair | معاملہ، کام
+piety; fear; protection | تقویٰ، پرہیزگاری
+truth, true; right | حق، سچ
+falsehood | باطل، جھوٹ
+wisdom | حکمت
+praise | حمد، تعریف
+religion; law; judgement | دین، قانون، فیصلہ
+poor-due, charity | زکوٰۃ
+witness, present | گواہ، حاضر
+prayer | نماز
+clear, self-expressive | واضح
+light | نور، روشنی
+one | ایک
+god; deity | معبود
+partner, associate | شریک
+witness | گواہی
+throne | عرش
+covenant, promise | عہد
+unseen | غیب
+book | کتاب
+word | کلمہ، بات
+angel | فرشتہ
+covenant, treaty | پختہ عہد
+one | ایک
+## 19
+actions, deeds, works | اعمال
+good (deed) | نیکی
+evil, bad | برائی
+good, better | بھلائی، بہتر
+evil, bad, worse | برا، بدتر
+sin | گناہ
+sin | گناہ
+sin | گناہ، حرج
+unlawful | حرام
+name | نام
+discourse; speech | بات، حدیث
+good | پاکیزہ، اچھا
+favours | نعمتیں
+authority; warrant | اختیار، دلیل
+grace | فضل
+water | پانی
+dominion, reign | بادشاہی
+favour | نعمت
+all | سب
+permission | اجازت
+punishment; power; adversity | سختی، عذاب، قوت
+all, everybody | سب کے سب
+same; equals; level; fair | برابر
+party, group | گروہ
+## 20
+mother | ماں
+father | باپ
+wife; husband | بیوی؛ شوہر، جوڑا
+man | مرد
+woman | عورت
+child | بچہ، اولاد
+father | والد
+descendants; children | نسل، اولاد
+son | بیٹا
+sons | بیٹے
+brother | بھائی
+brothers | بھائی (جمع)
+face | چہرہ
+eye; spring | آنکھ؛ چشمہ
+sights | نگاہیں
+mouths | منہ
+tongue; language | زبان
+heart | دل
+breast | سینہ
+hand | ہاتھ
+foot | پاؤں
+soul | جان، نفس
+soul, spirit | روح
+power, strength | طاقت
+## 21
+house | گھر
+abode | رہنے کی جگہ، گھر
+world | دنیا
+way | راستہ
+path | سیدھی راہ
+world | جہان
+trial; persecution | آزمائش؛ فتنہ
+town | بستی
+wealth | مال
+provision; enjoyment | سامان، فائدہ
+mosque | مسجد
+place; abode | جگہ، مقام
+community | امت
+people | قوم
+man | انسان
+men, people | لوگ
+male | مرد، نر
+female | عورت، مادہ
+slave | بندہ
+enemy | دشمن
+disbelievers | کافر لوگ
+criminal | مجرم
+chiefs, leaders | سردار
+protecting friend; guardian | دوست، سرپرست
+## 22
+to do | کرنا
+to open; to give victory | کھولنا؛ فتح دینا
+to raise; to resurrect | اٹھانا؛ زندہ کرنا
+to make, to place, to set up | بنانا، رکھنا، ٹھہرانا
+to gather, to collect | جمع کرنا
+to go | جانا
+to raise | بلند کرنا
+to enchant, to bewitch | جادو کرنا
+to act righteously | نیک عمل کرنا؛ درست ہونا
+to curse | لعنت کرنا
+to profit | نفع دینا
+## 23
+to help; to deliver | مدد کرنا؛ نجات دینا
+to reach | پہنچنا
+to leave | چھوڑنا
+to gather; to bring together | اکٹھا کرنا
+to judge; to rule | فیصلہ کرنا؛ حکومت کرنا
+to come out | نکلنا
+to live forever | ہمیشہ رہنا
+to create out of nothing | پیدا کرنا
+to enter | داخل ہونا
+to remember | یاد کرنا؛ ذکر کرنا
+to provide | رزق دینا
+## 24
+to prostrate | سجدہ کرنا
+to perceive | محسوس کرنا؛ شعور رکھنا
+to be grateful | شکر کرنا
+to be true; to say the truth | سچ ہونا؛ سچ بولنا
+to worship; to serve | عبادت کرنا؛ بندگی کرنا
+to transgress | نافرمانی کرنا؛ فسق کرنا
+to kill; to slay | قتل کرنا
+to sit; to remain behind | بیٹھنا؛ پیچھے رہ جانا
+to prescribe; to write | لکھنا؛ فرض کرنا
+to disbelieve; to be ungrateful | انکار کرنا؛ ناشکری کرنا
+to plot | سازش کرنا، تدبیر کرنا
+to look; to wait | دیکھنا؛ انتظار کرنا
+## 25
+to strike | مارنا؛ بیان کرنا
+to carry; to bear | اٹھانا
+to bear with patience | صبر کرنا
+to wrong | ظلم کرنا
+to recognise | پہچاننا
+to understand; to comprehend | سمجھنا، عقل سے کام لینا
+to forgive; to cover | بخشنا؛ ڈھانپنا
+to decree; to have power | اندازہ کرنا؛ قدرت رکھنا
+to lie | جھوٹ بولنا
+to earn | کمانا
+to possess | مالک ہونا
+## 26
+to hear | سننا
+to be grieved | غمگین ہونا
+to think; to consider | گمان کرنا؛ سمجھنا
+to guard; to protect | حفاظت کرنا
+to lose | نقصان اٹھانا
+to have mercy on someone | رحم کرنا
+to bear witness; to be present | گواہی دینا؛ حاضر ہونا
+to know | جاننا
+to work; to do | عمل کرنا؛ کام کرنا
+to dislike; to detest | ناپسند کرنا
+to watch; to see | دیکھنا
+## 27
+to live; to greet | جینا؛ سلام کہنا
+to give back; to return | لوٹانا
+to turn away; to hinder | روکنا؛ پھیر دینا
+to hurt; to harm | نقصان پہنچانا
+to go astray; to err; to waste | بھٹکنا؛ ضائع ہونا
+to think; to believe | گمان کرنا؛ یقین کرنا
+to count | گننا
+to beguile | دھوکا دینا
+to spread out; to stretch | پھیلانا، لمبا کرنا
+to touch | چھونا؛ پہنچنا
+to love; to wish | چاہنا؛ محبت کرنا
+## 28
+to leave behind | چھوڑ دینا
+to put; to set | رکھنا؛ ڈال دینا
+to befall | واقع ہونا؛ پڑنا
+to grant | عطا کرنا؛ بخشنا
+to find | پانا؛ ملنا
+to inherit | وارث بننا؛ ورثہ پانا
+to bear a load | بوجھ اٹھانا
+to describe; to ascribe | بیان کرنا؛ منسوب کرنا
+to promise | وعدہ کرنا
+to protect; to save | بچانا؛ حفاظت کرنا
+to embrace; to comprehend | سمانا؛ گھیرنا
+## 29
+to repent | توبہ کرنا
+to taste | چکھنا
+to succeed; to gain victory | کامیاب ہونا؛ فتح پانا
+to say | کہنا
+to stand up; to raise | کھڑا ہونا؛ قائم ہونا
+to be | ہونا
+to die | مرنا
+to be afraid | ڈرنا
+to become nigh; to be close to | قریب ہونا
+to plot against | تدبیر کرنا؛ چال چلنا
+to increase | بڑھنا؛ زیادہ کرنا
+## 30
+to recite | تلاوت کرنا؛ پیچھے چلنا
+to call; to pray | پکارنا؛ دعا کرنا
+to forgo | معاف کرنا؛ درگزر کرنا
+to want, to seek | چاہنا؛ تلاش کرنا
+to flow | بہنا؛ جاری ہونا
+to reward | بدلہ دینا
+to decree; to fulfil | فیصلہ کرنا؛ پورا کرنا
+to suffice | کافی ہونا
+to guide; to direct | ہدایت دینا؛ راہ دکھانا
+to fear | ڈرنا؛ خوف رکھنا
+to be satisfied, to be content | راضی ہونا؛ خوش ہونا
+to forget | بھولنا
+## 31
+to ask | پوچھنا؛ مانگنا
+to read; to recite | پڑھنا
+to take; to catch | لینا؛ پکڑنا
+to eat | کھانا
+to command | حکم دینا
+to be safe; to feel safe; to trust | امن میں ہونا؛ بھروسا کرنا
+to refuse | انکار کرنا؛ نہ ماننا
+to see | دیکھنا
+to come | آنا
+to will, to wish | چاہنا؛ منظور ہونا
+to be evil | برا ہونا؛ بری لگنا
+to come | آنا
+## 32
+to change | بدلنا
+to give good news | خوشخبری دینا
+to make clear | واضح کرنا؛ بیان کرنا
+to adorn/make st seem fair | خوبصورت بنانا؛ مزین کرنا
+to glorify; to praise | تسبیح کرنا؛ پاکی بیان کرنا
+to bring under control | مسخر کرنا؛ تابع کرنا
+to pronounce ss to be true | سچا قرار دینا؛ تصدیق کرنا
+to punish; to torment | عذاب دینا
+to teach | سکھانا؛ تعلیم دینا
+to send forward | آگے بھیجنا؛ پیش کرنا
+to accuse ss of falsehood | جھٹلانا
+## 33
+to declare; to apprise | خبر دینا؛ آگاہ کرنا
+to send down | نازل کرنا؛ اتارنا
+to deliver; to rescue | نجات دینا؛ بچانا
+to turn | پھیرنا؛ سونپنا
+to struggle; to strive | جدوجہد کرنا؛ جہاد کرنا
+to fight | لڑنا؛ قتال کرنا
+to call out; to cry unto | پکارنا؛ آواز دینا
+to play hypocrisy | منافقت کرنا
+to migrate | ہجرت کرنا
+## 34
+to see; to watch | دیکھنا؛ سمجھ بوجھ رکھنا
+to do good; to do excellently | نیکی کرنا؛ احسان کرنا
+to bring forth | نکالنا
+to make ss enter | داخل کرنا
+to send back; to take back | واپس بھیجنا؛ لوٹانا
+to send | بھیجنا
+to exceed; to be extravagant | حد سے بڑھنا؛ فضول خرچی کرنا
+to submit; to surrender | فرماں بردار ہونا؛ اسلام لانا
+to ascribe a partner | شریک ٹھہرانا
+to become | ہو جانا، صبح کرنا
+to become good; to make good | اصلاح کرنا؛ نیک ہونا
+## 35
+to turn away; to backslide | منہ موڑنا؛ اعراض کرنا
+to drown | غرق کرنا
+to spread corruption | فساد پھیلانا
+to be successful | کامیاب ہونا؛ فلاح پانا
+to make st grow; to cause to grow | اگانا
+to warn | ڈرانا؛ خبردار کرنا
+to send down; to reveal | نازل کرنا؛ اتارنا
+to produce/create; to make st grow | پیدا کرنا؛ اٹھانا
+to favour; to bestow grace | انعام کرنا؛ احسان کرنا
+to spend | خرچ کرنا
+to not recognize; to deny | انکار کرنا؛ نہ پہچاننا
+to destroy | ہلاک کرنا
+## 36
+to complete | پورا کرنا؛ مکمل کرنا
+to love | محبت کرنا؛ پسند کرنا
+to make lawful; to cause to dwell | حلال کرنا؛ اتارنا
+to conceal; to speak secretly | چھپانا؛ سرگوشی کرنا
+to leave in error; to send astray | گمراہ کرنا؛ بھٹکانا
+to prepare; to make st ready | تیار کرنا
+to make sb taste | چکھانا
+to intend; to wish | ارادہ کرنا؛ چاہنا
+to befall; to inflict | پہنچنا؛ آ پڑنا
+to obey | اطاعت کرنا؛ فرماں برداری کرنا
+to establish; to set upright | قائم کرنا؛ ٹھہرانا
+to cause someone to die | موت دینا؛ مارنا
+## 37
+to give life | زندہ کرنا
+to conceal | چھپانا
+to show | دکھانا
+to enrich | بے نیاز کرنا؛ مالدار کرنا
+to throw; to cast; to place | ڈالنا؛ پھینکنا
+to rescue; to save; to deliver | نجات دینا؛ بچانا
+to reveal; to inspire | وحی کرنا؛ دل میں ڈالنا
+to fulfil | پورا کرنا
+to believe | ایمان لانا
+to give | دینا
+to give trouble; to harm; to annoy | تکلیف دینا؛ ایذا پہنچانا
+## 38
+to think over; to reflect | غور کرنا؛ سوچنا
+to receive admonition; to remember | نصیحت حاصل کرنا؛ یاد کرنا
+to put one's trust | بھروسا کرنا؛ توکل کرنا
+to become clear | واضح ہونا؛ ظاہر ہونا
+to wait and watch for opportunity | انتظار کرنا؛ تاک میں رہنا
+to turn away; to take for friend | منہ موڑنا؛ دوست بنانا
+to make sb die; to receive in full | وفات دینا؛ پورا پورا لینا
+to be blessed or exalted | بابرکت ہونا؛ بلند ہونا
+to ask each other | ایک دوسرے سے پوچھنا
+## 39
+to differ | اختلاف کرنا
+to follow | پیروی کرنا
+to take; to adopt | اختیار کرنا؛ بنا لینا
+to be on guard; to protect | ڈرنا؛ بچنا؛ پرہیزگاری اختیار کرنا
+to fabricate a lie | جھوٹ گھڑنا؛ بہتان باندھنا
+to find or to follow the right path | ہدایت پانا؛ راہ پانا
+to seek | چاہنا؛ طلب کرنا
+to turn around; to return | پلٹنا؛ لوٹنا
+to refrain; to end | باز آنا؛ رک جانا
+## 40
+to become black | سیاہ ہو جانا
+to become white | سفید ہو جانا
+to seek ss to hasten | جلدی چاہنا؛ جلدی مچانا
+to ask forgiveness | مغفرت مانگنا
+to act arrogantly | تکبر کرنا
+to mock at | مذاق اڑانا
+to accept; to respond | قبول کرنا؛ جواب دینا
+to be able to | استطاعت رکھنا؛ قابل ہونا
+to be straight; to act straight | سیدھا رہنا؛ استقامت اختیار کرنا
+## 41
+stroke | مارا
+went forth; strove | نکلا؛ کوشش کی
+mentioned | بیان کیا
+struck upon; overshadowed | چھا گیا؛ مسلط ہوا
+gave example | مثال دی
+came | آیا
+brought | لایا
+sought | چاہا
+oppressed; was unjust | زیادتی کی؛ ظلم کیا
+repented | توبہ کی
+accepted the repentance | توبہ قبول کی
+came, arrived | آیا، پہنچا
+brought | لایا
+went | گیا
+took away | لے گیا
+went away | چلا گیا
+was contented | راضی ہوا
+pleased with | راضی ہوا
+abound | بہت ہوئے
+forgave | معاف کیا
+decreed; fulfilled | فیصلہ کیا؛ پورا کیا
+judged | فیصلہ کیا
+killed | مار ڈالا
+put; laid down | رکھا؛ اتار دیا
+removed | دور کر دیا
+turned; caused to turn | پھیرا
+turned to | رجوع کیا
+turned away from | منہ موڑا

@@ -22,7 +22,7 @@
 وَصَفَ ; يَصِفُ ; صِفْ ; وَاصِف ; وَصْف | to describe; to ascribe | | 14 | verb-initial-weak
 وَعَدَ ; يَعِدُ ; عِدْ ; وَاعِد ; وَعْد | to promise | | 124 | verb-initial-weak
 وَقَى ; يَقِي ; قِ ; وَاقٍ ; وِقَايَة | to protect; to save | | 19 | verb-initial-weak
-وَسِعَ ; يَسَعُ ; سَعْ ; وَاسِع ; سَعَة | to embrace; to comprehend | check | 25 | verb-initial-weak
+وَسِعَ ; يَوْسَعُ ; اِيْسَعْ ; وَاسِع ; سَعَة | to embrace; to comprehend | as printed | 25 | verb-initial-weak
 ## 29 | Second letter of the root is و or ي (أَجْوَف)
 تَابَ ; يَتُوبُ ; تُبْ ; تَائِب ; تَوْبَة | to repent | | 72 | verb-hollow
 ذَاقَ ; يَذُوقُ ; ذُقْ ; ذَائِق ; ذَوْق | to taste | | 42 | verb-hollow
@@ -42,12 +42,12 @@
 أَكَلَ ; يَأْكُلُ ; كُلْ ; آكِل ; أَكْل | to eat | | 101 | verb-hamzated
 أَمَرَ ; يَأْمُرُ ; مُرْ ; آمِر ; أَمْر | to command | | 232 | verb-hamzated
 أَمِنَ ; يَأْمَنُ ; ائْمَنْ ; آمِن ; أَمْن | to be safe; to feel safe; to trust | | 25 | verb-hamzated
-أَبَى ; يَأْبَى ; إِئْبَ ; آبٍ ; إِبَاء | to refuse | | 13 | verb-hamzated
-رَأَى ; يَرَى ; رَ ; رَاءٍ ; رُؤْيَة | to see | | 269 | verb-hamzated
+أَبَى ; يَأْبَى ; اِئْبَ ; آبٍ ; إِبَاء | to refuse | | 13 | verb-hamzated
+رَأَى ; يَرَى ; رَ ; رَاءٍ ; رَأْي | to see | | 269 | verb-hamzated
 أَتَى ; يَأْتِي ; ائْتِ ; آتٍ ; إِتْيَان | to come | | 263 | verb-hamzated
 شَاءَ ; يَشَاءُ ; شَأْ ; شَاءٍ ; مَشِيئَة | to will, to wish | | 277 | verb-hamzated
 سَاءَ ; يَسُوءُ ; سُؤْ ; سَاوِئ ; سُوء | to be evil | | 39 | verb-hamzated
-جَاءَ ; يَجِيءُ ; جِئْ ; جَائِي ; مَجِيء | to come | | 236 | verb-hamzated
+جَاءَ ; يَجِيءُ ; جِئْ ; جَاءٍ ; مَجِيء | to come | | 236 | verb-hamzated
 ## 32 | فعل ثلاثي مزيد فيه فَعَّلَ (Form II)
 بَدَّلَ ; يُبَدِّلُ ; بَدِّلْ ; مُبَدِّل ; تَبْدِيل | to change | | 33 | verb-form-2
 بَشَّرَ ; يُبَشِّرُ ; بَشِّرْ ; مُبَشِّر ; تَبْشِير | to give good news | | 48 | verb-form-2
