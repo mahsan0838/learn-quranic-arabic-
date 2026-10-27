@@ -5,6 +5,7 @@ import { COLORS, SIZES, SPACING, arabicStyle } from '../constants/theme';
 import { CURRICULUM, meaningOf } from '../data/words';
 import { buildSession } from '../utils/srs';
 import { getSrsMap, recordReview } from '../utils/game';
+import { syncReminders } from '../utils/notifications';
 import useLanguage from '../hooks/useLanguage';
 import RewardBanner from '../components/RewardBanner';
 
@@ -63,6 +64,7 @@ export default function FlashcardsScreen() {
             // Missed cards come back at the end of this session.
             const nextQueue = grade === 'again' ? [...rest, currentWord] : rest;
             setReward(result);
+            if (result.goalReached) syncReminders();
             setSummary((s) => ({
                 cards: s.cards + 1,
                 xp: s.xp + result.xpGained,

@@ -198,20 +198,19 @@ export const savePreferences = async (preferences) => {
   }
 };
 
+export const DEFAULT_PREFERENCES = {
+  language: 'english',
+  dailyReminder: false,
+  reminderHour: 19,
+  reminderMinute: 0,
+};
+
 export const getPreferences = async () => {
   try {
     const data = await AsyncStorage.getItem(STORAGE_KEYS.PREFERENCES);
-    return data ? JSON.parse(data) : {
-      language: 'english',
-      arabicFontSize: 'large',
-      dailyReminder: false,
-    };
+    return { ...DEFAULT_PREFERENCES, ...(data ? JSON.parse(data) : {}) };
   } catch (error) {
-    return {
-      language: 'english',
-      arabicFontSize: 'large',
-      dailyReminder: false,
-    };
+    return { ...DEFAULT_PREFERENCES };
   }
 };
 

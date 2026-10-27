@@ -7,7 +7,8 @@
 - Phase 3 (partly) done: Leitner spaced repetition, XP/levels, daily goal, badges, streaks (+longest), frequency-weighted Qur'an-coverage meter (sums to the PDF's own 82.6%), unit tests for the pure logic (`npm test`).
 - Done since: verb tables + drill, quiz modes (Arabic→meaning, meaning→Arabic; all / per-module / weak words).
 - Done: Amiri Arabic font bundled (covers every character in the data).
-- Still open: human proofread of the Arabic, native review of the Urdu, audio, notifications, TypeScript/lint, EAS build.
+- Done: daily reminders (local notifications, skipped on days the goal is met).
+- Still open: human proofread of the Arabic, native review of the Urdu, word audio, TypeScript/lint, EAS build (needs an Android package id).
 
 ---
 

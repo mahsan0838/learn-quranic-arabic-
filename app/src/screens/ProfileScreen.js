@@ -1,9 +1,14 @@
 import React, { useState, useCallback } from 'react';
+import { Alert } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { COLORS, SIZES, SPACING } from '../constants/theme';
 import { TOTAL_WORDS } from '../data/words';
-import { getAverageQuizAccuracy } from '../utils/storage';
+import { getAverageQuizAccuracy, getPreferences } from '../utils/storage';
+import { REMINDER_PRESETS, labelFor } from '../utils/reminders';
+import { setReminderEnabled, setReminderTime } from '../utils/notifications';
+import useLanguage from '../hooks/useLanguage';
+import { HAS_URDU } from '../data/words';
 import { getDashboard } from '../utils/game';
 import { BADGES, levelProgress, titleFor } from '../utils/gamification';
 
@@ -24,7 +29,31 @@ export default function ProfileScreen() {
         }, [])
     );
 
+    const [reminder, setReminder] = useState({ on: false, hour: 19, minute: 0 });
+    const [language, setLanguage] = useLanguage();
+
+    const loadReminder = async () => {
+        const prefs = await getPreferences();
+        setReminder({ on: prefs.dailyReminder, hour: prefs.reminderHour, minute: prefs.reminderMinute });
+    };
+
+    const toggleReminder = async () => {
+        const ok = await setReminderEnabled(!reminder.on);
+        if (!ok) {
+            Alert.alert('Notifications are off', 'Allow notifications for this app in your phone settings to get reminders.');
+        }
+        loadReminder();
+    };
+
+    const cycleReminderTime = async () => {
+        const at = REMINDER_PRESETS.findIndex((p) => p.hour === reminder.hour && p.minute === reminder.minute);
+        const next = REMINDER_PRESETS[(at + 1) % REMINDER_PRESETS.length];
+        await setReminderTime(next.hour, next.minute);
+        loadReminder();
+    };
+
     const loadStats = async () => {
+        loadReminder();
         const dash = await getDashboard();
         const accuracy = await getAverageQuizAccuracy();
         setStats({
@@ -93,18 +122,25 @@ export default function ProfileScreen() {
 
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Settings</Text>
-                <TouchableOpacity style={styles.settingRow}>
+                <TouchableOpacity style={styles.settingRow} onPress={toggleReminder}>
                     <Text style={styles.settingLabel}>Daily Reminder</Text>
-                    <Text style={styles.settingValue}>Off</Text>
+                    <Text style={styles.settingValue}>{reminder.on ? 'On' : 'Off'}</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.settingRow}>
-                    <Text style={styles.settingLabel}>Preferred Language</Text>
-                    <Text style={styles.settingValue}>English</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.settingRow}>
-                    <Text style={styles.settingLabel}>Arabic Font Size</Text>
-                    <Text style={styles.settingValue}>Large</Text>
-                </TouchableOpacity>
+                {reminder.on && (
+                    <TouchableOpacity style={styles.settingRow} onPress={cycleReminderTime}>
+                        <Text style={styles.settingLabel}>Reminder time (tap to change)</Text>
+                        <Text style={styles.settingValue}>{labelFor(reminder.hour, reminder.minute)}</Text>
+                    </TouchableOpacity>
+                )}
+                {HAS_URDU && (
+                    <TouchableOpacity
+                        style={styles.settingRow}
+                        onPress={() => setLanguage(language === 'english' ? 'urdu' : 'english')}
+                    >
+                        <Text style={styles.settingLabel}>Meaning language</Text>
+                        <Text style={styles.settingValue}>{language === 'urdu' ? 'Urdu' : 'English'}</Text>
+                    </TouchableOpacity>
+                )}
             </View>
 
             <View style={styles.section}>

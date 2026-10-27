@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-nati
 import { COLORS, SIZES, SPACING } from '../constants/theme';
 import { TOTAL_WORDS } from '../data/words';
 import { getDashboard } from '../utils/game';
+import { syncReminders } from '../utils/notifications';
 import { BADGES, DAILY_GOAL, levelProgress, titleFor } from '../utils/gamification';
 
 export default function HomeScreen({ navigation }) {
@@ -12,6 +13,7 @@ export default function HomeScreen({ navigation }) {
     useFocusEffect(
         useCallback(() => {
             getDashboard().then(setDash);
+            syncReminders();
         }, [])
     );
 

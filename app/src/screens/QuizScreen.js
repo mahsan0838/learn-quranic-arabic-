@@ -6,6 +6,7 @@ import { ALL_WORDS, getModule, getModuleWords, MODULE_IDS } from '../data/words'
 import { buildQuiz, weakWords } from '../utils/quiz';
 import { saveQuizScore } from '../utils/storage';
 import { recordQuiz, getSrsMap } from '../utils/game';
+import { syncReminders } from '../utils/notifications';
 import RewardBanner from '../components/RewardBanner';
 
 const DIRECTIONS = [
@@ -75,7 +76,9 @@ export default function QuizScreen() {
             return;
         }
         await saveQuizScore(score, questions.length, typeof scope === 'number' ? scope : null);
-        setReward(await recordQuiz(score, questions.length));
+        const result = await recordQuiz(score, questions.length);
+        setReward(result);
+        if (result.goalReached) syncReminders();
         setStage('result');
     };
 
