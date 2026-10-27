@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useRef } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
-import { COLORS, SIZES, SPACING } from '../constants/theme';
+import { COLORS, SIZES, SPACING, arabicStyle } from '../constants/theme';
 import { CURRICULUM, meaningOf } from '../data/words';
 import { buildSession } from '../utils/srs';
 import { getSrsMap, recordReview } from '../utils/game';
@@ -213,13 +213,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     arabicText: {
-        fontSize: 48,
+        ...arabicStyle(48),
         color: COLORS.text,
         marginBottom: SPACING.lg,
         textAlign: 'center',
     },
     arabicSmall: {
-        fontSize: 32,
+        ...arabicStyle(32),
         color: COLORS.primary,
         marginBottom: SPACING.md,
         textAlign: 'center',
@@ -242,7 +242,7 @@ const styles = StyleSheet.create({
         marginBottom: SPACING.xs,
     },
     formsText: {
-        fontSize: SIZES.large,
+        ...arabicStyle(24),
         color: COLORS.text,
         textAlign: 'center',
         marginTop: SPACING.md,

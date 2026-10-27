@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
-import { COLORS, SIZES, SPACING } from '../constants/theme';
+import { COLORS, SIZES, SPACING, arabicStyle } from '../constants/theme';
 import conjugation from '../data/conjugation.json';
 import { buildConjugationDrill } from '../utils/conjugation';
 import { recordQuiz } from '../utils/game';
@@ -221,9 +221,9 @@ const styles = StyleSheet.create({
     },
     pronoun: { width: 64, fontSize: SIZES.large, color: COLORS.primary, textAlign: 'center' },
     cell: { flex: 1, alignItems: 'center' },
-    arabic: { fontSize: 24, color: COLORS.text, textAlign: 'center' },
-    arabicSmall: { fontSize: 20, color: COLORS.text, textAlign: 'center' },
-    bigArabic: { fontSize: 44, color: COLORS.primary, marginVertical: SPACING.sm },
+    arabic: { ...arabicStyle(24), color: COLORS.text, textAlign: 'center' },
+    arabicSmall: { ...arabicStyle(20), color: COLORS.text, textAlign: 'center' },
+    bigArabic: { ...arabicStyle(44), color: COLORS.primary, marginVertical: SPACING.sm },
     english: { fontSize: SIZES.small, color: COLORS.textSecondary, textAlign: 'center' },
     block: { backgroundColor: COLORS.cardBackground, borderRadius: 10, padding: SPACING.md, marginBottom: SPACING.xs, alignItems: 'center' },
     questionCard: { backgroundColor: COLORS.cardBackground, borderRadius: 12, padding: SPACING.lg, alignItems: 'center', marginBottom: SPACING.md, elevation: 2 },

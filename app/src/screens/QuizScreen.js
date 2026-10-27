@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
-import { COLORS, SIZES, SPACING } from '../constants/theme';
+import { COLORS, SIZES, SPACING, arabicStyle } from '../constants/theme';
 import { ALL_WORDS, getModule, getModuleWords, MODULE_IDS } from '../data/words';
 import { buildQuiz, weakWords } from '../utils/quiz';
 import { saveQuizScore } from '../utils/storage';
@@ -220,14 +220,14 @@ const styles = StyleSheet.create({
         elevation: 2,
     },
     questionLabel: { fontSize: SIZES.medium, color: COLORS.textSecondary, marginBottom: SPACING.md },
-    arabicText: { fontSize: 48, color: COLORS.text, textAlign: 'center' },
+    arabicText: { ...arabicStyle(48), color: COLORS.text, textAlign: 'center' },
     englishPrompt: { fontSize: SIZES.xlarge, color: COLORS.text, textAlign: 'center' },
     optionsContainer: { flex: 1 },
     optionButton: { backgroundColor: COLORS.cardBackground, padding: SPACING.lg, borderRadius: 12, marginBottom: SPACING.md, elevation: 2 },
     correctOption: { backgroundColor: COLORS.success },
     wrongOption: { backgroundColor: COLORS.error },
     optionText: { fontSize: SIZES.large, color: COLORS.text, textAlign: 'center' },
-    arabicOptionText: { fontSize: 28, color: COLORS.text, textAlign: 'center' },
+    arabicOptionText: { ...arabicStyle(28), color: COLORS.text, textAlign: 'center' },
     nextButton: { backgroundColor: COLORS.primary, paddingVertical: SPACING.lg, borderRadius: 12, alignItems: 'center', marginTop: SPACING.md },
     nextButtonText: { color: '#FFFFFF', fontSize: SIZES.large, fontWeight: 'bold' },
     resultContainer: { flex: 1, justifyContent: 'center', alignItems: 'center' },

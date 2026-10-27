@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Alert } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
-import { COLORS, SIZES, SPACING } from '../constants/theme';
+import { COLORS, SIZES, SPACING, arabicStyle } from '../constants/theme';
 import { MODULE_IDS, HAS_URDU, getModule, meaningOf } from '../data/words';
 import * as Speech from 'expo-speech';
 import { saveProgress, getProgress } from '../utils/storage';
@@ -164,7 +164,7 @@ export default function LearnScreen({ route, navigation }) {
 
 const styles = StyleSheet.create({
     formsText: {
-        fontSize: SIZES.large,
+        ...arabicStyle(24),
         color: COLORS.text,
         textAlign: 'center',
         marginBottom: SPACING.sm,
@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
     },
     arabicText: {
-        fontSize: 36,
+        ...arabicStyle(36),
         textAlign: 'center',
         marginBottom: SPACING.md,
         color: COLORS.text,

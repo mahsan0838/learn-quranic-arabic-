@@ -12,10 +12,17 @@ export const COLORS = {
 };
 
 export const FONTS = {
-  arabic: 'System', // Will use device's Arabic font
+  arabic: 'Amiri_400Regular', // bundled via @expo-google-fonts/amiri (loaded in App.js)
   urdu: 'System',
   english: 'System',
 };
+
+// Amiri's tall marks need extra line height or the diacritics get clipped.
+export const arabicStyle = (fontSize) => ({
+  fontFamily: FONTS.arabic,
+  fontSize,
+  lineHeight: Math.round(fontSize * 1.7),
+});
 
 export const SIZES = {
   small: 12,
