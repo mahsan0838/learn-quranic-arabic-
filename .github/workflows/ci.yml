@@ -5,26 +5,23 @@ on:
   pull_request:
 
 jobs:
-  app:
+  web:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: app
+        working-directory: web
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
-          cache-dependency-path: app/package-lock.json
+          cache-dependency-path: web/package-lock.json
       - run: npm ci
       - run: npm run lint
       - run: npm run typecheck
       - run: npm test
-      - name: Bundle the Android app
-        run: npx expo export --platform android --output-dir "$RUNNER_TEMP/export"
-      - name: Bundle the web app (what Vercel deploys)
-        run: npx expo export --platform web --output-dir "$RUNNER_TEMP/web"
+      - run: npm run build
 
   data:
     runs-on: ubuntu-latest
@@ -36,8 +33,8 @@ jobs:
       - name: vocab.json is up to date with data/pdf and data/supplement
         run: |
           python scripts/build_vocab.py
-          git diff --exit-code app/src/data/vocab.json
+          git diff --exit-code web/src/data/vocab.json
       - name: conjugation.json copies match
-        run: diff data/pdf/conjugation.json app/src/data/conjugation.json
+        run: diff data/pdf/conjugation.json web/src/data/conjugation.json
       - name: Validate vocabulary
-        run: python scripts/validate_vocab.py app/src/data/vocab.json
+        run: python scripts/validate_vocab.py web/src/data/vocab.json

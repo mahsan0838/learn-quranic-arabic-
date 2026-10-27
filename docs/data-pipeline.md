@@ -6,15 +6,15 @@ The PDF (`source/80_percent.pdf`, git-ignored) is the single source of truth. It
 source/80_percent.pdf
    -> data/pdf/*.txt          hand-transcribed pages (edit these to fix mistakes)
    -> scripts/build_vocab.py  parses + validates + assigns ids/modules
-   -> app/src/data/vocab.json generated; do not edit by hand
-data/pdf/conjugation.json     sample verb tables from pp. 42-45 (copied to app/src/data/)
+   -> web/src/data/vocab.json generated; do not edit by hand
+data/pdf/conjugation.json     sample verb tables from pp. 42-45 (copied to web/src/data/)
 ```
 
 ## Edit a word
 
 1. Fix the row in `data/pdf/*.txt` (`arabic | english | note | frequency | category`; verb rows use `past ; present ; imperative ; participle ; verbal noun`).
 2. `python scripts/build_vocab.py`
-3. `python scripts/validate_vocab.py app/src/data/vocab.json`
+3. `python scripts/validate_vocab.py web/src/data/vocab.json`
 
 ## Coverage
 

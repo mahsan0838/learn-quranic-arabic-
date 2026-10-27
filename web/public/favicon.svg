@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="75%">
+      <stop offset="0" stop-color="#14503e"/>
+      <stop offset="0.6" stop-color="#0a2a21"/>
+      <stop offset="1" stop-color="#05110d"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3dc9a"/>
+      <stop offset="0.55" stop-color="#d4ad55"/>
+      <stop offset="1" stop-color="#a47c2c"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112.0" fill="url(#bg)"/>
+  <circle cx="256.0" cy="256.0" r="196.0" fill="none" stroke="#d4ad55" stroke-opacity="0.5" stroke-width="2.5"/>
+  <circle cx="256.0" cy="256.0" r="182.0" fill="none" stroke="#d4ad55" stroke-opacity="0.25" stroke-width="1.5"/>
+  <polygon points="256.00,106.00 300.01,149.75 362.07,149.93 362.25,211.99 406.00,256.00 362.25,300.01 362.07,362.07 300.01,362.25 256.00,406.00 211.99,362.25 149.93,362.07 149.75,300.01 106.00,256.00 149.75,211.99 149.93,149.93 211.99,149.75" fill="url(#gold)"/>
+  <polygon points="292.74,167.31 308.33,203.67 344.69,219.26 330.00,256.00 344.69,292.74 308.33,308.33 292.74,344.69 256.00,330.00 219.26,344.69 203.67,308.33 167.31,292.74 182.00,256.00 167.31,219.26 203.67,203.67 219.26,167.31 256.00,182.00" fill="#0b2a20"/>
+  <circle cx="256.0" cy="256.0" r="30.0" fill="url(#gold)"/>
+</svg>

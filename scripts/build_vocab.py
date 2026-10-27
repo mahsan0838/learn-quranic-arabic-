@@ -16,7 +16,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "data", "pdf")
-OUT = os.path.join(ROOT, "app", "src", "data", "vocab.json")
+OUT = os.path.join(ROOT, "web", "src", "data", "vocab.json")
 
 # Page ranges (PDF page numbers) for each module.
 MODULES = {

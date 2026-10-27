@@ -1,0 +1,69 @@
+/* Design tokens. "Night" is the signature look; "Parchment" is its daylight twin. */
+:root {
+  --font-ui: 'Manrope Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  --font-arabic: 'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', serif;
+  --font-kufi: 'Reem Kufi', 'Amiri', serif;
+
+  --radius-sm: 10px;
+  --radius: 18px;
+  --radius-lg: 28px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --nav-w: 272px;
+  --bar-h: 72px;
+}
+
+:root[data-theme='night'] {
+  color-scheme: dark;
+  --bg: #050e0b;
+  --bg-2: #081812;
+  --surface: rgba(255, 247, 226, 0.04);
+  --surface-2: rgba(255, 247, 226, 0.07);
+  --surface-solid: #0b1b15;
+  --line: rgba(224, 189, 108, 0.16);
+  --line-strong: rgba(224, 189, 108, 0.34);
+  --text: #f4ecd8;
+  --text-dim: #b9b49f;
+  --text-faint: #7f8c82;
+  --gold: #e0bd6c;
+  --gold-hi: #f6e2ae;
+  --gold-lo: #b38a35;
+  --emerald: #3cb08a;
+  --emerald-deep: #145a45;
+  --rose: #e08a73;
+  --on-gold: #1a1406;
+  --shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.75), 0 2px 0 rgba(255, 255, 255, 0.03) inset;
+  --glow: radial-gradient(60% 50% at 78% -8%, rgba(60, 176, 138, 0.2), transparent 70%),
+    radial-gradient(50% 40% at 6% 4%, rgba(224, 189, 108, 0.11), transparent 70%);
+  --pattern-opacity: 0.09;
+  --glass: rgba(6, 19, 14, 0.72);
+}
+
+:root[data-theme='parchment'] {
+  color-scheme: light;
+  --bg: #f3ead2;
+  --bg-2: #ece0c1;
+  --surface: rgba(255, 252, 244, 0.72);
+  --surface-2: rgba(255, 252, 244, 0.95);
+  --surface-solid: #fffaf0;
+  --line: rgba(122, 90, 24, 0.2);
+  --line-strong: rgba(122, 90, 24, 0.42);
+  --text: #17261f;
+  --text-dim: #4d5c52;
+  --text-faint: #7b8479;
+  --gold: #9a7122;
+  --gold-hi: #c39a3e;
+  --gold-lo: #77551a;
+  --emerald: #17795a;
+  --emerald-deep: #0f4f3c;
+  --rose: #b4533d;
+  --on-gold: #fff8e6;
+  --shadow: 0 22px 50px -26px rgba(70, 48, 8, 0.45), 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+  --glow: radial-gradient(60% 50% at 80% -10%, rgba(23, 121, 90, 0.14), transparent 70%),
+    radial-gradient(50% 40% at 4% 0%, rgba(154, 113, 34, 0.16), transparent 70%);
+  --pattern-opacity: 0.16;
+  --glass: rgba(243, 234, 210, 0.78);
+}
