@@ -7,7 +7,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "node --test tests/logic.test.js tests/conjugation.test.js"
+    "test": "node --test tests/logic.test.js tests/conjugation.test.js tests/quiz.test.js"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^2.2.0",

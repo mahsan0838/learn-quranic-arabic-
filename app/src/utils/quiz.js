@@ -7,27 +7,55 @@ const shuffle = (items) => {
   return result;
 };
 
-// Builds a fixed list of questions. Options are decided once here, so they
-// stay stable while the user taps an answer.
-export const buildQuiz = (words, questionCount = 10, optionCount = 4) => {
+// direction 'toMeaning': Arabic shown, pick the English meaning.
+// direction 'toArabic':  English shown, pick the Arabic word.
+// Questions come from `words`; wrong options are drawn from `pool`.
+// Options are decided once here, so they stay stable while the user taps.
+export const buildQuiz = (
+  words,
+  questionCount = 10,
+  optionCount = 4,
+  { direction = 'toMeaning', pool = words } = {}
+) => {
+  const label = (w) => (direction === 'toArabic' ? w.arabic : w.english);
+
   return shuffle(words)
     .slice(0, questionCount)
     .map((word) => {
-      const candidates = words.filter(
-        (w) => w.id !== word.id && w.english !== word.english
+      // Several entries share an Arabic form or a meaning (e.g. هٰذِهِ is both "this" and
+      // "these"), so any option that is also valid for this word must be kept out.
+      const validLabels = new Set(
+        pool.filter((w) => w.english === word.english || w.arabic === word.arabic).map(label)
       );
+      validLabels.add(label(word));
+      const candidates = pool.filter((w) => w.id !== word.id && !validLabels.has(label(w)));
       const sameCategory = shuffle(candidates.filter((w) => w.category === word.category));
       const others = shuffle(candidates.filter((w) => w.category !== word.category));
 
       const distractors = [];
       for (const candidate of [...sameCategory, ...others]) {
         if (distractors.length === optionCount - 1) break;
-        if (!distractors.includes(candidate.english)) distractors.push(candidate.english);
+        if (!distractors.includes(label(candidate))) {
+          distractors.push(label(candidate));
+        }
       }
 
       return {
         word,
-        options: shuffle([word.english, ...distractors]),
+        direction,
+        prompt: direction === 'toArabic' ? word.english : word.arabic,
+        hint: word.grammatical_info,
+        answer: label(word),
+        options: shuffle([label(word), ...distractors]),
       };
     });
 };
+
+// Words the learner has reviewed and still struggles with, worst first.
+export const weakWords = (words, srsMap) =>
+  words
+    .filter((w) => {
+      const s = srsMap[w.id];
+      return s && s.reviews > 0 && (s.lapses > 0 || s.box <= 1);
+    })
+    .sort((a, b) => srsMap[b.id].lapses - srsMap[a.id].lapses);

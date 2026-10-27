@@ -75,6 +75,7 @@ test('quiz: stable options, correct answer present, no duplicate meanings', () =
   const words = Array.from({ length: 12 }, (_, i) => ({
     id: i + 1,
     english: i === 3 ? 'word 3' : `word ${i}`, // id 4 duplicates id 3's meaning
+    arabic: `ar${i}`,
     category: i % 2 ? 'a' : 'b',
   }));
   const quiz = buildQuiz(words, 10);

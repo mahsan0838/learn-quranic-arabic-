@@ -5,7 +5,8 @@
 - Phase 0-1 done: repo cleanup, bug fixes.
 - Phase 2 done: 570 entries transcribed from the PDF (source of truth) and proofread against 190-dpi renders; supplementary Urdu added (not from the PDF). Decision taken: the PDF, not Quran Corpus, is the source.
 - Phase 3 (partly) done: Leitner spaced repetition, XP/levels, daily goal, badges, streaks (+longest), frequency-weighted Qur'an-coverage meter (sums to the PDF's own 82.6%), unit tests for the pure logic (`npm test`).
-- Still open: human proofread of the Arabic, native review of the Urdu, conjugation-table screen (`conjugation.json`), quiz modes (meaning→Arabic, per-module), fonts + audio, notifications, TypeScript/lint, EAS build.
+- Done since: verb tables + drill, quiz modes (Arabic→meaning, meaning→Arabic; all / per-module / weak words).
+- Still open: human proofread of the Arabic, native review of the Urdu, Arabic font + audio, notifications, TypeScript/lint, EAS build.
 
 ---
 
