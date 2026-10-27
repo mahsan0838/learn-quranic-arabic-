@@ -4,6 +4,8 @@ import { COLORS, SIZES, SPACING } from '../constants/theme';
 import { ALL_WORDS } from '../data/words';
 import { buildQuiz } from '../utils/quiz';
 import { saveQuizScore } from '../utils/storage';
+import { recordQuiz } from '../utils/game';
+import RewardBanner from '../components/RewardBanner';
 
 export default function QuizScreen() {
     const [questions, setQuestions] = useState(() => buildQuiz(ALL_WORDS));
@@ -11,6 +13,7 @@ export default function QuizScreen() {
     const [score, setScore] = useState(0);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [showResult, setShowResult] = useState(false);
+    const [reward, setReward] = useState(null);
 
     const current = questions[currentQuestion];
     const currentWord = current?.word;
@@ -29,6 +32,7 @@ export default function QuizScreen() {
             setSelectedAnswer(null);
         } else {
             await saveQuizScore(score, questions.length);
+            setReward(await recordQuiz(score, questions.length));
             setShowResult(true);
         }
     };
@@ -39,6 +43,7 @@ export default function QuizScreen() {
         setScore(0);
         setSelectedAnswer(null);
         setShowResult(false);
+        setReward(null);
     };
 
     if (showResult) {
@@ -49,6 +54,7 @@ export default function QuizScreen() {
                     <Text style={styles.resultTitle}>Quiz Complete! 🎉</Text>
                     <Text style={styles.resultScore}>{score} / {questions.length}</Text>
                     <Text style={styles.resultPercentage}>{percentage}%</Text>
+                    <RewardBanner result={reward} />
                     <TouchableOpacity style={styles.restartButton} onPress={handleRestart}>
                         <Text style={styles.restartButtonText}>Try Again</Text>
                     </TouchableOpacity>

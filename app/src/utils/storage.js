@@ -6,6 +6,7 @@ const STORAGE_KEYS = {
   FLASHCARD_PROGRESS: '@quranvoc_flashcard_progress',
   LAST_STUDY_DATE: '@quranvoc_last_study_date',
   STREAK: '@quranvoc_streak',
+  LONGEST_STREAK: '@quranvoc_longest_streak',
   PREFERENCES: '@quranvoc_preferences',
 };
 
@@ -130,6 +131,7 @@ export const updateStreak = async () => {
       // First time studying
       await AsyncStorage.setItem(STORAGE_KEYS.LAST_STUDY_DATE, today);
       await AsyncStorage.setItem(STORAGE_KEYS.STREAK, '1');
+      await bumpLongestStreak(1);
       return 1;
     }
 
@@ -153,9 +155,25 @@ export const updateStreak = async () => {
 
     await AsyncStorage.setItem(STORAGE_KEYS.LAST_STUDY_DATE, today);
     await AsyncStorage.setItem(STORAGE_KEYS.STREAK, currentStreak.toString());
+    await bumpLongestStreak(currentStreak);
     return currentStreak;
   } catch (error) {
     console.error('Error updating streak:', error);
+    return 0;
+  }
+};
+
+const bumpLongestStreak = async (streak) => {
+  const longest = parseInt((await AsyncStorage.getItem(STORAGE_KEYS.LONGEST_STREAK)) || '0');
+  if (streak > longest) {
+    await AsyncStorage.setItem(STORAGE_KEYS.LONGEST_STREAK, String(streak));
+  }
+};
+
+export const getLongestStreak = async () => {
+  try {
+    return parseInt((await AsyncStorage.getItem(STORAGE_KEYS.LONGEST_STREAK)) || '0');
+  } catch (error) {
     return 0;
   }
 };

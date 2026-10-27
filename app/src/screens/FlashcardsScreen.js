@@ -1,59 +1,130 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useState, useCallback, useRef } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { useFocusEffect } from '@react-navigation/native';
 import { COLORS, SIZES, SPACING } from '../constants/theme';
-import { ALL_WORDS, meaningOf, pickSession } from '../data/words';
-import { saveFlashcardProgress } from '../utils/storage';
+import { CURRICULUM, meaningOf } from '../data/words';
+import { buildSession } from '../utils/srs';
+import { getSrsMap, recordReview } from '../utils/game';
 import useLanguage from '../hooks/useLanguage';
+import RewardBanner from '../components/RewardBanner';
+
+const GRADES = [
+    { grade: 'again', label: 'Again', color: COLORS.error },
+    { grade: 'good', label: 'Good', color: COLORS.primary },
+    { grade: 'easy', label: 'Easy', color: COLORS.accent },
+];
 
 export default function FlashcardsScreen() {
-    // Cards still to be answered this session; the front of the array is current.
-    const [session, setSession] = useState(() => pickSession(ALL_WORDS));
-    const [queue, setQueue] = useState(session);
-    const [isFlipped, setIsFlipped] = useState(false);
     const [language] = useLanguage();
+    const [ready, setReady] = useState(false);
+    const [queue, setQueue] = useState([]);
+    const [counts, setCounts] = useState({ dueCount: 0, newCount: 0 });
+    const [isFlipped, setIsFlipped] = useState(false);
+    const [reward, setReward] = useState(null);
+    const [summary, setSummary] = useState({ cards: 0, xp: 0, again: 0 });
+    const [finished, setFinished] = useState(false);
+    const busy = useRef(false);
+    const started = useRef(false);
+    const finishedRef = useRef(false);
+
+    const startSession = useCallback(async () => {
+        const srsMap = await getSrsMap();
+        const session = buildSession(CURRICULUM, srsMap);
+        setQueue(session.cards);
+        setCounts({ dueCount: session.dueCount, newCount: session.newCount });
+        setSummary({ cards: 0, xp: 0, again: 0 });
+        setIsFlipped(false);
+        setReward(null);
+        setFinished(false);
+        finishedRef.current = false;
+        setReady(true);
+    }, []);
+
+    // Build on first focus, and again when the user returns after finishing a
+    // session. Refs keep this effect from re-running (and wiping the summary)
+    // as soon as the last card is answered.
+    useFocusEffect(
+        useCallback(() => {
+            if (!started.current || finishedRef.current) {
+                started.current = true;
+                startSession();
+            }
+        }, [startSession])
+    );
 
     const currentWord = queue[0];
-    const reviewed = session.length - queue.length;
 
-    const handleKnow = async () => {
-        await saveFlashcardProgress(currentWord.id, 5);
-        setQueue(queue.slice(1));
-        setIsFlipped(false);
+    const answer = async (grade) => {
+        if (busy.current || !currentWord) return;
+        busy.current = true;
+        try {
+            const result = await recordReview(currentWord.id, grade);
+            const rest = queue.slice(1);
+            // Missed cards come back at the end of this session.
+            const nextQueue = grade === 'again' ? [...rest, currentWord] : rest;
+            setReward(result);
+            setSummary((s) => ({
+                cards: s.cards + 1,
+                xp: s.xp + result.xpGained,
+                again: s.again + (grade === 'again' ? 1 : 0),
+            }));
+            setQueue(nextQueue);
+            setIsFlipped(false);
+            if (nextQueue.length === 0) {
+                setFinished(true);
+                finishedRef.current = true;
+            }
+        } finally {
+            busy.current = false;
+        }
     };
 
-    // Missed cards go to the back of the queue so they come around again.
-    const handleDontKnow = async () => {
-        await saveFlashcardProgress(currentWord.id, 2);
-        setQueue([...queue.slice(1), currentWord]);
-        setIsFlipped(false);
-    };
-
-    if (!currentWord) {
+    if (!ready) {
         return (
             <View style={styles.container}>
-                <Text style={styles.completedText}>🎉 You've reviewed all cards!</Text>
-                <TouchableOpacity
-                    style={styles.restartButton}
-                    onPress={() => {
-                        const next = pickSession(ALL_WORDS);
-                        setSession(next);
-                        setQueue(next);
-                        setIsFlipped(false);
-                    }}
-                >
-                    <Text style={styles.restartButtonText}>Start Over</Text>
+                <Text style={styles.completedText}>Loading your cards…</Text>
+            </View>
+        );
+    }
+
+    if (!currentWord) {
+        const nothingToDo = summary.cards === 0;
+        return (
+            <View style={styles.container}>
+                <Text style={styles.completedText}>
+                    {nothingToDo ? '✅ You are all caught up!' : '🎉 Session complete!'}
+                </Text>
+                {nothingToDo ? (
+                    <Text style={styles.infoText}>
+                        Nothing is due right now. Come back later, or take a quiz.
+                    </Text>
+                ) : (
+                    <Text style={styles.infoText}>
+                        {summary.cards} reviews · +{summary.xp} XP · {summary.again} to revisit
+                    </Text>
+                )}
+                <RewardBanner result={reward} />
+                <TouchableOpacity style={styles.restartButton} onPress={startSession}>
+                    <Text style={styles.restartButtonText}>
+                        {nothingToDo ? 'Check again' : 'Start another session'}
+                    </Text>
                 </TouchableOpacity>
             </View>
         );
     }
 
+    const forms = currentWord.forms;
+
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Text style={styles.progressText}>
-                    {reviewed} / {session.length} known · {queue.length} left
+                <Text style={styles.progressText}>{queue.length} left</Text>
+                <Text style={styles.subText}>
+                    {counts.dueCount} due · {counts.newCount} new in total
                 </Text>
             </View>
+
+            <RewardBanner result={reward} />
 
             <TouchableOpacity
                 style={styles.card}
@@ -61,34 +132,46 @@ export default function FlashcardsScreen() {
                 activeOpacity={0.9}
             >
                 {!isFlipped ? (
-                    <View style={styles.cardFront}>
+                    <View style={styles.cardFace}>
                         <Text style={styles.arabicText}>{currentWord.arabic}</Text>
                         <Text style={styles.tapHint}>Tap to reveal meaning</Text>
                     </View>
                 ) : (
-                    <View style={styles.cardBack}>
-                        <Text style={styles.meaningText}>
-                            {meaningOf(currentWord, language)}
-                        </Text>
+                    <ScrollView contentContainerStyle={styles.cardFace}>
+                        <Text style={styles.arabicSmall}>{currentWord.arabic}</Text>
+                        <Text style={styles.meaningText}>{meaningOf(currentWord, language)}</Text>
                         <Text style={styles.infoText}>{currentWord.grammatical_info}</Text>
-                    </View>
+                        {currentWord.frequency != null && (
+                            <Text style={styles.infoText}>
+                                Appears {currentWord.frequency}× in the Qur'an
+                            </Text>
+                        )}
+                        {forms && (
+                            <Text style={styles.formsText}>
+                                {[forms.present, forms.imperative, forms.active_participle, forms.verbal_noun].join('   ')}
+                            </Text>
+                        )}
+                    </ScrollView>
                 )}
             </TouchableOpacity>
 
-            <View style={styles.buttonContainer}>
-                <TouchableOpacity
-                    style={[styles.actionButton, styles.dontKnowButton]}
-                    onPress={handleDontKnow}
-                >
-                    <Text style={styles.buttonText}>❌ Review Again</Text>
+            {isFlipped ? (
+                <View style={styles.buttonContainer}>
+                    {GRADES.map((g) => (
+                        <TouchableOpacity
+                            key={g.grade}
+                            style={[styles.actionButton, { backgroundColor: g.color }]}
+                            onPress={() => answer(g.grade)}
+                        >
+                            <Text style={styles.buttonText}>{g.label}</Text>
+                        </TouchableOpacity>
+                    ))}
+                </View>
+            ) : (
+                <TouchableOpacity style={styles.revealButton} onPress={() => setIsFlipped(true)}>
+                    <Text style={styles.buttonText}>Show answer</Text>
                 </TouchableOpacity>
-                <TouchableOpacity
-                    style={[styles.actionButton, styles.knowButton]}
-                    onPress={handleKnow}
-                >
-                    <Text style={styles.buttonText}>✅ I Know This</Text>
-                </TouchableOpacity>
-            </View>
+            )}
         </View>
     );
 }
@@ -101,37 +184,45 @@ const styles = StyleSheet.create({
     },
     header: {
         alignItems: 'center',
-        marginBottom: SPACING.lg,
+        marginBottom: SPACING.sm,
     },
     progressText: {
         fontSize: SIZES.large,
         fontWeight: '600',
         color: COLORS.text,
     },
+    subText: {
+        fontSize: SIZES.small,
+        color: COLORS.textSecondary,
+    },
     card: {
         flex: 1,
         backgroundColor: COLORS.cardBackground,
         borderRadius: 16,
-        padding: SPACING.xl,
-        justifyContent: 'center',
-        alignItems: 'center',
+        padding: SPACING.lg,
         elevation: 4,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.2,
         shadowRadius: 8,
-        marginBottom: SPACING.lg,
+        marginBottom: SPACING.md,
     },
-    cardFront: {
+    cardFace: {
+        flexGrow: 1,
         alignItems: 'center',
-    },
-    cardBack: {
-        alignItems: 'center',
+        justifyContent: 'center',
     },
     arabicText: {
         fontSize: 48,
         color: COLORS.text,
         marginBottom: SPACING.lg,
+        textAlign: 'center',
+    },
+    arabicSmall: {
+        fontSize: 32,
+        color: COLORS.primary,
+        marginBottom: SPACING.md,
+        textAlign: 'center',
     },
     tapHint: {
         fontSize: SIZES.medium,
@@ -148,6 +239,13 @@ const styles = StyleSheet.create({
         fontSize: SIZES.medium,
         color: COLORS.textSecondary,
         textAlign: 'center',
+        marginBottom: SPACING.xs,
+    },
+    formsText: {
+        fontSize: SIZES.large,
+        color: COLORS.text,
+        textAlign: 'center',
+        marginTop: SPACING.md,
     },
     buttonContainer: {
         flexDirection: 'row',
@@ -160,11 +258,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginHorizontal: SPACING.xs,
     },
-    dontKnowButton: {
-        backgroundColor: COLORS.error,
-    },
-    knowButton: {
-        backgroundColor: COLORS.success,
+    revealButton: {
+        backgroundColor: COLORS.primary,
+        paddingVertical: SPACING.lg,
+        borderRadius: 12,
+        alignItems: 'center',
     },
     buttonText: {
         color: '#FFFFFF',
@@ -176,6 +274,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: COLORS.text,
         marginTop: SPACING.xl,
+        marginBottom: SPACING.md,
     },
     restartButton: {
         backgroundColor: COLORS.primary,
@@ -183,7 +282,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: SPACING.xl,
         borderRadius: 12,
         alignSelf: 'center',
-        marginTop: SPACING.xl,
+        marginTop: SPACING.lg,
     },
     restartButtonText: {
         color: '#FFFFFF',

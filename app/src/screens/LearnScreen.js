@@ -5,6 +5,7 @@ import { COLORS, SIZES, SPACING } from '../constants/theme';
 import { MODULE_IDS, HAS_URDU, getModule, meaningOf } from '../data/words';
 import * as Speech from 'expo-speech';
 import { saveProgress, getProgress } from '../utils/storage';
+import { recordLearned } from '../utils/game';
 import useLanguage from '../hooks/useLanguage';
 
 export default function LearnScreen({ route }) {
@@ -50,6 +51,7 @@ export default function LearnScreen({ route }) {
         const success = await saveProgress(wordId, 'learned');
         if (success) {
             setLearned((prev) => ({ ...prev, [wordId]: { status: 'learned' } }));
+            recordLearned(wordId);
         }
     };
 
@@ -84,6 +86,9 @@ export default function LearnScreen({ route }) {
                 </View>
                 <Text style={styles.headerTitle}>{moduleData.name}</Text>
                 <Text style={styles.headerSubtitle}>{moduleData.description}</Text>
+                {selectedLanguage === 'urdu' && (
+                    <Text style={styles.headerSubtitle}>Urdu is a supplementary aid, not from the source book.</Text>
+                )}
 
                 {HAS_URDU && (
                 <View style={styles.languageToggle}>

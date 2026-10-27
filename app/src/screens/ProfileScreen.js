@@ -3,7 +3,9 @@ import { useFocusEffect } from '@react-navigation/native';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { COLORS, SIZES, SPACING } from '../constants/theme';
 import { TOTAL_WORDS } from '../data/words';
-import { getLearnedWordsCount, getStreak, getAverageQuizAccuracy } from '../utils/storage';
+import { getAverageQuizAccuracy } from '../utils/storage';
+import { getDashboard } from '../utils/game';
+import { BADGES, levelProgress, titleFor } from '../utils/gamification';
 
 export default function ProfileScreen() {
     const [stats, setStats] = useState({
@@ -11,6 +13,9 @@ export default function ProfileScreen() {
         currentStreak: 0,
         longestStreak: 0,
         quizAccuracy: 0,
+        xp: 0,
+        coverage: 0,
+        badges: [],
     });
 
     useFocusEffect(
@@ -20,15 +25,16 @@ export default function ProfileScreen() {
     );
 
     const loadStats = async () => {
-        const learned = await getLearnedWordsCount();
-        const streak = await getStreak();
+        const dash = await getDashboard();
         const accuracy = await getAverageQuizAccuracy();
-
         setStats({
-            wordsLearned: learned,
-            currentStreak: streak,
-            longestStreak: streak, // For now, same as current
+            wordsLearned: dash.known,
+            currentStreak: dash.streak,
+            longestStreak: dash.longestStreak,
             quizAccuracy: accuracy,
+            xp: dash.xp,
+            coverage: dash.coveragePct,
+            badges: dash.badges,
         });
     };
 
@@ -41,7 +47,7 @@ export default function ProfileScreen() {
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Learning Stats</Text>
                 <View style={styles.statRow}>
-                    <Text style={styles.statLabel}>Total Words Learned</Text>
+                    <Text style={styles.statLabel}>Words Known</Text>
                     <Text style={styles.statValue}>{stats.wordsLearned} / {TOTAL_WORDS}</Text>
                 </View>
                 <View style={styles.statRow}>
@@ -56,6 +62,33 @@ export default function ProfileScreen() {
                     <Text style={styles.statLabel}>Quiz Accuracy</Text>
                     <Text style={styles.statValue}>{stats.quizAccuracy}%</Text>
                 </View>
+            </View>
+
+            <View style={styles.section}>
+                <Text style={styles.sectionTitle}>
+                    Level {levelProgress(stats.xp).level} · {titleFor(levelProgress(stats.xp).level)}
+                </Text>
+                <View style={styles.statRow}>
+                    <Text style={styles.statLabel}>Total XP</Text>
+                    <Text style={styles.statValue}>{stats.xp}</Text>
+                </View>
+                <View style={styles.statRow}>
+                    <Text style={styles.statLabel}>Qur'an coverage</Text>
+                    <Text style={styles.statValue}>{stats.coverage.toFixed(1)}%</Text>
+                </View>
+            </View>
+
+            <View style={styles.section}>
+                <Text style={styles.sectionTitle}>Badges</Text>
+                {BADGES.map((b) => {
+                    const earned = stats.badges.includes(b.id);
+                    return (
+                        <View key={b.id} style={[styles.statRow, !earned && { opacity: 0.4 }]}>
+                            <Text style={styles.statLabel}>{earned ? b.icon : '🔒'} {b.title}</Text>
+                            <Text style={styles.settingValue}>{b.description}</Text>
+                        </View>
+                    );
+                })}
             </View>
 
             <View style={styles.section}>
