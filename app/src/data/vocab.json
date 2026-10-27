@@ -1,0 +1,169 @@
+{
+    "metadata": {
+        "source": "80% of Quranic Words by Dr. Abdulazeez Abdulraheem",
+        "total_words": 300,
+        "coverage_percentage": 80,
+        "modules": 3
+    },
+    "module_1": {
+        "name": "High-Frequency Words",
+        "description": "Covers 41.5% of Quranic text",
+        "pages": "8-13",
+        "words": [
+            {
+                "id": 1,
+                "arabic": "هٰذَا",
+                "english": "this (masculine)",
+                "urdu": "یہ (مذکر)",
+                "grammatical_info": "demonstrative pronoun, masculine",
+                "frequency": 450,
+                "category": "pronouns"
+            },
+            {
+                "id": 2,
+                "arabic": "ذٰلِكَ",
+                "english": "that (masculine)",
+                "urdu": "وہ (مذکر)",
+                "grammatical_info": "demonstrative pronoun, masculine",
+                "frequency": 380,
+                "category": "pronouns"
+            },
+            {
+                "id": 3,
+                "arabic": "مَا",
+                "english": "what, that which",
+                "urdu": "کیا، جو",
+                "grammatical_info": "interrogative/relative pronoun",
+                "frequency": 750,
+                "category": "pronouns"
+            },
+            {
+                "id": 4,
+                "arabic": "مَنْ",
+                "english": "who, whoever",
+                "urdu": "کون، جو کوئی",
+                "grammatical_info": "interrogative/relative pronoun",
+                "frequency": 520,
+                "category": "pronouns"
+            },
+            {
+                "id": 5,
+                "arabic": "فِي",
+                "english": "in, at",
+                "urdu": "میں",
+                "grammatical_info": "preposition",
+                "frequency": 1200,
+                "category": "prepositions"
+            }
+        ]
+    },
+    "module_2": {
+        "name": "Key Nouns & Attributes",
+        "description": "Allah's names, Prophets, Day of Judgment",
+        "pages": "14-21",
+        "words": [
+            {
+                "id": 101,
+                "arabic": "اللَّهُ",
+                "english": "Allah",
+                "urdu": "اللہ",
+                "grammatical_info": "proper noun",
+                "frequency": 2699,
+                "category": "divine_names"
+            },
+            {
+                "id": 102,
+                "arabic": "رَبّ",
+                "english": "Lord",
+                "urdu": "رب، پروردگار",
+                "grammatical_info": "noun, masculine",
+                "frequency": 980,
+                "category": "divine_names"
+            },
+            {
+                "id": 103,
+                "arabic": "يَوْم",
+                "english": "day",
+                "urdu": "دن",
+                "grammatical_info": "noun, masculine",
+                "frequency": 475,
+                "category": "time"
+            },
+            {
+                "id": 104,
+                "arabic": "نَاس",
+                "english": "people, mankind",
+                "urdu": "لوگ",
+                "grammatical_info": "noun, plural",
+                "frequency": 241,
+                "category": "people"
+            },
+            {
+                "id": 105,
+                "arabic": "كِتَاب",
+                "english": "book",
+                "urdu": "کتاب",
+                "grammatical_info": "noun, masculine",
+                "frequency": 319,
+                "category": "objects"
+            }
+        ]
+    },
+    "module_3": {
+        "name": "Essential Verbs",
+        "description": "Common Quranic verbs",
+        "pages": "22-37",
+        "words": [
+            {
+                "id": 201,
+                "arabic": "قَالَ",
+                "english": "he said",
+                "urdu": "اس نے کہا",
+                "grammatical_info": "past tense, 3rd person masculine singular",
+                "frequency": 1722,
+                "category": "verbs",
+                "verb_form": "ثلاثي مجرد"
+            },
+            {
+                "id": 202,
+                "arabic": "كَانَ",
+                "english": "he was",
+                "urdu": "وہ تھا",
+                "grammatical_info": "past tense, 3rd person masculine singular",
+                "frequency": 1358,
+                "category": "verbs",
+                "verb_form": "ثلاثي مجرد"
+            },
+            {
+                "id": 203,
+                "arabic": "جَاءَ",
+                "english": "he came",
+                "urdu": "وہ آیا",
+                "grammatical_info": "past tense, 3rd person masculine singular",
+                "frequency": 284,
+                "category": "verbs",
+                "verb_form": "ثلاثي مجرد"
+            },
+            {
+                "id": 204,
+                "arabic": "عَلِمَ",
+                "english": "he knew",
+                "urdu": "اس نے جانا",
+                "grammatical_info": "past tense, 3rd person masculine singular",
+                "frequency": 854,
+                "category": "verbs",
+                "verb_form": "ثلاثي مجرد"
+            },
+            {
+                "id": 205,
+                "arabic": "آمَنَ",
+                "english": "he believed",
+                "urdu": "اس نے ایمان لایا",
+                "grammatical_info": "past tense, 3rd person masculine singular",
+                "frequency": 537,
+                "category": "verbs",
+                "verb_form": "ثلاثي مجرد"
+            }
+        ]
+    }
+}

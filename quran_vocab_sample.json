@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "source": "80% of Quranic Words by Dr. Abdulazeez Abdulraheem",
+    "total_words": 300,
+    "coverage_percentage": 80,
+    "modules": 3
+  },
+  "module_1": {
+    "name": "High-Frequency Words",
+    "description": "Covers 41.5% of Quranic text",
+    "pages": "8-13",
+    "words": [
+      {
+        "id": 1,
+        "arabic": "هٰذَا",
+        "english": "this (masculine)",
+        "urdu": "یہ (مذکر)",
+        "grammatical_info": "demonstrative pronoun, masculine",
+        "frequency": 450,
+        "category": "pronouns",
+        "examples": [
+          {
+            "verse": "2:2",
+            "text": "ذَٰلِكَ الْكِتَابُ",
+            "translation": "This is the Book"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "arabic": "ذٰلِكَ",
+        "english": "that (masculine)",
+        "urdu": "وہ (مذکر)",
+        "grammatical_info": "demonstrative pronoun, masculine",
+        "frequency": 380,
+        "category": "pronouns",
+        "examples": []
+      }
+    ]
+  },
+  "module_2": {
+    "name": "Key Nouns & Attributes",
+    "description": "Allah's names, Prophets, Day of Judgment, relatives, body parts",
+    "pages": "14-21",
+    "words": [
+      {
+        "id": 101,
+        "arabic": "اللَّهُ",
+        "english": "Allah",
+        "urdu": "اللہ",
+        "grammatical_info": "proper noun",
+        "frequency": 2699,
+        "category": "divine_names",
+        "examples": []
+      }
+    ]
+  },
+  "module_3": {
+    "name": "Essential Verbs",
+    "description": "Organized by verb form",
+    "pages": "22-37",
+    "words": [
+      {
+        "id": 201,
+        "arabic": "قَالَ",
+        "english": "he said",
+        "urdu": "اس نے کہا",
+        "grammatical_info": "past tense, 3rd person masculine singular",
+        "frequency": 1722,
+        "category": "verbs",
+        "verb_form": "ثلاثي مجرد",
+        "examples": []
+      }
+    ]
+  }
+}
