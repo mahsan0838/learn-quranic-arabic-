@@ -5,7 +5,7 @@ import { COLORS, SIZES, SPACING } from '../constants/theme';
 import { TOTAL_WORDS, HAS_URDU } from '../data/words';
 import { getAverageQuizAccuracy, getPreferences } from '../utils/storage';
 import { REMINDER_PRESETS, labelFor } from '../utils/reminders';
-import { setReminderEnabled, setReminderTime } from '../utils/notifications';
+import { setReminderEnabled, setReminderTime, REMINDERS_SUPPORTED } from '../utils/notifications';
 import useLanguage from '../hooks/useLanguage';
 import { getDashboard } from '../utils/game';
 import { BADGES, levelProgress, titleFor } from '../utils/gamification';
@@ -120,11 +120,13 @@ export default function ProfileScreen() {
 
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Settings</Text>
-                <TouchableOpacity style={styles.settingRow} onPress={toggleReminder}>
-                    <Text style={styles.settingLabel}>Daily Reminder</Text>
-                    <Text style={styles.settingValue}>{reminder.on ? 'On' : 'Off'}</Text>
-                </TouchableOpacity>
-                {reminder.on && (
+                {REMINDERS_SUPPORTED && (
+                    <TouchableOpacity style={styles.settingRow} onPress={toggleReminder}>
+                        <Text style={styles.settingLabel}>Daily Reminder</Text>
+                        <Text style={styles.settingValue}>{reminder.on ? 'On' : 'Off'}</Text>
+                    </TouchableOpacity>
+                )}
+                {REMINDERS_SUPPORTED && reminder.on && (
                     <TouchableOpacity style={styles.settingRow} onPress={cycleReminderTime}>
                         <Text style={styles.settingLabel}>Reminder time (tap to change)</Text>
                         <Text style={styles.settingValue}>{labelFor(reminder.hour, reminder.minute)}</Text>

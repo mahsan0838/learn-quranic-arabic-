@@ -7,7 +7,10 @@ import { computeReminderDates, reminderMessage } from './reminders';
 
 const CHANNEL_ID = 'daily-review';
 
-Notifications.setNotificationHandler({
+// Local notifications don't exist in the browser build.
+export const REMINDERS_SUPPORTED = Platform.OS !== 'web';
+
+if (REMINDERS_SUPPORTED) Notifications.setNotificationHandler({
   handleNotification: async () => ({
     shouldShowBanner: true,
     shouldShowList: true,
@@ -27,6 +30,7 @@ const ensureChannel = async () => {
 
 // Returns true when notifications may be shown (asking once if needed).
 export const ensurePermission = async () => {
+  if (!REMINDERS_SUPPORTED) return false;
   const current = await Notifications.getPermissionsAsync();
   if (current.granted) return true;
   if (!current.canAskAgain) return false;
@@ -37,6 +41,7 @@ export const ensurePermission = async () => {
 // Rebuilds the schedule from scratch: one notification per upcoming day, minus today
 // if the goal is already met. Cheap enough to call on every app open / review.
 export const syncReminders = async () => {
+  if (!REMINDERS_SUPPORTED) return false;
   try {
     await Notifications.cancelAllScheduledNotificationsAsync();
     const prefs = await getPreferences();
